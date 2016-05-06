@@ -13,43 +13,43 @@
   font-size: 18px;
 
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
 
-  li {
-    width: 64px;
-    height: 48px;
-    line-height: 52px;
-    overflow: hidden;
+.timeline li {
+  width: 64px;
+  height: 48px;
+  line-height: 52px;
+  overflow: hidden;
 
-    transition: 100ms linear background-color, 100ms linear color;
-    -ms-transition: 100ms linear background-color, 100ms linear color;
-    -moz-transition: 100ms linear background-color, 100ms linear color;
-    -webkit-transition: 100ms linear background-color, 100ms linear color;
+  transition: 100ms linear background-color, 100ms linear color;
+  -ms-transition: 100ms linear background-color, 100ms linear color;
+  -moz-transition: 100ms linear background-color, 100ms linear color;
+  -webkit-transition: 100ms linear background-color, 100ms linear color;
+}
 
-    &:not(.month) {
-      cursor: pointer;
-    }
+.timeline li:not(.month) {
+  cursor: pointer;
+}
 
-    &.month {
-      font-weight: bold;
-      height: 52px;
+.timeline li.month {
+  font-weight: bold;
+  height: 52px;
 
-      color: white;
-      border-top: 1px solid rgba(0, 0, 0, 0.15);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
-      cursor: default;
-      font-size: 12px;
-    }
+  cursor: default;
+  font-size: 12px;
+}
 
-    &.active {
-      background-color: white;
-      color: #22a9d8;
-    }
-  }
+.timeline li.active {
+  background-color: white;
+  color: #22a9d8;
+}
 
-  .month:last-child {
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  }
+.timeline .month:last-child {
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 

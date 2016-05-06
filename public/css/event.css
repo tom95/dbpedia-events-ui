@@ -1,0 +1,93 @@
+
+/*.event {
+	margin: 24px 0;
+	padding: 24px;
+	background-color: #ff9900;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/92/Mustermann_1987.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+}
+.event .glyphicon {
+	color: #E78A00;
+	font-size: 36px;
+	float: left;
+	display: block;
+	margin-right: 24px;
+}
+.event h2 {
+	font-size: 16px;
+	margin: 0;
+}
+.event .data-link {
+	text-decoration: underline;
+}*/
+
+body {
+	background-color: #EFEFEF;
+}
+.event {
+	position: relative;
+	height: 48px;
+	margin-bottom: 26px;
+	margin-left: 72px;
+	background-color: #fff;
+	padding: 6px;
+	border-radius: 6px;
+	line-height: 2.5em;
+	border: 1px solid #C8CbCF;
+	box-sizing: content-box;
+}
+.event .image {
+	height: 48px;
+	width: 48px;
+	border-radius: 5px;
+	background-size: cover;
+	float: left;
+	margin-right: 12px;
+}
+.event h2 {
+	margin: 4px 0 0 0;
+}
+.event:before {
+	width: 16px;
+	border: 1px solid #C8CBCF;
+	content: "";
+	display: block;
+	position: absolute;
+	left: -16px;
+	top: 20px;
+}
+.event > .glyphicon {
+	text-align: center;
+	display: block;
+	border-radius: 999px;
+	padding: 10px;
+	font-size: 20px;
+	background-color: white;
+	border: 2px solid #C8CBCF;
+	color: #C8CBCF;
+	left: -64px;
+	position: absolute;
+}
+.event > .glyphicon:after {
+	content: "";
+	border: 1px solid #C8CBCF;
+	height: 32px;
+	top: 48px;
+	left: 20px;
+	position: absolute;
+}
+
+.event h2 {
+	display: block;
+	font-size: inherit;
+}
+
+.event .time {
+	font-size: 0.8em;
+	color: #aaa;
+}
