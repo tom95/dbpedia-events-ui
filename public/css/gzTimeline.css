@@ -2,11 +2,12 @@
 .timeline {
   list-style-type: none;
   position: fixed;
-  top: 0;
+  top: 51px;
   left: 0;
-  height: 100%;
+  height: calc(100% - 51px);
   background-color: #22a9d8;
   padding: 0;
+  z-index: -1;
 
   text-align: center;
   color: rgba(255, 255, 255, 0.7);

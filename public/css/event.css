@@ -33,7 +33,7 @@ body {
 	position: relative;
 	height: 48px;
 	margin-bottom: 26px;
-	margin-left: 72px;
+	margin-left: 172px;
 	background-color: #fff;
 	padding: 6px;
 	border-radius: 6px;
@@ -90,4 +90,7 @@ body {
 .event .time {
 	font-size: 0.8em;
 	color: #aaa;
+}
+.event .data-link {
+	color: #F64C23;
 }
