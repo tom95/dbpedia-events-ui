@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col-md-8">
+        <form role="form">
+            <div class="form-group">
+                <label for="template">Digest Template:</label>
+                <textarea placeholder='Your digest template here...' class="form-control" rows="15" id="template">
+                  dig:RELEASED a dbe:DigestTemplate ;
+                    dbe:ignore true ;
+                    dcterms:identifier "RELEASED" ;
+                    dcterms:description """Finds works released within last three weeks."""@en ;
+                    dbe:queryString """SELECT ?u ?res ?releasedate
+                        { ?u guo:target_subject ?res ;
+                            guo:insert [
+                                dbo:releaseDate ?releasedate ] .
+                            FILTER (xsd:date(?releasedate) > xsd:date(NOW()-"P21D"^^xsd:duration)) }""" ;
+                    dbe:contextQueryString """SELECT ?labelres
+                        { %%res%% rdfs:label ?labelres . }""" ;
+                    dbe:descriptionTemplate """%%labelres%% is released on %%releasedate%%.""" ;
+                    dbe:rankWeight "0.6"^^xsd:float ;
+                    .
+                </textarea>
+            </div>
+            <div class="form-group">
+                <div class="pull-right">
+                    <button ng-click='submit()' type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
