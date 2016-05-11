@@ -1,4 +1,5 @@
 
+
 /*.event {
 	margin: 24px 0;
 	padding: 24px;
@@ -25,7 +26,7 @@
 .event .data-link {
 	text-decoration: underline;
 }*/
-
+/*
 body {
 	background-color: #EFEFEF;
 }
@@ -93,4 +94,139 @@ body {
 }
 .event .data-link {
 	color: #F64C23;
+}*/
+
+body {
+	background-color: #eee;	
+
+}
+
+.container {
+	position: relative;
+}
+.event {
+	background-color: #fff;
+	padding: 12px;
+	margin: 24px 0;
+	width: calc(100% - 128px);
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.event h2 {
+	margin: 0px;
+	font-size: 18px;
+
+}
+
+.event-icon {
+	position: absolute;
+	right: -94px;
+	color: #888;
+	z-index: 1;
+	height: 30px;
+	width: 48px;
+	padding-top: 6px;
+	text-align: center;
+	margin-left: -24px;
+	font-size: 20px;
+	background-color: #eee;
+}
+.container {
+	position: relative;
+}
+.line {
+	position: absolute;
+	height: 100%;
+	left: 50%;
+	border: 1px solid #888;
+	content: "";
+}
+
+.event .time {
+	float: right;
+	font-size: 12px;
+	color: #777;
+}
+
+.event .data-link, .event dbp-data-link {
+	color: #008;
+}
+
+.event .image {
+	margin-top: 12px;
+	width: 100%;
+	height: 200px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.event:before {
+	content: "";
+	position: absolute;
+	border-width: 20px;
+	top: 10px;
+	right: -40px;
+	z-index: 9999;
+	border-color: transparent transparent transparent #fff;
+	border-style: solid;
+}
+.event:after {
+	content: "";
+	position: absolute;
+	border-width: 20px;
+	top: 10px;
+	right: -42px;
+	z-index: 9990;
+	border-color: transparent transparent transparent #ddd;
+	border-style: solid;
+}
+.day-marker {
+	margin-left: calc(50% - 40px);
+	text-align: center;
+	padding: 5px;
+	border: 2px solid #ddd;
+	border-radius: 240px;
+	height: 80px;
+	width: 80px;
+	background-color: white;
+}
+
+.day-marker .day {
+	font-size: 26px;
+	color: black;
+	display: block;
+} 
+
+.day-marker .month {
+	font-size: 16px;	
+
+}
+
+@media screen and (min-width: 600px) {
+	.event {
+		width: calc(50% - 70px);
+	}
+	.event-wrapper {
+		margin-top: -120px;
+	}
+	.event-wrapper.first {
+		margin-top: 0;
+	}
+	.event-wrapper:nth-child(even) .event {
+		margin-left: calc(50% + 70px);
+	}
+	.event-wrapper:nth-child(even) .event-icon {
+		left: -70px;
+		right: auto;
+	}
+	.event-wrapper:nth-child(even) .event:before {
+		left: -40px;
+		border-color: transparent #fff transparent transparent;
+	}
+	.event-wrapper:nth-child(even) .event:after {
+		left: -42px;
+		border-color: transparent #ddd transparent transparent;
+	}
 }

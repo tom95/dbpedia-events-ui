@@ -22,7 +22,6 @@
 					<a class="navbar-brand" href="/#/">DBpedia Events</a>
 				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav" ng-controller="TabController as tab">
 						<li ng-class="{ active: tab.isSet(0) }"><a ng-click="tab.setTab(0)" href="/#/">Timeline</a></li>
@@ -42,11 +41,16 @@
 		<script src="/js/vendor/angular.js"></script>
 		<script src="/js/vendor/angular-route.js"></script>
 		<script src="/js/vendor/angular-animate.js"></script>
-
+		<script src="/js/vendor/EventEmitter.js"></script>
+		<script src="/js/vendor/eventie.js"></script>
+		<script src="/js/vendor/imagesloaded.js"></script>
+		<script src="/js/vendor/masonry.pkgd.min.js"></script>
+		<script src="/js/vendor/angular-masonry.js"></script>
 		<script src="/js/app.js"></script>
 		<script src="/js/controllers/TimelineController.js"></script>
 		<script src="/js/controllers/TabController.js"></script>
 		<script src="/js/controllers/EditorController.js"></script>
 		<script src="/js/directives/gzTimeline.js"></script>
+		<script src="/js/directives/dbpDataLink.js"></script>
 	</body>
 </html>
