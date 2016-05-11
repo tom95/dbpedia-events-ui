@@ -1,4 +1,5 @@
 
+
 /*.event {
 	margin: 24px 0;
 	padding: 24px;
@@ -25,7 +26,7 @@
 .event .data-link {
 	text-decoration: underline;
 }*/
-
+/*
 body {
 	background-color: #EFEFEF;
 }
@@ -93,4 +94,106 @@ body {
 }
 .event .data-link {
 	color: #F64C23;
+}*/
+
+body {
+	background-color: #eee;	
+
+}
+
+.event {
+	background-color: #fff;
+	padding: 12px;
+	margin: 24px;
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.event h2 {
+	margin: 0px;
+	font-size: 18px;
+
+}
+
+.event>.glyphicon {
+	position: absolute;
+	right: -89px;
+	color: #888;
+	z-index: 1;
+	height: 30px;
+	width: 48px;
+	padding-top: 6px;
+	text-align: right;
+	font-size: 20px;
+	background-color: #eee;
+}
+
+.event .time {
+	float: right;
+	font-size: 12px;
+	color: #777;
+}
+
+.event .data-link, .event dbp-data-link {
+	color: #008;
+}
+
+.event .image {
+	margin-top: 12px;
+	width: 100%;
+	height: 250px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.event:before {
+	content: "";
+	position: absolute;
+	border-width: 30px;
+	top: 0;
+	right: -60px;
+	z-index: 9999;
+	border-color: #fff transparent transparent #fff;
+	border-style: solid;
+}
+.event:after {
+	content: "";
+	position: absolute;
+	border-width: 30px;
+	top: -1px;
+	right: -62px;
+	z-index: 9990;
+	border-color: #ddd transparent transparent #ddd;
+	border-style: solid;
+}
+.day-marker {
+	position: absolute;
+	right: 80px;
+	text-align: center;
+	padding: 5px;
+	border: 2px solid #ddd;
+	border-radius: 240px;
+	height: 80px;
+	width: 80px;
+	background-color: white;
+}
+
+.day-marker .day {
+	font-size: 26px;
+	color: black;
+	display: block;
+} 
+
+.day-marker .month {
+	font-size: 16px;	
+
+}
+
+.event h2:before {
+	content:"";
+	position: absolute;
+	height: calc(100% + 36px);
+	border: 1px solid #888;
+	right: -80px;
 }
