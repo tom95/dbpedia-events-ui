@@ -101,10 +101,14 @@ body {
 
 }
 
+.container {
+	position: relative;
+}
 .event {
 	background-color: #fff;
 	padding: 12px;
-	margin: 24px;
+	margin: 24px 0;
+	width: calc(100% - 128px);
 	border: 1px solid #ddd;
 	position: relative;
 }
@@ -115,17 +119,28 @@ body {
 
 }
 
-.event>.glyphicon {
+.event-icon {
 	position: absolute;
-	right: -89px;
+	right: -94px;
 	color: #888;
 	z-index: 1;
 	height: 30px;
 	width: 48px;
 	padding-top: 6px;
-	text-align: right;
+	text-align: center;
+	margin-left: -24px;
 	font-size: 20px;
 	background-color: #eee;
+}
+.container {
+	position: relative;
+}
+.line {
+	position: absolute;
+	height: 100%;
+	left: 50%;
+	border: 1px solid #888;
+	content: "";
 }
 
 .event .time {
@@ -141,7 +156,7 @@ body {
 .event .image {
 	margin-top: 12px;
 	width: 100%;
-	height: 250px;
+	height: 200px;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -150,26 +165,25 @@ body {
 .event:before {
 	content: "";
 	position: absolute;
-	border-width: 30px;
-	top: 0;
-	right: -60px;
+	border-width: 20px;
+	top: 10px;
+	right: -40px;
 	z-index: 9999;
-	border-color: #fff transparent transparent #fff;
+	border-color: transparent transparent transparent #fff;
 	border-style: solid;
 }
 .event:after {
 	content: "";
 	position: absolute;
-	border-width: 30px;
-	top: -1px;
-	right: -62px;
+	border-width: 20px;
+	top: 10px;
+	right: -42px;
 	z-index: 9990;
-	border-color: #ddd transparent transparent #ddd;
+	border-color: transparent transparent transparent #ddd;
 	border-style: solid;
 }
 .day-marker {
-	position: absolute;
-	right: 80px;
+	margin-left: calc(50% - 40px);
 	text-align: center;
 	padding: 5px;
 	border: 2px solid #ddd;
@@ -190,10 +204,29 @@ body {
 
 }
 
-.event h2:before {
-	content:"";
-	position: absolute;
-	height: calc(100% + 36px);
-	border: 1px solid #888;
-	right: -80px;
+@media screen and (min-width: 600px) {
+	.event {
+		width: calc(50% - 70px);
+	}
+	.event-wrapper {
+		margin-top: -120px;
+	}
+	.event-wrapper.first {
+		margin-top: 0;
+	}
+	.event-wrapper:nth-child(even) .event {
+		margin-left: calc(50% + 70px);
+	}
+	.event-wrapper:nth-child(even) .event-icon {
+		left: -70px;
+		right: auto;
+	}
+	.event-wrapper:nth-child(even) .event:before {
+		left: -40px;
+		border-color: transparent #fff transparent transparent;
+	}
+	.event-wrapper:nth-child(even) .event:after {
+		left: -42px;
+		border-color: transparent #ddd transparent transparent;
+	}
 }
