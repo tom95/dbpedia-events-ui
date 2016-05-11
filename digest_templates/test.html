@@ -1,4 +1,11 @@
-<style type="text/css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
 td.linenos { background-color: #f0f0f0; padding-right: 10px; }
 span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
 pre { line-height: 125%; }
@@ -68,37 +75,11 @@ body .vg { color: #19177C } /* Name.Variable.Global */
 body .vi { color: #19177C } /* Name.Variable.Instance */
 body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
-</style>
-<div class="container">
-    <div class="col-md-8">
-        <form role="form">
-            <div class="form-group">
-                <label for="template">Digest Template:</label>
-                <textarea placeholder='Your digest template here...' class="form-control" rows="15" id="template">
-                  dig:RELEASED a dbe:DigestTemplate ;
-                    dbe:ignore true ;
-                    dcterms:identifier "RELEASED" ;
-                    dcterms:description """Finds works released within last three weeks."""@en ;
-                    dbe:queryString """SELECT ?u ?res ?releasedate
-                        { ?u guo:target_subject ?res ;
-                            guo:insert [
-                                dbo:releaseDate ?releasedate ] .
-                            FILTER (xsd:date(?releasedate) > xsd:date(NOW()-"P21D"^^xsd:duration)) }""" ;
-                    dbe:contextQueryString """SELECT ?labelres
-                        { %%res%% rdfs:label ?labelres . }""" ;
-                    dbe:descriptionTemplate """%%labelres%% is released on %%releasedate%%.""" ;
-                    dbe:rankWeight "0.6"^^xsd:float ;
-                    .
-                </textarea>
-            </div>
-            <div class="form-group">
-                <div class="pull-right">
-                    <button ng-click='submit()' type="submit" class="btn btn-default">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+  </style>
+</head>
+<body>
+<h2></h2>
+
 <div class="highlight"><pre><span></span><span class="nn">dig:</span><span class="nt">RELEASED</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">dbe:</span><span class="nt">DigestTemplate</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="nn">dbe:</span><span class="nt">ignore</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="nn">dcterms:</span><span class="nt">identifier</span><span class="w"> </span><span class="s">&quot;RELEASED&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
@@ -114,3 +95,5 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="s">    dbe:rankWeight &quot;0.6&quot;^^xsd:float ;</span>
 <span class="s">    .</span>
 </pre></div>
+</body>
+</html>
