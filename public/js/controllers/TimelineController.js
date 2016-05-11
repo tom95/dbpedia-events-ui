@@ -2,7 +2,7 @@
 angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', function($scope) {
 	$scope.availableDays = [new Date(), new Date(+new Date() - 60*60*1000*24*5)];
 	$scope.activeDay = new Date();
-	$scope.bricks = [
+	$scope.events = [
 		{
 			text: '<dbp-data-link href="">Max Mustermann</dbp-data-link> married <dbp-data-link class="data-link">Marta Mustermann</dbp-data-link>.',
 			icon: 'heart',
