@@ -6,6 +6,7 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 			var POPOVER_WIDTH = 500;
 			var POPOVER_HEIGHT = 200;
 			var POPOVER_OFFSET = 36;
+			var SCREEN_PADDING = 12;
 			var DISMISS_DELAY = 350;
 			var popover;
 
@@ -83,9 +84,13 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 				}
 
 				var offset = $element.offset();
+				var shootoverRight = Math.max(offset.left + POPOVER_WIDTH + SCREEN_PADDING - $(window).width(), 0);
+				console.log(shootoverRight, $(window).width(), offset.left, POPOVER_WIDTH);
+				var x = offset.left - shootoverRight;
+
 				popover
 					.css({
-						left: offset.left,
+						left: x,
 						top: offset.top + POPOVER_OFFSET,
 					})
 					.appendTo(document.body);
