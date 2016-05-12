@@ -6,24 +6,48 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 			var POPOVER_WIDTH = 500;
 			var POPOVER_HEIGHT = 200;
 			var POPOVER_OFFSET = 36;
+			var DISMISS_DELAY = 350;
 			var popover;
 
 			var entity = $element.text();
+			var isOpen = false;
+			var wasEntered = false;
+
+			function close() {
+				popover.detach();
+				isOpen = false;
+			}
+			
+			function closeIfNotEntered() {
+				wasEntered = false;
+
+				if (isOpen) {
+					setTimeout(function() {
+						if (!wasEntered) {
+							close();
+						}
+					}, DISMISS_DELAY);
+				}
+			}
+
+			$element.mouseleave(closeIfNotEntered)
 
 			$element.mouseover(function() {
+				if (isOpen)
+					return;
+
+				isOpen = true;
+
 				if (!popover) {
 					popover = $('<div/>')
 						.css({
 							width: POPOVER_WIDTH,
-							height: POPOVER_HEIGHT,
-							zIndex: 999999,
-							position: 'absolute',
-							backgroundColor: '#fff',
-							boxShadow: '0 5px 20px rgba(0, 0, 0, 0.6)'
+							height: POPOVER_HEIGHT
 						})
 						.addClass('dbp-popover')
-						.mouseleave(function() {
-							popover.detach();
+						.mouseleave(closeIfNotEntered)
+						.mouseenter(function() {
+							wasEntered = true;
 						});
 
 						$.ajax({

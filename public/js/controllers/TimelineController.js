@@ -1,6 +1,9 @@
 
 angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', function($scope) {
-	$scope.availableDays = [new Date(), new Date(+new Date() - 60*60*1000*24*5)];
+	$scope.availableDays = [];
+	for (var i = 0; i < 30; i++) {
+		$scope.availableDays.push(new Date(+new Date() - 60 * 60 * 1000 * 24 * 5 * i));
+	}
 	$scope.activeDay = new Date();
 	$scope.events = [
 		{

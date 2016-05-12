@@ -102,6 +102,8 @@ body {
 }
 
 .container {
+	margin-top: 64px;
+	margin-left: 64px;
 	position: relative;
 }
 .event {
@@ -161,6 +163,12 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+.event.noimage .image {
+	height: 0;
+}
+.event.noimage {
+	margin-bottom: 200px;
+}
 
 .event:before {
 	content: "";
@@ -168,7 +176,7 @@ body {
 	border-width: 20px;
 	top: 10px;
 	right: -40px;
-	z-index: 9999;
+	z-index: 99;
 	border-color: transparent transparent transparent #fff;
 	border-style: solid;
 }
@@ -178,7 +186,7 @@ body {
 	border-width: 20px;
 	top: 10px;
 	right: -42px;
-	z-index: 9990;
+	z-index: 90;
 	border-color: transparent transparent transparent #ddd;
 	border-style: solid;
 }

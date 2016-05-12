@@ -21,6 +21,12 @@
 .dbp-popover {
 	padding: 12px;
 	cursor: pointer;
+	box-shadow: 0 0px 100px rgba(0, 0, 0, 0.35);
+	background-color: #fff;
+	z-index: 99999;
+	position: absolute;
+	animation: popover-open 200ms;
+	transform-origin: top;
 }
 .dbp-popover h2 {
 	margin: 0;
@@ -41,10 +47,14 @@
 .dbp-popover:after {
 	content: "";
 	border-style: solid;
-	border-width: 16px;
+	border-width: 12px;
 	border-color: transparent transparent #fff transparent;
-	top: -32px;
+	top: -24px;
 	position: absolute;
+}
+@keyframes popover-open {
+	from { opacity: 0; transform: scale(1, 0.3); }
+	to { opacity: 1; transform: scale(1); }
 }
 
 .masonry-brick {
