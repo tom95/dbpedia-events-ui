@@ -1,5 +1,4 @@
 
-
 /*.event {
 	margin: 24px 0;
 	padding: 24px;
@@ -101,10 +100,20 @@ body {
 
 }
 
+@keyframes left-slide-in {
+	from { transform: scale(0.3, 0.3); opacity: 0; }
+	60% { transform: scale(1.0, 0.3) }
+	to { transform: scale(1); opacity: 1; }
+}
+
 .container {
 	margin-top: 64px;
 	margin-left: 64px;
 	position: relative;
+}
+.event-wrapper {
+	animation: left-slide-in 300ms;
+	transform-origin: top center;
 }
 .event {
 	background-color: #fff;

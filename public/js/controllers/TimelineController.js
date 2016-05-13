@@ -1,11 +1,35 @@
 
 angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', function($scope) {
 	$scope.availableDays = [];
-	for (var i = 0; i < 30; i++) {
-		$scope.availableDays.push(new Date(+new Date() - 60 * 60 * 1000 * 24 * 5 * i));
+	var DAY = 1000 * 60 * 60 * 24; 
+	var daysOfThisYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / DAY);
+	for (var i = 0; i < daysOfThisYear; i++) {
+		$scope.availableDays.push(new Date(+new Date() - DAY * i));
 	}
+
+	$scope.day = '1st';
+	$scope.month = 'Jan';
 	$scope.activeDay = new Date();
-	$scope.events = [
+
+	$scope.$watch('activeDay', function(newDay) {
+		$scope.setDay(newDay);
+	});
+
+	$scope.setDay = function(date) {
+		$scope.events = [];
+		if (date < new Date() - 10000) $scope.events = TEST;
+
+		$scope.day = date.getDate();
+		var lastNum = $scope.day[$scope.day.length - 1];
+		$scope.day = $scope.day + (lastNum == '1' ? $scope.day + 'st' :
+			lastNum == '2' ? $scope.day + 'nd' :
+			lastNum == '3' ? $scope.day + 'rd' :
+			'th');
+
+		$scope.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][date.getMonth()];
+	};
+
+	var TEST = [
 		{
 			text: '<dbp-data-link href="">Max Mustermann</dbp-data-link> married <dbp-data-link class="data-link">Marta Mustermann</dbp-data-link>.',
 			icon: 'heart',

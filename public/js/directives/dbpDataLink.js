@@ -18,7 +18,7 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 				popover.detach();
 				isOpen = false;
 			}
-			
+
 			function closeIfNotEntered() {
 				wasEntered = false;
 
@@ -49,7 +49,8 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 						.mouseleave(closeIfNotEntered)
 						.mouseenter(function() {
 							wasEntered = true;
-						});
+						}).
+						append('<div class="dbp-popover-tip"/>')
 
 						$.ajax({
 							url: 'https://en.wikipedia.org/w/api.php',
@@ -85,8 +86,10 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 
 				var offset = $element.offset();
 				var shootoverRight = Math.max(offset.left + POPOVER_WIDTH + SCREEN_PADDING - $(window).width(), 0);
-				console.log(shootoverRight, $(window).width(), offset.left, POPOVER_WIDTH);
 				var x = offset.left - shootoverRight;
+
+				var tip = popover.find('.dbp-popover-tip');
+				tip.css('left', shootoverRight + $element.width() / 2 - tip.width() / 2 + 'px');
 
 				popover
 					.css({
