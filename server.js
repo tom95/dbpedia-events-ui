@@ -44,6 +44,15 @@ server.register([{
 			file: (request) => { return 'public/index.html'; }
 		}
 	});
+	
+	// Serve static assets
+	server.route({
+		method: 'GET',
+		path: '/{param*}',
+		handler: {
+			directory: { path: 'public' }
+		}
+	});
 
     server.start(function () {
       console.log('Template API up and running at:', server.info.uri);
