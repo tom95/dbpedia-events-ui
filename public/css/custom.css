@@ -17,3 +17,79 @@
 .navbar-inverse .navbar-nav > .active > a {
 	background-color: #AB3F22;
 }
+
+.dbp-popover {
+	padding: 12px;
+	cursor: pointer;
+	box-shadow: 0 0px 100px rgba(0, 0, 0, 0.35);
+	background-color: #fff;
+	z-index: 99999;
+	position: absolute;
+	animation: popover-open 200ms;
+	transform-origin: top;
+}
+.dbp-popover h2 {
+	margin: 0;
+	font-size: 1.5em;
+	margin-bottom: 0.3em;
+}
+.dbp-popover .text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 100%;
+}
+.dbp-popover img {
+	float: right;
+	max-height: 100%;
+	max-width: 50%;
+	margin-left: 12px;
+}
+.dbp-popover:after {
+	content: "";
+	border-style: solid;
+	border-width: 12px;
+	border-color: transparent transparent #fff transparent;
+	top: -24px;
+	position: absolute;
+}
+@keyframes popover-open {
+	from { opacity: 0; transform: scale(1, 0.3); }
+	to { opacity: 1; transform: scale(1); }
+}
+
+.masonry-brick {
+	margin: 1em;
+	background-color: #fff;
+	display: none;
+	width: 300px;
+	position: relative;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+.masonry-brick h2 {
+	margin: 12px;
+	font-size: 15px;
+}
+.masonry-brick dbp-data-link {
+	color: #ff9900;
+	font-weight: bold;
+}
+.masonry-brick .time {
+	font-weight: normal;
+	margin: 12px;
+}
+.masonry-brick > .glyphicon {
+	position: absolute;
+	top: -18px;
+	left: -12px;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	padding: 12px;
+	font-size: 24px;
+	border-radius: 999px;
+}
+.masonry-brick img {
+	width: 100%;
+}
+.masonry-brick.loaded {
+	display: block;
+}

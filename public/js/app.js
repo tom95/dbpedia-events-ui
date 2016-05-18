@@ -1,3 +1,34 @@
+var app = angular.module('dbpedia-events-ui', ['ngRoute']);
 
-angular.module('dbpedia-events-ui', []);
+app
+  .config(['$routeProvider',
+    function($routeProvider) {
+      $routeProvider.
+	when('/', {
+	  controller: 'TimelineController',
+	  templateUrl: 'views/timeline.html'
+	}).
+	when('/editor', {
+	  controller: 'EditorController',
+	  templateUrl: 'views/template-editor.html'
+	}).
+	otherwise({
+	  redirectTo: '/',
+	});
+    }])
+  .directive('dbpLateCompile', ['$compile', function($compile) {
+    return {
+      restrict: 'A',
+      scope: {
+	dbpLateCompile: '='
+      },
+      link: function($scope, $element, $attrs) {
+	$scope.$watch('dbpLateCompile', function(val) {
+	  console.log(val);
+	  $element.html('');
+	  $element.append($compile('<div>' + val + '</div>')($scope));
+	});
+      }
+    };
+  }]);
 

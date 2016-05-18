@@ -1,4 +1,6 @@
-angular.module('dbpedia-events-ui').controller('TabController', function() {
+var app = angular.module('dbpedia-events-ui');
+
+app.controller('TabController', function() {
 	this.tab = 0;
   this.setTab = function(newTab) {
     this.tab = newTab;

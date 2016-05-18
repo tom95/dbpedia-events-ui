@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="cold-md-3">
+        <label for="template">Digest Template:</label>
+        <div digest-template></div>
+        <div class="form-group">
+            <div class="col-md-1">
+                <button ng-click='submit()' type="submit" class="btn btn-default">Submit</button>
+            </div>
+            <div class="col-md-offset-1">
+                <button ng-click='try()' type="submit" class="btn btn-default">Try</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-3">
+        <form role="form">
+            <div class="form-group">
+                <label for="template">Name:</label>
+                <input ng-change="change()" ng-model="name" placeholder='Name' class="form-control" id="name" />
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input ng-change="change()" ng-model="ignore" type="checkbox" id="ignore" />Ignore?</label>
+            </div>
+            <div class="form-group">
+                <input ng-change="change()" ng-model="name" placeholder='identifier' class="form-control" id="identifier" />
+            </div>
+            <div class="form-group">
+                <input ng-change="change()" ng-model="description" placeholder='description' class="form-control" id="description" />
+            </div>
+            <div class="form-group">
+                <textarea ng-change="change()" ng-model="queryString" placeholder='queryString' class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+                <textarea ng-change="change()" ng-model="contextQueryString" placeholder='contextQueryString' class="form-control" id="contextQueryString" />
+            </div>
+            <div class="form-group">
+                <input ng-change="change()" ng-model="descriptionTemplate" placeholder='descriptionTemplate' class="form-control" id="descriptionTemplate" />
+            </div>
+            <div class="form-group">
+                <input ng-change="change()" ng-model="rankWeight" placeholder='rankWeight' class="form-control" id="rankWeight" />
+            </div>
+        </form>
+    </div>
+</div>
