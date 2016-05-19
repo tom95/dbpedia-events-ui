@@ -7,22 +7,36 @@ const querystring = require('querystring');
 
 const server = new Hapi.Server();
 
-server.connection({ 
-	host: 'localhost', 
-	port: 8000 
+server.connection({
+	host: 'localhost',
+	port: 8000
 });
 
-server.register(require('inert'), function(err) {
-	if (err) throw err;
+var dogwaterOptions = {
+  connections: {
+    templateDB : {
+      adapter: 'templateDisk'
+    }
+  },
+  adapters:{
+     templateDisk : 'sails-disk'
+  },
+  models: [require('./models/template')]
+};
 
-	// Serve static assets
-	server.route({
-		method: 'GET',
-		path: '/{param*}',
-		handler: {
-			directory: { path: 'public' }
-		}
-	});
+
+server.register([{
+    register: require('dogwater'),
+    options: dogwaterOptions
+	},
+	{
+	register: require('inert'),
+	options: {}
+}
+], function (err) {
+    if (err) { return console.log(err); }
+
+    server.route(require('./routes/template'));
 
 	// Serve index.html
 	server.route({
@@ -32,22 +46,13 @@ server.register(require('inert'), function(err) {
 			file: (request) => { return 'public/index.html'; }
 		}
 	});
-
-	// Example route in most simpe form
+	
+	// Serve static assets
 	server.route({
 		method: 'GET',
-		path:'/hello', 
-		handler: (request, reply) => {
-			return reply('hello world');
-		}
-	});
-
-	// Example route with parameter
-	server.route({
-		method: 'GET',
-		path: '/test/{name}',
-		handler: (request, reply) => {
-			return reply('Hello ' + request.params.name);
+		path: '/{param*}',
+		handler: {
+			directory: { path: 'public' }
 		}
 	});
 
@@ -110,10 +115,7 @@ server.register(require('inert'), function(err) {
 		}
 	});
 
-	server.start((err) => {
-		if (err) throw err;
-
-		console.log('Server running at:', server.info.uri);
+	server.start(() => {
+		console.log('Template API up and running at:', server.info.uri);
 	});
 });
-
