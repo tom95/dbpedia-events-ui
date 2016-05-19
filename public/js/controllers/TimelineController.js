@@ -1,5 +1,24 @@
 
-angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', function($scope) {
+var ICONS = {
+	'http://events.dbpedia.org/data/digests#AWARDED': 'gift',
+	'http://events.dbpedia.org/data/digests#LEADER': 'user',
+	'http://events.dbpedia.org/data/digests#DEADPEOPLE': 'remove',
+	'http://events.dbpedia.org/data/digests#DEADPEOPLEWOF': 'remove',
+	'http://events.dbpedia.org/data/digests#RELEASED': 'book',
+	'http://events.dbpedia.org/data/digests#INTRODUCED': 'book',
+	'http://events.dbpedia.org/data/digests#RISINGNUMBERS': 'chevron-up',
+	'http://events.dbpedia.org/data/digests#HEADHUNTED': 'book',
+	'http://events.dbpedia.org/data/digests#PRESIDENT': 'book',
+	'http://events.dbpedia.org/data/digests#EUROPE2015': 'globe',
+	'http://events.dbpedia.org/data/digests#GRANDPRIX': 'gift',
+	'http://events.dbpedia.org/data/digests#PODIUM': 'gift',
+	'http://events.dbpedia.org/data/digests#JUSTMARRIED': 'heart',
+	'http://events.dbpedia.org/data/digests#JUSTDIVORCED': 'heart',
+	'http://events.dbpedia.org/data/digests#AIRCRAFTOCCURRENCE': 'heart',
+	'http://events.dbpedia.org/data/digests#VOLCANO': 'book'
+};
+
+angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', '$http', function($scope, $http) {
 	$scope.availableDays = [];
 	var DAY = 1000 * 60 * 60 * 24; 
 	var daysOfThisYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / DAY);
@@ -17,7 +36,17 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 
 	$scope.setDay = function(date) {
 		$scope.events = [];
-		if (date < new Date() - 10000) $scope.events = TEST;
+
+		$http.get('/events?day=' + escape($scope.activeDay.toISOString())).then(function(body) {
+			console.log(body.data);
+			$scope.events = body.data.map(function(digest) {
+				return {
+					text: digest.desc,
+					icon: ICONS[digest.tmpl],
+					image: null
+				};
+			})
+		})
 
 		$scope.day = date.getDate();
 		var lastNum = $scope.day[$scope.day.length - 1];

@@ -24,7 +24,6 @@ app
       },
       link: function($scope, $element, $attrs) {
 	$scope.$watch('dbpLateCompile', function(val) {
-	  console.log(val);
 	  $element.html('');
 	  $element.append($compile('<div>' + val + '</div>')($scope));
 	});
