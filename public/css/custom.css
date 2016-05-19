@@ -44,12 +44,12 @@
 	max-width: 50%;
 	margin-left: 12px;
 }
-.dbp-popover:after {
-	content: "";
+.dbp-popover .dbp-popover-tip {
 	border-style: solid;
 	border-width: 12px;
 	border-color: transparent transparent #fff transparent;
 	top: -24px;
+	left: 12px;
 	position: absolute;
 }
 @keyframes popover-open {

@@ -1,8 +1,8 @@
 <!--<div masonry>
-  <div class="masonry-brick" ng-repeat="brick in events">
-    <img ng-src="{{ brick.image }}">
-    <span class="glyphicon" ng-class="'glyphicon-' + brick.icon"></span>
-    <h2 dbp-late-compile="brick.text"></h2>
+  <div class="masonry-brick" ng-repeat="event in events">
+    <img ng-src="{{ event.image }}">
+    <span class="glyphicon" ng-class="'glyphicon-' + event.icon"></span>
+    <h2 dbp-late-compile="event.text"></h2>
     <div class="time"><span class="glyphicon glyphicon-time"></span> 23:23</div>
   </div>
 </div>-->
@@ -19,7 +19,11 @@
 </div>-->
 
 <div class="container">
-  <div class="day-marker"> <span class="day"> 4th </span> <span class="month"> May </span></div>
+  <div class="day-marker">
+    <span class="day" ng-bind="day"></span>
+    <span class="month" ng-bind="month"></span>
+  </div>
+
   <div class="line"></div>
 
   <div class="event-wrapper" ng-repeat="event in events" ng-class="$index == 0 ? 'first' : ''">
@@ -31,4 +35,3 @@
     </div>
   </div>
 </div>
-
