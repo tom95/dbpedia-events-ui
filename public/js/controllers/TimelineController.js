@@ -43,7 +43,7 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 				return {
 					text: digest.desc,
 					icon: ICONS[digest.tmpl],
-					image: null
+					image: digest.image
 				};
 			})
 		})

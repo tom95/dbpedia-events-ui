@@ -24,6 +24,10 @@ var dogwaterOptions = {
   models: [require('./models/template')]
 };
 
+function sparqlQuery(query, source, cb) {
+	httpRequest('http://' + source + '.dbpedia.org/sparql?query=' +
+		querystring.escape(query) + '&format=json', cb);
+}
 
 server.register([{
     register: require('dogwater'),
@@ -76,8 +80,7 @@ server.register([{
 
 			var endDay = new Date(+startDay + 24 * 60 * 60 * 1000);
 
-			httpRequest('http://events.dbpedia.org/sparql?query=' +
-				querystring.escape('SELECT DISTINCT ?digestid ?tmpl ?desc ?res \
+				sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?res \
 				{ \
 				  ?s a <http://events.dbpedia.org/ns/core#Event> . \
 				  ?s <http://purl.org/dc/terms/description> ?desc . \
@@ -90,9 +93,9 @@ server.register([{
 				  FILTER ( ?endTime > "' + startDay.toISOString() + '"^^xsd:date && ?endTime < "' + endDay.toISOString() + '"^^xsd:date) \
 				  ?u a <http://webr3.org/owl/guo#UpdateInstruction> . \
 				  ?u <http://webr3.org/owl/guo#target_subject> ?res . \
-				} LIMIT 100') + '&format=json', function(err, res, body) {
+				} LIMIT 100', 'events', function(err, res, body) {
 					  if (err) {
-						  console.log('Did not receive reply from SPARQL server', err);
+						  console.log('Did not receive reply from SPARQL events server', err);
 						  return reply('Internal error').code(500);
 					  }
 
@@ -102,15 +105,41 @@ server.register([{
 								  id: digest.digestid.value,
 								  tmpl: digest.tmpl.value,
 								  desc: digest.desc.value,
-								  res: digest.desc.value
+								  res: digest.res.value
 							  };
 						  });
-						  sparqlMemoryCache[+startDay] = data;
-						  return reply(data);
-					  } catch (e) {
-						  console.log('Failed to decode SPARQL reply', e);
+						} catch (e) {
+						  console.log('Failed to decode SPARQL events reply', e);
 						  return reply('Internal error').code(500);
 					  }
+
+						Promise.all(data.map(function(digest) {
+							return new Promise(function(resolve, reject) {
+								sparqlQuery('select ?img { <' + digest.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }', 'live', function(err, res, body) {
+									digest.image = null;
+									if (err) {
+										console.log('Did not receive reply from SPARQL live server', err);
+										return resolve(digest);
+									}
+
+									try {
+										var data = JSON.parse(body);
+										if (data.results.bindings.length)
+											digest.image = data.results.bindings[0].img.value;
+
+										return resolve(digest);
+									} catch (e) {
+										console.log('Failed to decode SPARQL live reply');
+										return resolve(digest);
+									}
+								});
+							});
+						})).then(function(data) {
+							console.log(data);
+							sparqlMemoryCache[+startDay] = data;
+							return reply(data);
+						}, function(data) {
+						});
 				  });
 		}
 	});
