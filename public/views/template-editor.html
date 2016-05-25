@@ -29,11 +29,11 @@
                         <input ng-change="change()" ng-model="description" placeholder='description' class="form-control" id="description" />
                     </div>
                     <div class="form-group">
-                        <div ng-repeat="ontology in ontologies">
+                        <div ng-repeat="(i, ontology) in ontologies track by $index">
                             <div class="input-group">
-                                 <input type="text" class="form-control" placeholder="" ng-model="ontology"/>
+                                 <input type="text" class="form-control" placeholder="" ng-model="ontologies[i]"/>
                                  <span class="input-group-btn">
-                                     <button type="button" class="btn btn-danger" ng-click="removeOntology(ontology)">
+                                     <button type="button" class="btn btn-danger" ng-click="removeOntology(ontologies[i])">
                                          <span class="glyphicon glyphicon-minus"/>
                                      </button>
                                  </span>

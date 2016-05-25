@@ -1,11 +1,14 @@
 var app = angular.module('dbpedia-events-ui');
 
 app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
+
     $scope.ontologies = [];
+
     $scope.addOntology = function() {
         $scope.ontologies.push($scope.newOntology);
         $scope.newOntology = "";
-    }
+    };
+
     $scope.removeOntology = function(ontology) {
         console.log($scope.ontologies)
         var index = $scope.ontologies.indexOf(ontology);
@@ -13,7 +16,8 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
             $scope.ontologies.splice(index, 1);
         }
         console.log($scope.ontologies);
-    }
+    };
+
     $scope.submit = function() {
         $scope.fulltemplate = 'dig:' + $scope.name + ' a dbe:DigestTemplate ;\
  dcterms:identifier ' + $scope.name + ' ;\
