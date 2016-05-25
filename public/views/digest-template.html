@@ -5,11 +5,11 @@
     <b>dcterms:</b>identifier "<span class="label label-info">{{name}}</span>" ;
     <b>dcterms:</b>description """<span class="label label-info">{{description}}</span>"""@en ;
     <br>
-    <b>dbe:</b>queryString """ SELECT ?u ?res ?deathdate ?deathplace
+    <b>dbe:</b>queryString """ SELECT ?u ?res <span ng-repeat="ontology in ontologies">?{{ontology}} </span>
                             { ?u guo:target_subject ?res ;
                                 guo:insert [
                                     dbo:deathDate ?deathdate ;
-                                    dbo:deathPlace ?deathplace 
+                                    dbo:deathPlace ?deathplace
                                 ] .
                             } """ ;
     <br>

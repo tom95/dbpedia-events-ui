@@ -23,14 +23,31 @@
             <div class="panel-body">
                 <form role="form">
                     <div class="form-group">
-                        <label for="template">Name:</label>
                         <input ng-change="change()" ng-model="name" placeholder='Name' class="form-control" id="name" />
                     </div>
                     <div class="form-group">
                         <input ng-change="change()" ng-model="description" placeholder='description' class="form-control" id="description" />
                     </div>
                     <div class="form-group">
-                        <textarea ng-change="change()" ng-model="queryString" placeholder='queryString' class="form-control" id="name" />
+                        <div ng-repeat="ontology in ontologies">
+                            <div class="input-group">
+                                 <input type="text" class="form-control" placeholder="" ng-model="ontology"/>
+                                 <span class="input-group-btn">
+                                     <button type="button" class="btn btn-danger" ng-click="removeOntology(ontology)">
+                                         <span class="glyphicon glyphicon-minus"/>
+                                     </button>
+                                 </span>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="input-group">
+                             <input type="text" class="form-control" placeholder="" ng-model="newOntology">
+                             <span class="input-group-btn">
+                                 <button type="button" class="btn btn-success" ng-click="addOntology()">
+                                     <span class="glyphicon glyphicon-plus"/>
+                                 </button>
+                             </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <textarea ng-change="change()" ng-model="contextQueryString" placeholder='contextQueryString' class="form-control" id="contextQueryString" />
