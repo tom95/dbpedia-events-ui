@@ -33,10 +33,13 @@ module.exports = [{
 
           var Template = request.collections.template;
 
-          console.log(request.payload);
-
           // Reply with promise
-          reply(Template.create({'name': request.payload.name}, {'query': request.payload.query}));
+          reply(Template.create({'name': request.payload.name, 'query': request.payload.query}).exec(function(err, template) {
+              if (err)
+                console.log(err);
+              console.log("saved: ", template)
+          })
+      );
       }
   }
 }, {
@@ -49,7 +52,12 @@ module.exports = [{
           var Template = request.collections.template;
 
           // Reply with promise
-          reply(Template.find());
+          reply(Template.update({'name': request.payload.name}, {'changes': request.payload.changes}).exec(function(err, template) {
+              if (err)
+                console.log(err);
+              console.log("updated: ", template)
+          })
+      );
       }
   }
 }, {
