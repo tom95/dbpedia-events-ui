@@ -19,6 +19,13 @@
 </div>-->
 
 <div class="container">
+  <select ng-model="selectedTmpl">
+    <option value="">All</option>
+    <option value="http://events.dbpedia.org/data/digests#GRANDPRIX">Grandprix</option>
+    <option value="http://events.dbpedia.org/data/digests#JUSTMARRIED">Just married</option>
+    <option value="http://events.dbpedia.org/data/digests#AWARDED">Awarded</option>
+  </select>
+
   <div class="day-marker">
     <span class="day" ng-bind="day"></span>
     <span class="month" ng-bind="month"></span>
@@ -26,10 +33,10 @@
 
   <div class="line"></div>
 
-  <div class="event-wrapper" ng-repeat="event in events" ng-class="$index == 0 ? 'first' : ''">
+  <div class="event-wrapper" ng-repeat="event in events | filter:filterEvents" ng-class="$index == 0 ? 'first' : ''">
     <div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
-      <span class="event-icon glyphicon" ng-class="'glyphicon-' + event.icon"></span>
-        <div class="time"><span class="glyphicon glyphicon-time"></span> 23:23</div>
+      <span class="event-icon" ng-class="'icon-' + event.icon"></span>
+        <!--<div class="time"><span class="glyphicon glyphicon-time"></span> 23:23</div>-->
         <h2 dbp-late-compile="event.text"></h2>
         <div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
     </div>

@@ -1,21 +1,21 @@
 
 var ICONS = {
-	'http://events.dbpedia.org/data/digests#AWARDED': 'gift',
-	'http://events.dbpedia.org/data/digests#LEADER': 'user',
-	'http://events.dbpedia.org/data/digests#DEADPEOPLE': 'remove',
-	'http://events.dbpedia.org/data/digests#DEADPEOPLEWOF': 'remove',
-	'http://events.dbpedia.org/data/digests#RELEASED': 'book',
-	'http://events.dbpedia.org/data/digests#INTRODUCED': 'book',
-	'http://events.dbpedia.org/data/digests#RISINGNUMBERS': 'chevron-up',
-	'http://events.dbpedia.org/data/digests#HEADHUNTED': 'book',
-	'http://events.dbpedia.org/data/digests#PRESIDENT': 'book',
-	'http://events.dbpedia.org/data/digests#EUROPE2015': 'globe',
-	'http://events.dbpedia.org/data/digests#GRANDPRIX': 'gift',
-	'http://events.dbpedia.org/data/digests#PODIUM': 'gift',
+	'http://events.dbpedia.org/data/digests#AWARDED': 'award',
+	'http://events.dbpedia.org/data/digests#LEADER': 'users',
+	'http://events.dbpedia.org/data/digests#DEADPEOPLE': 'religious-christian',
+	'http://events.dbpedia.org/data/digests#DEADPEOPLEWOF': 'religious-christian',
+	'http://events.dbpedia.org/data/digests#RELEASED': 'plus',
+	'http://events.dbpedia.org/data/digests#INTRODUCED': 'sun',
+	'http://events.dbpedia.org/data/digests#RISINGNUMBERS': 'chart-line',
+	'http://events.dbpedia.org/data/digests#HEADHUNTED': 'user-plus',
+	'http://events.dbpedia.org/data/digests#PRESIDENT': 'users',
+	'http://events.dbpedia.org/data/digests#EUROPE2015': 'euro',
+	'http://events.dbpedia.org/data/digests#GRANDPRIX': 'award-1',
+	'http://events.dbpedia.org/data/digests#PODIUM': 'award-1',
 	'http://events.dbpedia.org/data/digests#JUSTMARRIED': 'heart',
-	'http://events.dbpedia.org/data/digests#JUSTDIVORCED': 'heart',
-	'http://events.dbpedia.org/data/digests#AIRCRAFTOCCURRENCE': 'heart',
-	'http://events.dbpedia.org/data/digests#VOLCANO': 'book'
+	'http://events.dbpedia.org/data/digests#JUSTDIVORCED': 'heart-broken',
+	'http://events.dbpedia.org/data/digests#AIRCRAFTOCCURRENCE': 'paper-plane',
+	'http://events.dbpedia.org/data/digests#VOLCANO': 'fire'
 };
 
 angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', '$http', function($scope, $http) {
@@ -34,6 +34,10 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 		$scope.setDay(newDay);
 	});
 
+	$scope.filterEvents = function(event) {
+		return event.tmpl == $scope.selectedTmpl || !$scope.selectedTmpl;
+	}
+
 	$scope.setDay = function(date) {
 		$scope.events = [];
 
@@ -43,6 +47,7 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 				return {
 					text: digest.desc,
 					icon: ICONS[digest.tmpl],
+					tmpl: digest.tmpl,
 					image: digest.image
 				};
 			})

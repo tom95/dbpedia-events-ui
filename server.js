@@ -25,7 +25,7 @@ var dogwaterOptions = {
 };
 
 function sparqlQuery(query, source, cb) {
-	httpRequest('http://' + source + '.dbpedia.org/sparql?query=' +
+	httpRequest(source + '?query=' +
 		querystring.escape(query) + '&format=json', cb);
 }
 
@@ -93,7 +93,7 @@ server.register([{
 				  FILTER ( ?endTime > "' + startDay.toISOString() + '"^^xsd:date && ?endTime < "' + endDay.toISOString() + '"^^xsd:date) \
 				  ?u a <http://webr3.org/owl/guo#UpdateInstruction> . \
 				  ?u <http://webr3.org/owl/guo#target_subject> ?res . \
-				} LIMIT 100', 'events', function(err, res, body) {
+				} LIMIT 100', 'http://events.dbpedia.org/sparql', function(err, res, body) {
 					  if (err) {
 						  console.log('Did not receive reply from SPARQL events server', err);
 						  return reply('Internal error').code(500);
@@ -113,9 +113,28 @@ server.register([{
 						  return reply('Internal error').code(500);
 					  }
 
+						data = data.sort(function(a, b) {
+							return (a.res != b.res && a.res < b.res) || (a.res == b.res && a.tmpl < b.tmpl) ? -1 : 1;
+						});
+						data.forEach(function(digest) {
+							console.log(digest.res + ' -> ' + digest.tmpl);
+						})
+
+						var currentDigest = data[0];
+						for (var i = 1; i < data.length; i++) {
+							if (data[i].res == currentDigest.res && data[i].tmpl == currentDigest.tmpl) {
+								currentDigest.desc += '<br>' + data[i].desc;
+								data[i].remove = true;
+							} else
+								currentDigest = data[i];
+						}
+						data = data.filter(function(digest) { return !digest.remove; });
+
 						Promise.all(data.map(function(digest) {
 							return new Promise(function(resolve, reject) {
-								sparqlQuery('select ?img { <' + digest.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }', 'live', function(err, res, body) {
+								sparqlQuery('select ?img { <' + digest.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }',
+														'http://dbpedia-live.openlinksw.com/sparql',
+														function(err, res, body) {
 									digest.image = null;
 									if (err) {
 										console.log('Did not receive reply from SPARQL live server', err);
@@ -130,6 +149,7 @@ server.register([{
 										return resolve(digest);
 									} catch (e) {
 										console.log('Failed to decode SPARQL live reply');
+										console.log(body);
 										return resolve(digest);
 									}
 								});

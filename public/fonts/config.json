@@ -1,0 +1,100 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "ab656e280958018a7859eba9a1eabbc7",
+      "css": "award",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "31972e4e9d080eaa796290349ae6c1fd",
+      "css": "users",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7f8b6c0519d85119a6f41fa3c5794806",
+      "css": "religious-christian",
+      "code": 59395,
+      "src": "maki"
+    },
+    {
+      "uid": "44e04715aecbca7f266a17d5a7863c68",
+      "css": "plus",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "aa035df0908c4665c269b7b09a5596f3",
+      "css": "sun",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ea2d9a8c51ca42b38ef0d2a07f16d9a7",
+      "css": "chart-line",
+      "code": 59398,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ff70f7b3228702e0d590e60ed3b90bea",
+      "css": "magic",
+      "code": 59399,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1bafeeb1808a5fe24484c7890096901a",
+      "css": "user-plus",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "486b835e9eebf54eee78ed12b4291b86",
+      "css": "euro",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d7a614bd701f6712e8e3b2be124899e1",
+      "css": "flag-checkered",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "lnyme20kl7kh26it9yrqk7at10k6i0sf",
+      "css": "award-1",
+      "code": 59403,
+      "src": "modernpics"
+    },
+    {
+      "uid": "862129f833b09f3d34ae39acf8484a7b",
+      "css": "heart-broken",
+      "code": 59405,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "d02a803276d9e1f42b7393964aa22ce9",
+      "css": "heart",
+      "code": 59406,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "38575a803c4da31ce20d77e1e1236bcb",
+      "css": "paper-plane",
+      "code": 59404,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "dc73bee1d58539abe8c96b958bf4c931",
+      "css": "fire",
+      "code": 59407,
+      "src": "elusive"
+    }
+  ]
+}
