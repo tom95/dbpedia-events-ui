@@ -1,24 +1,24 @@
 <pre>
     <code>
     <b>dig:</b> <span class="label label-info">{{name}}</span> a <b>dbe:</b>DigestTemplate ;
-    <b>dbe:</b>ignore <span class="label label-info">{{ignore}}</span> ;
     <b>dcterms:</b>identifier "<span class="label label-info">{{name}}</span>" ;
     <b>dcterms:</b>description """<span class="label label-info">{{description}}</span>"""@en ;
     <br>
-    <b>dbe:</b>queryString """ SELECT ?u ?res <span ng-repeat="ontology in ontologies">?{{ontology}} </span>
+    <b>dbe:</b>queryString """ SELECT ?u ?res <span ng-repeat="ontology in ontologies"><span class="label label-info">?{{ontology | lowercase}} </span></span>
                             { ?u guo:target_subject ?res ;
-                                guo:insert [
-                                    dbo:deathDate ?deathdate ;
-                                    dbo:deathPlace ?deathplace
-                                ] .
+                                guo:insert [<span ng-repeat="ontology in ontologies">
+                                    <span class="label label-info">dbo:{{ontology}} ?{{ontology | lowercase}};</span></span>
+                                ] . <span ng-repeat="filter in filters">
+                                <span class="label label-info">FILTER ({{filter}}) </span></span>
                             } """ ;
     <br>
-    <b>dbe:</b>contextQueryString """ SELECT ?labelres ?labeldeathplace
-                                    { %%res%% rdfs:label ?labelres .
-                                        %%deathplace%% rdfs:label ?labeldeathplace .
+    <b>dbe:</b>contextQueryString """ SELECT ?labelres <span ng-repeat="ontology in ontologies"><span class="label label-info">?label{{ontology | lowercase}} </span></span>
+                                    {
+                                        %%res%% rdfs:label ?labelres . <span ng-repeat="ontology in ontologies">
+                                        <span class="label label-info">%%{{ontology | lowercase}}%% rdfs:label ?label{{ontology | lowercase}} .</span></span>
                                     } """ ;
-    </br>
-    <b>dbe:</b>descriptionTemplate """ %%labelres%% died on %%deathdate%% in %%deathplace%%. """ ;
+    <br>
+    <b>dbe:</b>descriptionTemplate """ <span class="label label-info">{{descriptionTemplate}}</span> """ ;
     <b>dbe:</b>rankWeight "<span class="label label-info">{{rankWeight}}</span>"^^<b>xsd:</b>float ;
     .
     </code>
