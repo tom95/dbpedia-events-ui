@@ -11,8 +11,7 @@ module.exports = [{
         reply(Template.find());
     }
   }
-}
-, {
+}, {
   // return a specific template by id
   path: '/template/{name}',
   method: 'GET',
@@ -34,8 +33,10 @@ module.exports = [{
 
           var Template = request.collections.template;
 
+          console.log(request.payload);
+
           // Reply with promise
-          reply(Template.create({'name': request.params.name}, {'query': request.params.query}));
+          reply(Template.create({'name': request.payload.name}, {'query': request.payload.query}));
       }
   }
 }, {
