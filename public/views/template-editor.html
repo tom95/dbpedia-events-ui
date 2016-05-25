@@ -41,7 +41,7 @@
                             <br>
                         </div>
                         <div class="input-group">
-                             <input type="text" class="form-control" placeholder="" ng-model="newOntology">
+                             <input type="text" class="form-control" placeholder="Ontology" ng-model="newOntology">
                              <span class="input-group-btn">
                                  <button type="button" class="btn btn-success" ng-click="addOntology()">
                                      <span class="glyphicon glyphicon-plus"/>
@@ -50,7 +50,25 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea ng-change="change()" ng-model="contextQueryString" placeholder='contextQueryString' class="form-control" id="contextQueryString" />
+                        <div ng-repeat="(i, filter) in filters track by $index">
+                            <div class="input-group">
+                                 <input type="text" class="form-control" placeholder="" ng-model="filters[i]"/>
+                                 <span class="input-group-btn">
+                                     <button type="button" class="btn btn-danger" ng-click="removeFilter(filters[i])">
+                                         <span class="glyphicon glyphicon-minus"/>
+                                     </button>
+                                 </span>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="input-group">
+                             <input type="text" class="form-control" placeholder="Filter" ng-model="newFilter">
+                             <span class="input-group-btn">
+                                 <button type="button" class="btn btn-success" ng-click="addFilter()">
+                                     <span class="glyphicon glyphicon-plus"/>
+                                 </button>
+                             </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <input ng-change="change()" ng-model="descriptionTemplate" placeholder='descriptionTemplate' class="form-control" id="descriptionTemplate" />
