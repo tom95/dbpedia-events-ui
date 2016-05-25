@@ -1,9 +1,25 @@
-<p><b>dig:</b>{{name}} a <b>dbe:</b>DigestTemplate ;</p>
-<p>    <b>dbe:</b>ignore {{ignore}} ;</p>
-<p>    <b>dcterms:</b>identifier "{{name}}" ;</p>
-<p>    <b>dcterms:</b>description """{{description}}"""@en ;</p>
-<p>    <b>dbe:</b>queryString """{{queryString}}""" ;</p>
-<p>    <b>dbe:</b>contextQueryString """{{contextQueryString}}""" ;</p>
-<p>    <b>dbe:</b>descriptionTemplate """{{descriptionTemplate}}""" ;</p>
-<p>    <b>dbe:</b>rankWeight "{{rankWeight}}"^^<b>xsd:</b>float ;</p>
-<p>    .</p>
+<pre>
+    <code>
+    <b>dig:</b> <span class="label label-info">{{name}}</span> a <b>dbe:</b>DigestTemplate ;
+    <b>dbe:</b>ignore <span class="label label-info">{{ignore}}</span> ;
+    <b>dcterms:</b>identifier "<span class="label label-info">{{name}}</span>" ;
+    <b>dcterms:</b>description """<span class="label label-info">{{description}}</span>"""@en ;
+    <br>
+    <b>dbe:</b>queryString """ SELECT ?u ?res <span ng-repeat="ontology in ontologies">?{{ontology}} </span>
+                            { ?u guo:target_subject ?res ;
+                                guo:insert [
+                                    dbo:deathDate ?deathdate ;
+                                    dbo:deathPlace ?deathplace
+                                ] .
+                            } """ ;
+    <br>
+    <b>dbe:</b>contextQueryString """ SELECT ?labelres ?labeldeathplace
+                                    { %%res%% rdfs:label ?labelres .
+                                        %%deathplace%% rdfs:label ?labeldeathplace .
+                                    } """ ;
+    </br>
+    <b>dbe:</b>descriptionTemplate """ %%labelres%% died on %%deathdate%% in %%deathplace%%. """ ;
+    <b>dbe:</b>rankWeight "<span class="label label-info">{{rankWeight}}</span>"^^<b>xsd:</b>float ;
+    .
+    </code>
+</pre>

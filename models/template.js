@@ -7,8 +7,8 @@ module.exports = {
       required : true
     },
     query: {
-      type : 'string',
+      type : 'json',
       required : true
     }
   }
-}
+};
