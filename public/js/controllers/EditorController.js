@@ -19,17 +19,18 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
             descriptionTemplate: $scope.descriptionTemplate,
             rankWeight: $scope.rankWeight
         };
+
         console.log(template);
 
-        var entry = {
-            name: $scope.name,
-            query: template
-        };
+
 
         $http({
             method: 'POST',
             url: '/template',
-            data: entry,
+            data: {
+                "name": $scope.name,
+                "query": JSON.stringify(template)
+            },
             headers: {
                 'Content-Type': 'application/json'
             },
