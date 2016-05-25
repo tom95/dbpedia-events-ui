@@ -1,12 +1,12 @@
 <div class="container">
     <div class="cold-md-3">
-        <label for="template">Digest Template:</label>
-        <div digest-template></div>
+        <label class="control-label" for="template">Digest Template:</label>
+        <div id="template" digest-template></div>
         <div class="form-group">
-            <div class="col-md-1">
+            <div class="left">
                 <button ng-click='submit()' type="submit" class="btn btn-default">Submit</button>
             </div>
-            <div class="col-md-offset-1">
+            <div class="left">
                 <button ng-click='try()' type="submit" class="btn btn-default">Try</button>
             </div>
         </div>
@@ -18,13 +18,6 @@
             <div class="form-group">
                 <label for="template">Name:</label>
                 <input ng-change="change()" ng-model="name" placeholder='Name' class="form-control" id="name" />
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input ng-change="change()" ng-model="ignore" type="checkbox" id="ignore" />Ignore?</label>
-            </div>
-            <div class="form-group">
-                <input ng-change="change()" ng-model="name" placeholder='identifier' class="form-control" id="identifier" />
             </div>
             <div class="form-group">
                 <input ng-change="change()" ng-model="description" placeholder='description' class="form-control" id="description" />
