@@ -26,7 +26,7 @@
                     <div class="form-group">
                         <div ng-repeat="(i, ontology) in ontologies track by $index">
                             <div class="input-group">
-                                 <input type="text" class="form-control" placeholder="" ng-model="ontologies[i]"/>
+                                 <input type="text" class="form-control" placeholder="" ng-esc="removeOntology(ontologies[i])" ng-model="ontologies[i]"/>
                                  <span class="input-group-btn">
                                      <button type="button" class="btn btn-danger" ng-click="removeOntology(ontologies[i])">
                                          <span class="glyphicon glyphicon-minus"/>
@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <div ng-repeat="(i, filter) in filters track by $index">
                             <div class="input-group">
-                                 <input type="text" class="form-control" placeholder="" ng-model="filters[i]"/>
+                                 <input type="text" class="form-control" placeholder="" ng-esc="removeFilter(filters[i])" ng-model="filters[i]" />
                                  <span class="input-group-btn">
                                      <button type="button" class="btn btn-danger" ng-click="removeFilter(filters[i])">
                                          <span class="glyphicon glyphicon-minus"/>

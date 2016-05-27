@@ -6,13 +6,12 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
     $scope.filters = [];
 
     $scope.addOntology = function() {
-        console.log("added Ontology")
         $scope.ontologies.push($scope.newOntology);
         $scope.newOntology = "";
     };
 
     $scope.removeOntology = function(ontology) {
-        console.log($scope.ontologies)
+        console.log($scope.ontologies);
         var index = $scope.ontologies.indexOf(ontology);
         if (index > -1) {
             $scope.ontologies.splice(index, 1);
@@ -26,7 +25,7 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
     };
 
     $scope.removeFilter = function(filter) {
-        console.log($scope.filters)
+        console.log($scope.filters);
         var index = $scope.filters.indexOf(filter);
         if (index > -1) {
             $scope.filters.splice(index, 1);
@@ -35,15 +34,6 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
     };
 
     $scope.submit = function() {
-
-        // var templateText = 'dig:' + $scope.name + ' a dbe:DigestTemplate ;'
-        //   + 'dcterms:identifier ' + $scope.name + ' ;'
-        //   + 'dcterms:description ' + '"""' + $scope.description + '"""@en ;'
-        //   + 'dbe:queryString ' + '""" SELECT ?u ?res ' + ontologies + '{ ?u guo:target_subject ?res ; guo:insert [' + ontologies + '] . } """ ;'
-        //   + 'dbe:contextQueryString ' + '""" SELECT ?labelres ' + vars + '{ %%res%% rdfs:label ?labelres . ' + mapping + '} """ ;'
-        //   + 'dbe:descriptionTemplate ' + '"""' + $scope.descriptionTemplate + '""" ;'
-        //   + 'dbe:rankWeight ' + '"' + $scope.rankWeight + '"' + '^^xsd:float ; .';
-
 
         var templateText = angular.element(document.getElementById("template")).text();
         var queryString = angular.element(document.getElementById("queryString")).text();
@@ -76,7 +66,7 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
                 'Content-Type': 'application/json'
             },
             success: function(data, status) {
-                console.log("Posted data successfully");
+                console.log("Posted template successfully");
             }
         });
     };
