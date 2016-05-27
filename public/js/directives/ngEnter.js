@@ -1,4 +1,6 @@
-angular.module('dbpedia-events-ui').directive('ngEnter', function() {
+var app = angular.module('dbpedia-events-ui');
+
+app.directive('ngEnter', function() {
     return function(scope, element, attrs) {
         element.bind("keydown keypress", function(event) {
             if (event.which == 13) {

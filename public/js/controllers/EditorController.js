@@ -6,6 +6,7 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
     $scope.filters = [];
 
     $scope.addOntology = function() {
+        console.log("added Ontology")
         $scope.ontologies.push($scope.newOntology);
         $scope.newOntology = "";
     };
@@ -34,25 +35,33 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
     };
 
     $scope.submit = function() {
-        $scope.fulltemplate = 'dig:' + $scope.name + ' a dbe:DigestTemplate ;\
- dcterms:identifier ' + $scope.name + ' ;\
- dcterms:description ' + '"""' + $scope.description + '"""@en ;\
- dbe:queryString ' + '"""' + $scope.queryString + '""" ;\
- dbe:contextQueryString ' + '"""' + $scope.contextQueryString + '""" ;\
- dbe:descriptionTemplate ' + '"""' + $scope.descriptionTemplate + '""" ;\
- dbe:rankWeight ' + '"' + $scope.rankWeight + '"' + '^^xsd:float ; .';
+
+        // var templateText = 'dig:' + $scope.name + ' a dbe:DigestTemplate ;'
+        //   + 'dcterms:identifier ' + $scope.name + ' ;'
+        //   + 'dcterms:description ' + '"""' + $scope.description + '"""@en ;'
+        //   + 'dbe:queryString ' + '""" SELECT ?u ?res ' + ontologies + '{ ?u guo:target_subject ?res ; guo:insert [' + ontologies + '] . } """ ;'
+        //   + 'dbe:contextQueryString ' + '""" SELECT ?labelres ' + vars + '{ %%res%% rdfs:label ?labelres . ' + mapping + '} """ ;'
+        //   + 'dbe:descriptionTemplate ' + '"""' + $scope.descriptionTemplate + '""" ;'
+        //   + 'dbe:rankWeight ' + '"' + $scope.rankWeight + '"' + '^^xsd:float ; .';
+
+
+        var templateText = angular.element(document.getElementById("template")).text();
+        var queryString = angular.element(document.getElementById("queryString")).text();
+        var contextQueryString = angular.element(document.getElementById("contextQueryString")).text();
+
 
         var template = {
-            fulltemplate: $scope.fulltemplate,
-            name: $scope.name,
-            description: $scope.description,
-            queryString: $scope.queryString,
-            contextQueryString: $scope.contextQueryString,
-            descriptionTemplate: $scope.descriptionTemplate,
-            rankWeight: $scope.rankWeight
+            "templateText": templateText,
+            "name": $scope.name,
+            "description": $scope.description,
+            "queryString": queryString,
+            "ontologies": $scope.ontologies,
+            "contextQueryString": contextQueryString,
+            "descriptionTemplate": $scope.descriptionTemplate,
+            "rankWeight": $scope.rankWeight
         };
 
-        console.log(template);
+        console.log(template)
 
 
 
@@ -67,13 +76,9 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
                 'Content-Type': 'application/json'
             },
             success: function(data, status) {
-              console.log("Posted data successfully");
+                console.log("Posted data successfully");
             }
         });
-
-        // $http.post("/template", entry).success(function(data, status) {
-        //     console.log('Data posted successfully');
-        // });
     };
 
 

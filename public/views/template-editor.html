@@ -36,7 +36,7 @@
                             <br>
                         </div>
                         <div class="input-group">
-                             <input type="text" class="form-control" ng-enter="addOntology()" placeholder="Ontology" ng-model="newOntology">
+                             <input type="text" class="form-control" placeholder="Ontology" ng-enter="addOntology()" ng-model="newOntology">
                              <span class="input-group-btn">
                                  <button type="button" class="btn btn-success" ng-click="addOntology()">
                                      <span class="glyphicon glyphicon-plus"/>
@@ -57,7 +57,7 @@
                             <br>
                         </div>
                         <div class="input-group">
-                             <input type="text" class="form-control" placeholder="Filter" ng-model="newFilter">
+                             <input type="text" class="form-control" placeholder="Filter" ng-enter="addFilter()" ng-model="newFilter">
                              <span class="input-group-btn">
                                  <button type="button" class="btn btn-success" ng-click="addFilter()">
                                      <span class="glyphicon glyphicon-plus"/>
