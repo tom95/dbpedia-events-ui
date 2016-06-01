@@ -2,8 +2,6 @@
 
 const Hapi = require('hapi');
 const Path = require('path');
-const httpRequest = require('request');
-const querystring = require('querystring');
 
 const server = new Hapi.Server();
 
@@ -24,11 +22,6 @@ var dogwaterOptions = {
   models: [require('./models/template')]
 };
 
-function sparqlQuery(query, source, cb) {
-	httpRequest(source + '?query=' +
-		querystring.escape(query) + '&format=json', cb);
-}
-
 server.register([{
     register: require('dogwater'),
     options: dogwaterOptions
@@ -41,6 +34,7 @@ server.register([{
     if (err) { return console.log(err); }
 
     server.route(require('./routes/template'));
+    server.route(require('./routes/events'));
 
 	// Serve index.html
 	server.route({
@@ -59,8 +53,6 @@ server.register([{
 			directory: { path: 'public' }
 		}
 	});
-
-	var sparqlMemoryCache = {};
 
 	server.route({
 		method: 'GET',

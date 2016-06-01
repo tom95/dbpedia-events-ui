@@ -27,7 +27,8 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav" ng-controller="TabController as tab">
 						<li ng-class="{ active: tab.isSet(0) }"><a ng-click="tab.setTab(0)" href="/#/">Timeline</a></li>
-						<li ng-class="{ active: tab.isSet(1) }"><a ng-click="tab.setTab(1)" href="/#/editor">Template Editor</a></li>
+						<li ng-class="{ active: tab.isSet(1) }"><a ng-click="tab.setTab(1)" href="/#/resource">Resource Search</a></li>
+						<li ng-class="{ active: tab.isSet(2) }"><a ng-click="tab.setTab(2)" href="/#/editor">Template Editor</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/#/">Login</a></li>
@@ -52,6 +53,7 @@
 		<script src="/js/app.js"></script>
 		<script src="/js/controllers/TimelineController.js"></script>
 		<script src="/js/controllers/TabController.js"></script>
+		<script src="/js/controllers/ResourceController.js"></script>
 		<script src="/js/controllers/EditorController.js"></script>
 		<script src="/js/directives/gzTimeline.js"></script>
 		<script src="/js/directives/dbpDataLink.js"></script>

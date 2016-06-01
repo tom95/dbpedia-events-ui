@@ -1,23 +1,4 @@
 
-var ICONS = {
-	'http://events.dbpedia.org/data/digests#AWARDED': 'award',
-	'http://events.dbpedia.org/data/digests#LEADER': 'users',
-	'http://events.dbpedia.org/data/digests#DEADPEOPLE': 'religious-christian',
-	'http://events.dbpedia.org/data/digests#DEADPEOPLEWOF': 'religious-christian',
-	'http://events.dbpedia.org/data/digests#RELEASED': 'plus',
-	'http://events.dbpedia.org/data/digests#INTRODUCED': 'sun',
-	'http://events.dbpedia.org/data/digests#RISINGNUMBERS': 'chart-line',
-	'http://events.dbpedia.org/data/digests#HEADHUNTED': 'user-plus',
-	'http://events.dbpedia.org/data/digests#PRESIDENT': 'users',
-	'http://events.dbpedia.org/data/digests#EUROPE2015': 'euro',
-	'http://events.dbpedia.org/data/digests#GRANDPRIX': 'award-1',
-	'http://events.dbpedia.org/data/digests#PODIUM': 'award-1',
-	'http://events.dbpedia.org/data/digests#JUSTMARRIED': 'heart',
-	'http://events.dbpedia.org/data/digests#JUSTDIVORCED': 'heart-broken',
-	'http://events.dbpedia.org/data/digests#AIRCRAFTOCCURRENCE': 'paper-plane',
-	'http://events.dbpedia.org/data/digests#VOLCANO': 'fire'
-};
-
 angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', '$http', function($scope, $http) {
 	$scope.availableDays = [];
 	var DAY = 1000 * 60 * 60 * 24; 
@@ -28,30 +9,43 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 
 	$scope.day = '1st';
 	$scope.month = 'Jan';
+	$scope.selectedTmpl = [];
+	$scope.selectedYear = new Date().getFullYear();
 	$scope.activeDay = new Date();
+	$scope.loading = false;
+	var FIRST_YEAR = 2013;
 
 	$scope.$watch('activeDay', function(newDay) {
 		$scope.setDay(newDay);
 	});
 
+	$scope.years = [];
+	for (var year = $scope.selectedYear; year >= FIRST_YEAR; year--)
+		$scope.years.push(year);
+
+	$scope.skipDays = function skipDays(num) {
+		$scope.activeDay = new Date(+$scope.activeDay + num * 24 * 60 * 60 * 1000);
+	};
+
 	$scope.filterEvents = function(event) {
-		return event.tmpl == $scope.selectedTmpl || !$scope.selectedTmpl;
+		return $scope.selectedTmpl.indexOf(event.tmpl) >= 0 || !$scope.selectedTmpl.length;
 	}
 
 	$scope.setDay = function(date) {
 		$scope.events = [];
+		$scope.loading = true;
 
-		$http.get('/events?day=' + escape($scope.activeDay.toISOString())).then(function(body) {
-			console.log(body.data);
+		$http.get('/events/day?day=' + escape($scope.activeDay.toISOString())).then(function(body) {
+			$scope.loading = false;
 			$scope.events = body.data.map(function(digest) {
 				return {
 					text: digest.desc,
-					icon: ICONS[digest.tmpl],
+					icon: $scope.categoryForTmpl(digest.tmpl).icon,
 					tmpl: digest.tmpl,
 					image: digest.image
 				};
-			})
-		})
+			});
+		});
 
 		$scope.day = date.getDate();
 		var lastNum = $scope.day[$scope.day.length - 1];
@@ -63,40 +57,98 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 		$scope.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][date.getMonth()];
 	};
 
-	var TEST = [
+	$scope.categoryForTmpl = function categoryForTmpl(tmpl) {
+		if (typeof tmpl === 'string')
+			return $scope.categories.filter(function(c) { return c.tmpl.indexOf(tmpl) >= 0; })[0];
+		else
+			return $scope.categories.filter(function(c) { return $scope.arrayEqual(c.tmpl, tmpl); })[0];
+	};
+	$scope.arrayEqual = function(a, b) {
+		if (a.length != b.length)
+			return false;
+		for (var i = 0; i < a.length; i++)
+			if (a[i] != b[i])
+				return false;
+		return true;
+	};
+
+	$scope.categories = [
 		{
-			text: '<dbp-data-link href="">Max Mustermann</dbp-data-link> married <dbp-data-link class="data-link">Marta Mustermann</dbp-data-link>.',
-			icon: 'heart',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Mustermann_1987.jpg'
+			label: 'All Categories',
+			tmpl: [],
+			icon: 'magic'
 		},
 		{
-			text: '<dbp-data-link class="data-link">Max Mustermann</dbp-data-link> is now president of <dbp-data-link class="data-link">Mustermann Inc.</dbp-data-link>.',
-			icon: 'user'
+			label: 'Awarded',
+			tmpl: ['http://events.dbpedia.org/data/digests#AWARDED'],
+			icon: 'award'
 		},
 		{
-			text: 'The <dbp-data-link class="data-link">Mustermann Chronicles</dbp-data-link> were released.',
-			icon: 'book'
+			label: 'Change of Leader',
+			tmpl: ['http://events.dbpedia.org/data/digests#LEADER'],
+			icon: 'users'
 		},
 		{
-			text: 'Eruption of <dbp-data-link class="data-link">Mount Aso</dbp-data-link>.',
-			icon: 'fire',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Kome_Zuka.JPG/320px-Kome_Zuka.JPG'
+			label: 'Deceased People',
+			tmpl: ['http://events.dbpedia.org/data/digests#DEADPEOPLE', 'http://events.dbpedia.org/data/digests#DEADPEOPLEWOF'],
+			icon: 'religious-christian'
 		},
 		{
-			text: '<dbp-data-link class="data-link">Aadesh Shrivastava</dbp-data-link> died on 2015-09-05 in <dbp-data-link class="data-link">Mumbai</dbp-data-link>.',
-			icon: 'remove',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/Aadesh_Shrivastava.jpg?1462958478123'
+			label: 'Released Things',
+			tmpl: ['http://events.dbpedia.org/data/digests#RELEASED'],
+			icon: 'plus'
 		},
 		{
-			text: '<dbp-data-link class="data-link">Scream Queens (2015 TV series)</dbp-data-link> is released on 2015-09-22',
-			icon: 'book',
-			image: 'https://upload.wikimedia.org/wikipedia/en/f/f0/Scream_Queens%2C_title_art.jpg?1462958872497'
+			label: 'Introduced Things',
+			tmpl: ['http://events.dbpedia.org/data/digests#INTRODUCED'],
+			icon: 'sun'
 		},
 		{
-			text: '<dbp-data-link class="data-link">Hellmuth Karasek</dbp-data-link> died on 2015-09-29 in <dbp-data-link class="data-link">Hamburg</dbp-data-link>.',
-			icon: 'remove',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Hellmuth_Karasek_3821-2.jpg/640px-Hellmuth_Karasek_3821-2.jpg?1462959149106'
+			label: 'Rising Numbers',
+			tmpl: ['http://events.dbpedia.org/data/digests#RISINGNUMBERS'],
+			icon: 'chart-line'
+		},
+		{
+			label: 'Headhunted',
+			tmpl: ['http://events.dbpedia.org/data/digests#HEADHUNTED'],
+			icon: 'user-plus'
+		},
+		{
+			label: 'Change of President',
+			tmpl: ['http://events.dbpedia.org/data/digests#PRESIDENT'],
+			icon: 'users'
+		},
+		{
+			label: 'Europe 2015',
+			tmpl: ['http://events.dbpedia.org/data/digests#EUROPE2015'],
+			icon: 'euro'
+		},
+		{
+			label: 'Winners Announced',
+			tmpl: ['http://events.dbpedia.org/data/digests#GRANDPRIX', 'http://events.dbpedia.org/data/digests#PODIUM'],
+			icon: 'award-1'
+		},
+		{
+			label: 'Just Married',
+			tmpl: ['http://events.dbpedia.org/data/digests#JUSTMARRIED'],
+			icon: 'heart'
+		},
+		{
+			label: 'Just Divorced',
+			tmpl: ['http://events.dbpedia.org/data/digests#JUSTDIVORCED'],
+			icon: 'heart-broken'
+		},
+		{
+			label: 'Aircraft Occurence',
+			tmpl: ['http://events.dbpedia.org/data/digests#AIRCRAFTOCCURRENCE'],
+			icon: 'paper-plane'
+		},
+		{
+			label: 'Volcano Eruption',
+			tmpl: ['http://events.dbpedia.org/data/digests#VOLCANO'],
+			icon: 'fire'
 		}
 	];
+
 }]);
 

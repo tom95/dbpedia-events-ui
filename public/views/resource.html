@@ -1,0 +1,23 @@
+
+<div class="container">
+	<div class="input-group">
+		<span class="input-group-addon">
+			<span class="glyphicon glyphicon-search"></span>
+		</span>
+		<input ng-change="updateSearchQuery()" type="text" class="form-control" placeholder="Search ..." ng-model="search">
+	</div>
+	<ul class="list-group" ng-show="!resource">
+		<button class="list-group-item" ng-click="$parent.resource = item.res" ng-repeat="item in items" ng-bind="item.label">
+		</button>
+	</ul>
+
+	  <h3 ng-show="loading" class="text-center">
+		<span class="glyphicon glyphicon-refresh loading"></span>
+		Loading ...
+	  </h3>
+
+	<ul>
+		<li ng-bind="event.desc" ng-repeat="event in events"></li>
+	</ul>
+</div>
+

@@ -19,21 +19,64 @@
 </div>-->
 
 <div class="container">
-  <select ng-model="selectedTmpl">
-    <option value="">All</option>
-    <option value="http://events.dbpedia.org/data/digests#GRANDPRIX">Grandprix</option>
-    <option value="http://events.dbpedia.org/data/digests#JUSTMARRIED">Just married</option>
-    <option value="http://events.dbpedia.org/data/digests#AWARDED">Awarded</option>
-  </select>
+  <div>
+    <button class="btn btn-default pull-left" ng-click="skipDays(-1)">
+      <span class="glyphicon glyphicon-chevron-left"></span> Previous Day
+    </button>
+    <button class="btn btn-default pull-right" ng-click="skipDays(1)">
+      <span class="glyphicon glyphicon-chevron-right"></span> Next Day
+    </button>
+
+    &nbsp;
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span ng-class="'icon-' + categoryForTmpl(selectedTmpl).icon"></span>
+        <span ng-bind="categoryForTmpl(selectedTmpl).label"></span>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+          <li ng-class="{active: arrayEqual($parent.selectedTmpl, category.tmpl)}"
+              ng-repeat="category in categories">
+            <a href="" ng-click="$parent.selectedTmpl = category.tmpl">
+              <span ng-class="'icon-' + category.icon"></span>
+              <span ng-bind="category.label"></span>
+            </a>
+          </li>
+      </ul>
+    </div>
+    &nbsp;
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span ng-bind="'Year ' + selectedYear"></span>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+          <li ng-class="{active: $parent.selectedYear == year}" ng-repeat="year in years">
+            <a href="" ng-click="$parent.selectedYear = year" ng-bind="year">
+            </a>
+          </li>
+      </ul>
+    </div>
+  </div>
 
   <div class="day-marker">
     <span class="day" ng-bind="day"></span>
     <span class="month" ng-bind="month"></span>
   </div>
 
-  <div class="line"></div>
+  <div class="line" ng-hide="!events.length || loading"></div>
 
-  <div class="event-wrapper" ng-repeat="event in events | filter:filterEvents" ng-class="$index == 0 ? 'first' : ''">
+  <h3 ng-show="loading" class="text-center">
+    <span class="glyphicon glyphicon-refresh loading"></span>
+    Loading ...
+  </h3>
+
+  <h3 ng-show="!events.length && !loading" class="text-center">
+    No events for this day.
+  </h3>
+
+  <div class="event-wrapper" ng-repeat="event in events | orderBy:'image' | filter:filterEvents" ng-class="$index == 0 ? 'first' : ''">
     <div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
       <span class="event-icon" ng-class="'icon-' + event.icon"></span>
         <!--<div class="time"><span class="glyphicon glyphicon-time"></span> 23:23</div>-->

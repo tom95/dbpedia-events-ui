@@ -12,6 +12,10 @@ app
 	  controller: 'EditorController',
 	  templateUrl: 'views/template-editor.html'
 	}).
+	when('/resource', {
+	  controller: 'ResourceController',
+	  templateUrl: 'views/resource.html'
+	}).
 	otherwise({
 	  redirectTo: '/',
 	});
