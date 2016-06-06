@@ -6,20 +6,22 @@
         "query": {
           "name": "DEADPEOPLE",
           "description": "Finds people who died within last three weeks.",
-          "queryString": "\"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                            } \"\"\" ",
+          "queryString": "\"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ",
           "ontologies": [
             "deathdate",
             "deathplace"
           ],
           "contextQueryString": "\"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ",
           "descriptionTemplate": "%%labelres%% died on %%deathdate%% in %%labeldeathplace%%.",
-          "filters": [],
+          "filters": [
+            "(xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))"
+          ],
           "rankWeight": "0.8",
-          "templateText": "    \n    dig: DEADPEOPLE a dbe:DigestTemplate ;\n    dcterms:identifier \"DEADPEOPLE\" ;\n    dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\n    dbe:rankWeight \"0.8\"^^xsd:float ;\n    .\n    \n\n"
+          "templateText": "    \n    dig: DEADPEOPLE a dbe:DigestTemplate ;\n    dcterms:identifier \"DEADPEOPLE\" ;\n    dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\n    dbe:rankWeight \"0.8\"^^xsd:float ;\n    .\n    \n\n"
         },
         "createdAt": "2016-06-06T15:52:25.423Z",
-        "updatedAt": "2016-06-06T19:31:17.315Z",
-        "id": 1,
+        "updatedAt": "2016-06-06T19:48:04.685Z",
+        "id": 1
       },
       {
         "name": "RELEASED",
@@ -37,9 +39,8 @@
         },
         "createdAt": "2016-06-06T15:54:16.051Z",
         "updatedAt": "2016-06-06T19:07:49.808Z",
-        "id": 2,
+        "id": 2
       }
-    ]
     ]
   },
   "schema": {
