@@ -20,7 +20,6 @@ module.exports = [{
 
             var Template = request.collections.template;
 
-            // Reply with promise
             reply(Template.findOne({'name': request.params.name}));
         }
     }
@@ -33,7 +32,6 @@ module.exports = [{
 
             var Template = request.collections.template;
 
-            // Reply with promise
             reply(Template.create({
                     'name': request.payload.name,
                     'query': request.payload.query
@@ -52,12 +50,9 @@ module.exports = [{
     config: {
         handler: function (request, reply) {
 
-            console.log(request.payload.name);
-
             var Template = request.collections.template;
 
-            // Reply with promise
-            reply(Template.update({name: request.payload.name}, {changes: request.payload.changes}).exec(function (err, template) {
+            reply(Template.update({name: request.params.name}, {changes: request.payload.changes}).exec(function (err, template) {
                     if (err)
                         console.log(err);
                     console.log("updated: ", template)
@@ -74,8 +69,12 @@ module.exports = [{
 
             var Template = request.collections.template;
 
-            // Reply with promise
-            reply(Template.find());
+            reply(Template.destroy({name: request.params.name}).exec(function (err, template) {
+                    if (err)
+                        console.log(err);
+                    console.log("deleted: ", template)
+                })
+            );
         }
     }
 }

@@ -56,6 +56,19 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
         $scope.rankWeight = template.rankWeight;
     };
 
+    $scope.deleteTemplate = function (templateName) {
+        $http({
+            method: 'DELETE',
+            url: '/template/' + templateName
+        }).then(function successCallback() {
+            console.log("Deleted template " + templateName + " successfully")
+        }, function errorCallback(response) {
+            console.log(response);
+        });
+        $scope.loadTemplates();
+    };
+
+
     $scope.saveTemplate = function () {
 
         var templateText = angular.element(document.getElementById("template")).text();

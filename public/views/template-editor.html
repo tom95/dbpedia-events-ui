@@ -41,7 +41,7 @@
                             <input type="text" class="form-control" placeholder="Ontology" ng-enter="addOntology()"
                                    ng-model="newOntology">
                             <span class="input-group-btn">
-                                <button type="button" class="btn btn-success" ng-click="addOntology()">
+                                <button type="button" class="btn btn-success pull-right" ng-click="deleteTemplate()">
                                     <span class="mdi mdi-plus"/>
                                 </button>
                             </span>
@@ -88,9 +88,20 @@
                 <label class="control-label" for="template">Saved Digest Templates</label>
             </div>
             <div class="panel-body">
-                <div class="list-group-item list-group-item-warning" ng-show="noTemplates()">No saved digest templates</div>
+                <div class="list-group-item list-group-item-warning" ng-show="noTemplates()">No saved digest templates
+                </div>
                 <div class="list-group" ng-repeat="template in templates">
-                    <button type="button" class="list-group-item" ng-click="loadTemplateIntoEditor(template.query)" >{{template.name}}</button>
+                    <a class="list-group-item clearfix">
+                        <b>{{template.name}}</b>
+                        <span class="pull-right button-group">
+                            <button class="btn btn-primary" ng-click="loadTemplateIntoEditor(template.query)">
+                                <span class="mdi mdi-pencil"/>Edit
+                            </button>
+                            <button class="btn btn-danger" ng-click="deleteTemplate(template.query.name)">
+                                <span class="mdi mdi-delete"/>Delete
+                            </button>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
