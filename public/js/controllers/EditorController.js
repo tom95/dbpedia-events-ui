@@ -40,6 +40,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
             method: 'GET',
             url: '/template'
         }).then(function successCallback(response) {
+            console.log(response);
             $scope.templates = response.data;
         }, function errorCallback(response) {
             console.log(response);
@@ -113,7 +114,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
             url: '/template/' + template.name,
             data: {
                 "name": template.name,
-                "changes": {"query": template}
+                "query": template
             },
             headers: {
                 'Content-Type': 'application/json'

@@ -20,7 +20,11 @@ module.exports = [{
 
             var Template = request.collections.template;
 
-            reply(Template.findOne({'name': request.params.name}));
+            reply(Template.findOne({'name': request.params.name})).exec(function (err, template) {
+                if (err)
+                    console.log(err);
+                console.log("get: ", template)
+            });
         }
     }
 }, {
@@ -52,12 +56,7 @@ module.exports = [{
 
             var Template = request.collections.template;
 
-            reply(Template.update({name: request.params.name}, {changes: request.payload.changes}).exec(function (err, template) {
-                    if (err)
-                        console.log(err);
-                    console.log("updated: ", template)
-                })
-            );
+            reply(Template.update({name: request.params.name}, {query: request.payload.query}));
         }
     }
 }, {
