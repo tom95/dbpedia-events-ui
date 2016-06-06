@@ -31,7 +31,7 @@
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-danger"
                                             ng-click="removeOntology(ontologies[i])">
-                                        <span class="glyphicon glyphicon-minus"/>
+                                        <span class="mdi mdi-minus"/>
                                     </button>
                                 </span>
                             </div>
@@ -42,7 +42,7 @@
                                    ng-model="newOntology">
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-success" ng-click="addOntology()">
-                                    <span class="glyphicon glyphicon-plus"/>
+                                    <span class="mdi mdi-plus"/>
                                 </button>
                             </span>
                         </div>
@@ -54,7 +54,7 @@
                                        ng-model="filters[i]"/>
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-danger" ng-click="removeFilter(filters[i])">
-                                        <span class="glyphicon glyphicon-minus"/>
+                                        <span class="mdi mdi-minus"/>
                                     </button>
                                 </span>
                             </div>
@@ -65,7 +65,7 @@
                                    ng-model="newFilter">
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-success" ng-click="addFilter()">
-                                    <span class="glyphicon glyphicon-plus"/>
+                                    <span class="mdi mdi-plus"/>
                                 </button>
                             </span>
                         </div>
@@ -88,6 +88,7 @@
                 <label class="control-label" for="template">Saved Digest Templates</label>
             </div>
             <div class="panel-body">
+                <div class="list-group-item list-group-item-warning" ng-show="noTemplates()">No saved digest templates</div>
                 <div class="list-group" ng-repeat="template in templates">
                     <button type="button" class="list-group-item" ng-click="loadTemplateIntoEditor(template.query)" >{{template.name}}</button>
                 </div>
