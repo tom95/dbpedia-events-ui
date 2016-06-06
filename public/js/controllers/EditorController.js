@@ -53,6 +53,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
         $scope.description = template.description;
         $scope.ontologies = template.ontologies;
         $scope.descriptionTemplate = template.descriptionTemplate;
+        $scope.filters = template.filters || [];
         $scope.rankWeight = template.rankWeight;
     };
 
@@ -83,6 +84,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
             "ontologies": $scope.ontologies,
             "contextQueryString": contextQueryString,
             "descriptionTemplate": $scope.descriptionTemplate,
+            "filters": $scope.filters,
             "rankWeight": $scope.rankWeight,
             "templateText": templateText
         };
@@ -140,8 +142,21 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
         });
     }
 
-    $scope.test = function () {
-
+    $scope.testTemplate = function () {
+        $http({
+            method: 'POST',
+            url: '/template',
+            data: {
+                "name": template.name,
+                "query": template
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            success: function (data, status) {
+                console.log("Saved new template successfully");
+            }
+        });
     };
 
     $scope.noTemplates = function () {
