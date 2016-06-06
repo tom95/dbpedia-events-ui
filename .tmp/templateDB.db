@@ -17,28 +17,29 @@
             "(xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))"
           ],
           "rankWeight": "0.8",
-          "templateText": "    \n    dig: DEADPEOPLE a dbe:DigestTemplate ;\n    dcterms:identifier \"DEADPEOPLE\" ;\n    dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\n    dbe:rankWeight \"0.8\"^^xsd:float ;\n    .\n    \n\n"
+          "templateText": "    \n    dig:DEADPEOPLE a dbe:DigestTemplate ;\n    dcterms:identifier \"DEADPEOPLE\" ;\n    dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\n    dbe:rankWeight \"0.8\"^^xsd:float ;\n    .\n    \n\n"
         },
         "createdAt": "2016-06-06T15:52:25.423Z",
-        "updatedAt": "2016-06-06T19:48:04.685Z",
+        "updatedAt": "2016-06-06T22:04:45.829Z",
         "id": 1
       },
       {
         "name": "RELEASED",
         "query": {
-          "templateText": "    \n    dig: RELEASED a dbe:DigestTemplate ;\n    dcterms:identifier \"RELEASED\" ;\n    dcterms:description \"\"\"Finds works released within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                                FILTER ((xsd:date(?releasedate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelreleasedate \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%releasedate%% rdfs:label ?labelreleasedate .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% is released on %%releasedate%%. \"\"\" ;\n    dbe:rankWeight \"0.6\"^^xsd:float ;\n    .\n    \n\n",
           "name": "RELEASED",
           "description": "Finds works released within last three weeks.",
-          "queryString": "\"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                                FILTER ((xsd:date(?releasedate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ",
+          "queryString": "\"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                            } \"\"\" ",
           "ontologies": [
             "releasedate"
           ],
           "contextQueryString": "\"\"\" SELECT ?labelres ?labelreleasedate \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%releasedate%% rdfs:label ?labelreleasedate .\n                                    } \"\"\" ",
           "descriptionTemplate": "%%labelres%% is released on %%releasedate%%.",
-          "rankWeight": "0.6"
+          "filters": [],
+          "rankWeight": "0.6",
+          "templateText": "    \n    dig:RELEASED a dbe:DigestTemplate ;\n    dcterms:identifier \"RELEASED\" ;\n    dcterms:description \"\"\"Finds works released within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelreleasedate \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%releasedate%% rdfs:label ?labelreleasedate .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% is released on %%releasedate%%. \"\"\" ;\n    dbe:rankWeight \"0.6\"^^xsd:float ;\n    .\n    \n\n"
         },
         "createdAt": "2016-06-06T15:54:16.051Z",
-        "updatedAt": "2016-06-06T19:07:49.808Z",
+        "updatedAt": "2016-06-06T22:04:48.191Z",
         "id": 2
       }
     ]

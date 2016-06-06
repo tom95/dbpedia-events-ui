@@ -17,7 +17,7 @@ app
 	  templateUrl: 'views/resource.html'
 	}).
 	otherwise({
-	  redirectTo: '/',
+	  redirectTo: '/'
 	});
     }])
   .directive('dbpLateCompile', ['$compile', function($compile) {
