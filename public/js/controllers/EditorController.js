@@ -146,16 +146,16 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
     $scope.testTemplate = function () {
         $http({
             method: 'POST',
-            url: '/template',
+            url: 'http://141.89.225.50:9000/api/testconfig',
             data: {
-                "name": template.name,
-                "query": template
+                "templateText": template.templateText
             },
             headers: {
                 'Content-Type': 'application/json'
             },
-            success: function (data, status) {
-                console.log("Saved new template successfully");
+            success: function (response) {
+                console.log(response.data);
+                console.log("Tested new template successfully");
             }
         });
     };
