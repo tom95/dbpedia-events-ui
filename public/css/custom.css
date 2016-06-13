@@ -57,44 +57,6 @@
 	to { opacity: 1; transform: scale(1); }
 }
 
-.masonry-brick {
-	margin: 1em;
-	background-color: #fff;
-	display: none;
-	width: 300px;
-	position: relative;
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-}
-.masonry-brick h2 {
-	margin: 12px;
-	font-size: 15px;
-}
-.masonry-brick dbp-data-link {
-	color: #ff9900;
-	font-weight: bold;
-}
-.masonry-brick .time {
-	font-weight: normal;
-	margin: 12px;
-}
-.masonry-brick > .glyphicon {
-	position: absolute;
-	top: -18px;
-	left: -12px;
-	background-color: #fff;
-	border: 1px solid #bbb;
-	padding: 12px;
-	font-size: 24px;
-	border-radius: 999px;
-}
-.masonry-brick img {
-	width: 100%;
-}
-.masonry-brick.loaded {
-	display: block;
-}
-
-
 .loading {
 	animation: rotate-loading 1000ms linear infinite;
 	transform-origin: center center;

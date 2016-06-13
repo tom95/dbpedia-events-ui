@@ -1,100 +1,4 @@
 
-/*.event {
-	margin: 24px 0;
-	padding: 24px;
-	background-color: #ff9900;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/92/Mustermann_1987.jpg);
-	background-repeat: no-repeat;
-	background-position: right;
-	background-size: contain;
-}
-.event .glyphicon {
-	color: #E78A00;
-	font-size: 36px;
-	float: left;
-	display: block;
-	margin-right: 24px;
-}
-.event h2 {
-	font-size: 16px;
-	margin: 0;
-}
-.event .data-link {
-	text-decoration: underline;
-}*/
-/*
-body {
-	background-color: #EFEFEF;
-}
-.event {
-	position: relative;
-	height: 48px;
-	margin-bottom: 26px;
-	margin-left: 172px;
-	background-color: #fff;
-	padding: 6px;
-	border-radius: 6px;
-	line-height: 2.5em;
-	border: 1px solid #C8CbCF;
-	box-sizing: content-box;
-}
-.event .image {
-	height: 48px;
-	width: 48px;
-	border-radius: 5px;
-	background-size: cover;
-	float: left;
-	margin-right: 12px;
-}
-.event h2 {
-	margin: 4px 0 0 0;
-}
-.event:before {
-	width: 16px;
-	border: 1px solid #C8CBCF;
-	content: "";
-	display: block;
-	position: absolute;
-	left: -16px;
-	top: 20px;
-}
-.event > .glyphicon {
-	text-align: center;
-	display: block;
-	border-radius: 999px;
-	padding: 10px;
-	font-size: 20px;
-	background-color: white;
-	border: 2px solid #C8CBCF;
-	color: #C8CBCF;
-	left: -64px;
-	position: absolute;
-}
-.event > .glyphicon:after {
-	content: "";
-	border: 1px solid #C8CBCF;
-	height: 32px;
-	top: 48px;
-	left: 20px;
-	position: absolute;
-}
-
-.event h2 {
-	display: block;
-	font-size: inherit;
-}
-
-.event .time {
-	font-size: 0.8em;
-	color: #aaa;
-}
-.event .data-link {
-	color: #F64C23;
-}*/
-
 body {
 	background-color: #eee;	
 
@@ -108,62 +12,53 @@ body {
 
 .container {
 	margin-top: 64px;
-	margin-left: 84px;
-	position: relative;
-}
-.event-wrapper {
-	animation: left-slide-in 300ms;
-	transform-origin: top center;
-}
-.event {
-	background-color: #fff;
-	padding: 12px;
-	margin: 24px 0;
-	width: calc(100% - 94px);
-	border: 1px solid #ddd;
+	margin-left: 100px;
 	position: relative;
 }
 
-.event h2 {
-	margin: 0px;
-	font-size: 18px;
-
-}
-
-.event-icon {
-	position: absolute;
-	right: -94px;
-	color: #888;
-	z-index: 1;
-	height: 30px;
-	width: 48px;
-	padding-top: 2px;
-	text-align: center;
-	margin-left: -24px;
-	font-size: 20px;
-	background-color: #eee;
-}
-.container {
-	position: relative;
-}
 .line {
 	position: absolute;
 	height: 100%;
-	left: calc(100% - 40px);
+	left: 15px;
 	border: 1px solid #888;
 	content: "";
 }
 
-.event .time {
-	float: right;
-	font-size: 12px;
-	color: #777;
+.event-wrapper {
+	animation: left-slide-in 300ms;
+	position: relative;
+	transform-origin: top center;
 }
-
-.event .data-link, .event dbp-data-link {
-	color: #008;
+.event {
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	margin: 15px;
+	padding: 15px;
+	margin-left: 30px;
+	position: relative;
+	width: calc(100% - 45px);
 }
-
+.event:before {
+	content: "";
+	position: absolute;
+	border-width: 10px;
+	left: -20px;
+	top: 11px;
+	z-index: 3;
+	border-color: transparent #fff transparent transparent;
+	border-style: solid;
+}
+.event:after {
+	content: "";
+	position: absolute;
+	border-width: 12px;
+	left: -24px;
+	top: 9px;
+	z-index: 2;
+	border-color: transparent #ddd transparent transparent;
+	border-style: solid;
+}
 .event .image {
 	margin-top: 12px;
 	width: 100%;
@@ -174,80 +69,58 @@ body {
 }
 .event.noimage .image {
 	height: 0;
+	margin: 0;
 }
-.event.noimage {
-	margin-bottom: 100px;
-}
-
-.event:before {
-	content: "";
+.event .event-icon {
 	position: absolute;
-	border-width: 20px;
-	top: 10px;
-	right: -40px;
-	z-index: 99;
-	border-color: transparent transparent transparent #fff;
-	border-style: solid;
-}
-.event:after {
-	content: "";
-	position: absolute;
-	border-width: 20px;
-	top: 10px;
-	right: -42px;
-	z-index: 90;
-	border-color: transparent transparent transparent #ddd;
-	border-style: solid;
-}
-.day-marker {
-	margin-left: calc(100% - 60px);
+	left: -30px;
+	color: #888;
+	z-index: 1;
+	top: 5px;
+	height: 30px;
+	width: 40px;
+	padding-top: 2px;
 	text-align: center;
-	padding: 5px;
-	border: 2px solid #ddd;
-	border-radius: 240px;
-	height: 80px;
-	width: 80px;
-	background-color: white;
+	margin-left: -20px;
+	font-size: 20px;
+	background-color: #eee;
 }
-
-.day-marker .day {
-	font-size: 26px;
-	color: black;
-	display: block;
-} 
-
-.day-marker .month {
-	font-size: 16px;	
-
+.event h2 {
+	margin: 0;
+	font-size: 11px;
 }
-
 @media screen and (min-width: 768px) {
-	.event {
-		width: calc(50% - 70px);
-	}
 	.event-wrapper {
-		margin-top: -120px;
+		width: 50%;
+		margin-bottom: -60px;
 	}
-	.event-wrapper.first {
-		margin-top: 0;
+	.event-wrapper:nth-child(odd) {
+		float: left;
+		clear: left;
+		margin-top: 60px;
 	}
-	.event-wrapper:nth-child(even) .event {
-		margin-left: calc(50% + 70px);
+	.event-wrapper:nth-child(even) {
+		float: right;
+		clear: right;
+		margin-top: -60px;
 	}
-	.event-wrapper:nth-child(even) .event-icon {
-		left: -70px;
-		right: auto;
+	.event-wrapper:nth-child(odd) .event .event-icon {
+		right: -52px;
+		left: auto;
 	}
-	.event-wrapper:nth-child(even) .event:before {
-		left: -40px;
-		border-color: transparent #fff transparent transparent;
+	.event-wrapper:nth-child(odd) .event {
+		margin-left: 15px;
+		margin-right: 30px;
 	}
-	.event-wrapper:nth-child(even) .event:after {
-		left: -42px;
-		border-color: transparent #ddd transparent transparent;
+	.event-wrapper:nth-child(odd) .event:before {
+		border-color: transparent transparent transparent #fff;
+		left: auto;
+		right: -20px;
 	}
-	.day-marker {
-		margin-left: calc(50% - 40px);
+	.event-wrapper:nth-child(odd) .event:after {
+		border-color: transparent transparent transparent #ddd;
+		left: auto;
+		right: -24px;
 	}
 	.line {
 		left: 50%;

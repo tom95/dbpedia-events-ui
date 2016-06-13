@@ -22,7 +22,8 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 	$scope.month = 'Jan';
 	$scope.selectedTmpl = [];
 	$scope.selectedYear = new Date().getFullYear() - 1;
-	$scope.activeDay = new Date(+new Date() - (1000 * 60 * 60 * 24 * 365));
+	// $scope.activeDay = new Date(+new Date() - (1000 * 60 * 60 * 24 * 365));
+	$scope.activeDay = new Date('2015-08-01');
 	$scope.loading = false;
 	var FIRST_YEAR = 2013;
 
