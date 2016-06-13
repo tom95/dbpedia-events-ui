@@ -1,0 +1,13 @@
+
+<div class="event-list" ng-class="{ large: large }">
+	<div class="line" ng-hide="!events.length"></div>
+
+	<div class="event-wrapper" ng-repeat="event in events | orderBy:'image' | filter:filterEvents" ng-class="$index == 0 ? 'first' : ''">
+		<div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
+			<span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
+				<!--<div class="time"><span class="glyphicon glyphicon-time"></span> 23:23</div>-->
+				<h2 dbp-late-compile="event.desc"></h2>
+				<div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
+		</div>
+	</div>
+</div>
