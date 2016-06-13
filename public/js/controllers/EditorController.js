@@ -1,16 +1,16 @@
 var app = angular.module('dbpedia-events-ui');
 
-app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
+app.controller('EditorController', ['$scope', '$http', function ($scope, $http) {
 
     $scope.ontologies = [];
     $scope.filters = [];
 
-    $scope.addOntology = function() {
+    $scope.addOntology = function () {
         $scope.ontologies.push($scope.newOntology);
         $scope.newOntology = "";
     };
 
-    $scope.removeOntology = function(ontology) {
+    $scope.removeOntology = function (ontology) {
         console.log($scope.ontologies);
         var index = $scope.ontologies.indexOf(ontology);
         if (index > -1) {
@@ -19,12 +19,12 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
         console.log($scope.ontologies);
     };
 
-    $scope.addFilter = function() {
+    $scope.addFilter = function () {
         $scope.filters.push($scope.newFilter);
         $scope.newFilter = "";
     };
 
-    $scope.removeFilter = function(filter) {
+    $scope.removeFilter = function (filter) {
         console.log($scope.filters);
         var index = $scope.filters.indexOf(filter);
         if (index > -1) {
@@ -33,7 +33,45 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
         console.log($scope.filters);
     };
 
-    $scope.submit = function() {
+    $scope.templates = [];
+
+    $scope.loadTemplates = function () {
+        $http({
+            method: 'GET',
+            url: '/template'
+        }).then(function successCallback(response) {
+            console.log(response);
+            $scope.templates = response.data;
+        }, function errorCallback(response) {
+            console.log(response);
+        });
+    };
+
+    $scope.loadTemplates();
+
+    $scope.loadTemplateIntoEditor = function (template) {
+        $scope.name = template.name;
+        $scope.description = template.description;
+        $scope.ontologies = template.ontologies;
+        $scope.descriptionTemplate = template.descriptionTemplate;
+        $scope.filters = template.filters || [];
+        $scope.rankWeight = template.rankWeight;
+    };
+
+    $scope.deleteTemplate = function (templateName) {
+        $http({
+            method: 'DELETE',
+            url: '/template/' + templateName
+        }).then(function successCallback() {
+            console.log("Deleted template " + templateName + " successfully")
+        }, function errorCallback(response) {
+            console.log(response);
+        });
+        $scope.loadTemplates();
+    };
+
+
+    $scope.saveTemplate = function () {
 
         var templateText = angular.element(document.getElementById("template")).text();
         var queryString = angular.element(document.getElementById("queryString")).text();
@@ -41,34 +79,89 @@ app.controller('EditorController', ['$scope', '$http', function($scope, $http) {
 
 
         var template = {
-            "templateText": templateText,
             "name": $scope.name,
             "description": $scope.description,
             "queryString": queryString,
             "ontologies": $scope.ontologies,
             "contextQueryString": contextQueryString,
             "descriptionTemplate": $scope.descriptionTemplate,
-            "rankWeight": $scope.rankWeight
+            "filters": $scope.filters,
+            "rankWeight": $scope.rankWeight,
+            "templateText": templateText
         };
+        if(templateAlreadyDefined(template.name)) {
+            updateTemplate(template);
+        } else {
+            createTemplate(template);
+        }
+        $scope.loadTemplates();
+    };
 
-        console.log(template)
+    function templateAlreadyDefined(name) {
+        var templates = $scope.templates;
+        for (var i = 0; i < templates.length; i++) {
+            if (name == templates[i].name) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-
+    function updateTemplate(template) {
 
         $http({
-            method: 'POST',
-            url: '/template',
+            method: 'PATCH',
+            url: '/template/' + template.name,
             data: {
-                "name": $scope.name,
+                "name": template.name,
                 "query": template
             },
             headers: {
                 'Content-Type': 'application/json'
             },
-            success: function(data, status) {
-                console.log("Posted template successfully");
+            success: function (data, status) {
+                console.log("Updated template successfully");
             }
         });
+        $scope.loadTemplates();
+    }
+
+    function createTemplate(template) {
+        $http({
+            method: 'POST',
+            url: '/template',
+            data: {
+                "name": template.name,
+                "query": template
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            success: function (data, status) {
+                console.log("Saved new template successfully");
+            }
+        });
+    }
+
+    $scope.testTemplate = function () {
+        $http({
+            method: 'POST',
+            url: 'http://141.89.225.50:9000/api/testconfig',
+            data: {
+                "templateText": template.templateText
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            success: function (response) {
+                console.log(response.data);
+                console.log("Tested new template successfully");
+            }
+        });
+    };
+
+    $scope.noTemplates = function () {
+        return $scope.templates.length < 1;
     };
 
 
