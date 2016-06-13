@@ -38,11 +38,12 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 					return;
 
 				isOpen = true;
+				var popoverWidth = Math.min(window.innerWidth - SCREEN_PADDING * 2, POPOVER_WIDTH);
 
 				if (!popover) {
 					popover = $('<div/>')
 						.css({
-							width: POPOVER_WIDTH,
+							width: popoverWidth,
 							height: POPOVER_HEIGHT
 						})
 						.addClass('dbp-popover')
@@ -85,7 +86,7 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 				}
 
 				var offset = $element.offset();
-				var shootoverRight = Math.max(offset.left + POPOVER_WIDTH + SCREEN_PADDING - $(window).width(), 0);
+				var shootoverRight = Math.max(offset.left + popoverWidth + SCREEN_PADDING - $(window).width(), 0);
 				var x = offset.left - shootoverRight;
 
 				var tip = popover.find('.dbp-popover-tip');
