@@ -2,18 +2,31 @@
 angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', '$http', function($scope, $http) {
 	$scope.availableDays = [];
 	var DAY = 1000 * 60 * 60 * 24; 
-	var daysOfThisYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / DAY);
-	for (var i = 0; i < daysOfThisYear; i++) {
-		$scope.availableDays.push(new Date(+new Date() - DAY * i));
-	}
+
+	$scope.updateAvailableDays = function updateAvailableDays() {
+		$scope.availableDays = [];
+		if ($scope.selectedYear == new Date().getFullYear()) {
+			var daysOfThisYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / DAY);
+			for (var i = 0; i < daysOfThisYear; i++) {
+				$scope.availableDays.push(new Date(+new Date() - DAY * i));
+			}
+		} else {
+			var start = new Date($scope.selectedYear + '-01-01');
+			for (var i = 0; i < 365; i++) {
+				$scope.availableDays.push(new Date(+start + DAY * i));
+			}
+		}
+	};
 
 	$scope.day = '1st';
 	$scope.month = 'Jan';
 	$scope.selectedTmpl = [];
-	$scope.selectedYear = new Date().getFullYear();
-	$scope.activeDay = new Date();
+	$scope.selectedYear = new Date().getFullYear() - 1;
+	$scope.activeDay = new Date(+new Date() - (1000 * 60 * 60 * 24 * 365));
 	$scope.loading = false;
 	var FIRST_YEAR = 2013;
+
+	$scope.updateAvailableDays();
 
 	$scope.$watch('activeDay', function(newDay) {
 		$scope.setDay(newDay);
