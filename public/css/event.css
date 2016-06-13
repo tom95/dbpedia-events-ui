@@ -10,6 +10,10 @@ body {
 	to { transform: scale(1); opacity: 1; }
 }
 
+dbp-data-link {
+	color: #ff9900;
+}
+
 .container {
 	margin-top: 64px;
 	margin-left: 100px;

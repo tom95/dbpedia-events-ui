@@ -6,7 +6,7 @@
 		<div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
 			<span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 				<!--<div class="time"><span class="glyphicon glyphicon-time"></span> 23:23</div>-->
-				<h2 dbp-late-compile="event.desc"></h2>
+				<h2 dbp-late-compile="insertDataLinks(event.desc, event.tmpl)"></h2>
 				<div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
 		</div>
 	</div>

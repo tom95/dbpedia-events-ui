@@ -9,6 +9,7 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
 		templateUrl: '/views/timeline-template.html',
 		link: function($scope, $element, $attrs) {
 			$scope.categoryForTmpl = dbpCategoryList.categoryForTmpl;
+			$scope.insertDataLinks = dbpCategoryList.insertDataLinks;
 		}
 	}
 }]);

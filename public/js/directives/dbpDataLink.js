@@ -49,8 +49,8 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 						.mouseleave(closeIfNotEntered)
 						.mouseenter(function() {
 							wasEntered = true;
-						}).
-						append('<div class="dbp-popover-tip"/>')
+						})
+						.append('<div class="dbp-popover-tip"/>');
 
 						$.ajax({
 							url: 'https://en.wikipedia.org/w/api.php',
@@ -76,7 +76,7 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function(
 								var page = pages[Object.keys(pages)[0]];
 								var image = page.thumbnail ? '<img src="' + page.thumbnail.source + '">' : '';
 								popover
-									.html(image +
+									.append(image +
 										  '<div class="text"><h2>' + page.title + '</h2>' +
 										  '<p>' + page.extract + '</p></div>')
 									.click(function() { window.open(page.fullurl); })
