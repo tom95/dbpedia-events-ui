@@ -2,6 +2,14 @@ var app = angular.module('dbpedia-events-ui');
 
 app.controller('EditorController', ['$scope', '$http', function ($scope, $http) {
 
+    var prefixes = "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\
+@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \
+@prefix dcterms:    <http://purl.org/dc/terms/> .\
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\
+@prefix dc:         <http://purl.org/dc/elements/1.1/> .\
+@prefix spin:       <http://spinrdf.org/spin#> .\
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> ."
+
     $scope.ontologies = [];
     $scope.filters = [];
 
@@ -73,7 +81,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
 
     $scope.saveTemplate = function () {
 
-        var templateText = angular.element(document.getElementById("template")).text();
+        var templateText = prefixes + angular.element(document.getElementById("template")).text();
         var queryString = angular.element(document.getElementById("queryString")).text();
         var contextQueryString = angular.element(document.getElementById("contextQueryString")).text();
 
@@ -144,25 +152,16 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
     }
 
     $scope.testTemplate = function () {
-        $http({
-            method: 'POST',
-            url: 'http://141.89.225.50:9000/api/testconfig',
-            data: {
-                "templateText": template.templateText
-            },
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            success: function (response) {
-                console.log(response.data);
-                console.log("Tested new template successfully");
-            }
+        var templateText = prefixes + angular.element(document.getElementById("template")).text();
+        $http.post('/events/custom', {
+            "templateText": templateText
+        }).then(function(response) {
+            console.log(response.data);
+            console.log("Sent new template to backend");
         });
     };
 
     $scope.noTemplates = function () {
         return $scope.templates.length < 1;
     };
-
-
 }]);

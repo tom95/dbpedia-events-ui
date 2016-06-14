@@ -24,6 +24,17 @@ function sparqlQuery(query, source) {
 	});
 }
 
+function postRequest(url, params) {
+ return new Promise((resolve, reject) => {
+  httpRequest.post(url, { form:params }, (err, res, body) => {
+   if (err)
+    return reject(err);
+   else
+    return resolve(body);
+  });
+ });
+}
+
 /**
  * cache a query result by a given hash
  */
@@ -101,6 +112,25 @@ function fetchImagesForResources(data) {
 	}));
 }
 
+function queryCustomEventsByDay(template) {
+
+	// var cached = getEventsFromCache('custom-' + (+template.start));
+	// if (cached) return Promise.resolve(cached);
+
+	return postRequest("http://141.89.225.50:9000/api/testconfig", template)
+	.then((data) => {
+		data = data;
+		return data;
+	})
+	.then(processEventQueryData)
+	.then(condenseEvents)
+	.then(fetchImagesForResources)
+	// .then((list) => {
+	// 	cacheEventQuery('custom-' + (+startDay), list);
+	// 	return list;
+	// });
+}
+
 function queryEventsByDay(startDay) {
 
 	var cached = getEventsFromCache('event-' + (+startDay));
@@ -174,10 +204,20 @@ module.exports = [{
 	}
 },
 {
+	path: '/events/custom',
+	method: 'POST',
+	handler: (request, reply) => {
+		console.log(request.payload);
+		queryCustomEventsByDay(request.payload)
+			.then((list) => { reply(list); },
+																		(err) => { console.log(err); reply('Internal Error').code(500); });
+	}
+},
+{
 	path: '/events/resource',
 	method: 'GET',
 	handler: (request, reply) => {
-		var resource = request.query.resource;
+		var resource = request.resource;
 		if (!resource)
 			return reply('Missing param resource').code(403);
 
