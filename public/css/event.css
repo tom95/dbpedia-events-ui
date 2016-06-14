@@ -1,7 +1,6 @@
 
 body {
 	background-color: #eee;	
-
 }
 
 @keyframes left-slide-in {
@@ -46,6 +45,7 @@ dbp-data-link {
 .event {
 	background: #fff;
 	border-radius: 5px;
+	font-size: 11px;
 	border: 1px solid #ddd;
 	margin: 15px;
 	padding: 15px;
@@ -100,8 +100,8 @@ dbp-data-link {
 	background-color: #eee;
 }
 .event h2 {
+	font-size: inherit;
 	margin: 0;
-	font-size: 11px;
 }
 
 .event-list.large .event-wrapper {
@@ -139,4 +139,9 @@ dbp-data-link {
 }
 .event-list.large .line {
 	left: 50%;
+}
+.event .time {
+	color: #ccc;
+	float: right;
+	font-size: inherit;
 }

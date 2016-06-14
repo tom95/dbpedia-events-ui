@@ -136,7 +136,7 @@ function queryEventsByResource(resource) {
 	var cached = getEventsFromCache('resource-' + resource);
 	if (cached) return Promise.resolve(cached);
 
-	return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc {' +
+	return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?endTime {' +
 							  '?s a <http://events.dbpedia.org/ns/core#Event> .' +
 							  '?s <http://purl.org/dc/terms/description> ?desc .' +
 							  '?s <http://events.dbpedia.org/ns/core#update> ?u .' +
