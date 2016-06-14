@@ -97,7 +97,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
             "rankWeight": $scope.rankWeight,
             "templateText": templateText
         };
-        if(templateAlreadyDefined(template.name)) {
+        if (templateAlreadyDefined(template.name)) {
             updateTemplate(template);
         } else {
             createTemplate(template);
@@ -155,7 +155,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
         var templateText = prefixes + angular.element(document.getElementById("template")).text();
         $http.post('/events/custom', {
             "templateText": templateText
-        }).then(function(response) {
+        }).then(function (response) {
             console.log(response.data);
             console.log("Sent new template to backend");
             $scope.events = response.data;

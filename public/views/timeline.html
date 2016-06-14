@@ -16,13 +16,13 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-          <li ng-class="{active: arrayEqual($parent.selectedTmpl, category.tmpl)}"
-              ng-repeat="category in categories">
-            <a href="" ng-click="$parent.selectedTmpl = category.tmpl">
-              <span ng-class="'icon-' + category.icon"></span>
-              <span ng-bind="category.label"></span>
-            </a>
-          </li>
+        <li ng-class="{active: arrayEqual($parent.selectedTmpl, category.tmpl)}"
+            ng-repeat="category in categories">
+          <a href="" ng-click="$parent.selectedTmpl = category.tmpl">
+            <span ng-class="'icon-' + category.icon"></span>
+            <span ng-bind="category.label"></span>
+          </a>
+        </li>
       </ul>
     </div>
     &nbsp;
@@ -33,27 +33,27 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-          <li ng-class="{active: $parent.currentYear == year}" ng-repeat="year in years">
-            <a href="" ng-click="$parent.currentYear = year" ng-bind="year">
-            </a>
-          </li>
+        <li ng-class="{active: $parent.currentYear == year}" ng-repeat="year in years">
+          <a href="" ng-click="$parent.currentYear = year" ng-bind="year">
+          </a>
+        </li>
       </ul>
     </div>
 
     <div class="date-picker wider clearfix">
       <div ng-click="$parent.currentMonth = $index"
-        ng-class="{ active: $index == currentMonth }"
-        ng-repeat="month in months"
-        ng-style="{ opacity: opacityForListItem($index, currentMonth, 12) }"
-        ng-bind="month"></div>
+           ng-class="{ active: $index == currentMonth }"
+           ng-repeat="month in months"
+           ng-style="{ opacity: opacityForListItem($index, currentMonth, 12) }"
+           ng-bind="month"></div>
     </div>
 
     <div class="date-picker clearfix">
       <div ng-click="$parent.currentDayOfMonth = $index"
-        ng-class="{ active: $index == currentDayOfMonth }"
-        ng-repeat="day in daysOfMonth | limitTo:daysOfCurrentMonth()"
-        ng-style="{ opacity: opacityForListItem($index, currentDayOfMonth, 30) }"
-        ng-bind="day < 10 ? '0' + day : day"></div>
+           ng-class="{ active: $index == currentDayOfMonth }"
+           ng-repeat="day in daysOfMonth | limitTo:daysOfCurrentMonth()"
+           ng-style="{ opacity: opacityForListItem($index, currentDayOfMonth, 30) }"
+           ng-bind="day < 10 ? '0' + day : day"></div>
     </div>
   </div>
 

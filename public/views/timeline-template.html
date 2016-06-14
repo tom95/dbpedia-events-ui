@@ -1,18 +1,19 @@
-
 <div class="event-list" ng-class="{ large: large }">
-	<div class="line" ng-hide="!events.length"></div>
+    <div class="line" ng-hide="!events.length"></div>
 
-	<div class="event-wrapper" ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents" ng-class="$index == 0 ? 'first' : ''">
-		<div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
+    <div class="event-wrapper"
+         ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents"
+         ng-class="$index == 0 ? 'first' : ''">
+        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
 
-			<span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
+            <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 
-			<div class="time" ng-show="showDate" ng-bind="event.endTime | date"></div>
+            <div class="time" ng-show="showDate" ng-bind="event.endTime | date"></div>
 
-			<h2 dbp-late-compile="insertDataLinks(event.desc, event.tmpl)"></h2>
+            <h2 dbp-late-compile="insertDataLinks(event.desc, event.tmpl)"></h2>
 
-			<div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
+            <div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
 
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
