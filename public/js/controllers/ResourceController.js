@@ -20,7 +20,7 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
 			return;
 
 		searchTriggerTimeout = setTimeout(function() {
-			var search = $scope.search.toLowerCase();
+			var search = $scope.search;
 			$scope.loading = true;
 
 			$http.get('http://lookup.dbpedia.org/api/search/PrefixSearch?MaxHits=8&QueryString=' + search, {
