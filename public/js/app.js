@@ -158,7 +158,8 @@ app
     return {
       categoryForTmpl: categoryForTmpl,
       insertDataLinks: insertDataLinks,
-      categories: categories
+      categories: categories,
+      arrayEqual: arrayEqual
     };
   })
   .directive('dbpLateCompile', ['$compile', function($compile) {

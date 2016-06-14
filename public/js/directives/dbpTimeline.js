@@ -5,6 +5,7 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
 		scope: {
 			events: '=',
 			showDate: '=?',
+			filterEvents: '=?',
 			large: '='
 		},
 		templateUrl: '/views/timeline-template.html',

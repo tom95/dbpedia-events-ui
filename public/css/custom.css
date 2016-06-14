@@ -7,11 +7,13 @@
 	border-bottom: 1px solid #303F9F;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	color: white;
+	z-index: 99999;
 }
 .navbar-inverse .navbar-nav > li > a {
 	color: #fff;
 }
-.navbar-inverse .navbar-brand {
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-brand:focus {
 	background-color: #fff;
 	padding: 6px 11px;
 } 
@@ -30,7 +32,7 @@
 	cursor: pointer;
 	box-shadow: 0 0px 100px rgba(0, 0, 0, 0.35);
 	background-color: #fff;
-	z-index: 99999;
+	z-index: 9999;
 	position: absolute;
 	animation: popover-open 200ms;
 	transform-origin: top;

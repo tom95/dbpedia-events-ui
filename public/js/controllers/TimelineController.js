@@ -4,6 +4,7 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 	var DAY = 1000 * 60 * 60 * 24; 
 
 	$scope.categoryForTmpl = dbpCategoryList.categoryForTmpl;
+	$scope.arrayEqual = dbpCategoryList.arrayEqual;
 	$scope.categories = dbpCategoryList.categories;
 
 	$scope.updateAvailableDays = function updateAvailableDays() {
