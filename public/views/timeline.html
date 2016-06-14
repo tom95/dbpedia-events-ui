@@ -1,13 +1,12 @@
-<gz-timeline active="activeDay" days="availableDays"></gz-timeline>
 
 <div class="timeline-container container">
   <div>
-    <button class="btn btn-default pull-left" ng-click="skipDays(-1)">
+    <!--<button class="btn btn-default pull-left" ng-click="skipDays(-1)">
       <span class="glyphicon glyphicon-chevron-left"></span> Previous Day
     </button>
     <button class="btn btn-default pull-right" ng-click="skipDays(1)">
       <span class="glyphicon glyphicon-chevron-right"></span> Next Day
-    </button>
+    </button>-->
 
     &nbsp;
     <div class="btn-group">
@@ -40,6 +39,22 @@
           </li>
       </ul>
     </div>
+
+    <div class="date-picker wider clearfix">
+      <div ng-mouseover="$parent.currentMonth = $index"
+        ng-class="{ active: $index == currentMonth }"
+        ng-repeat="month in months"
+        ng-style="{ opacity: opacityForListItem($index, currentMonth, 12) }"
+        ng-bind="month"></div>
+    </div>
+
+    <div class="date-picker clearfix">
+      <div ng-mouseover="$parent.currentDayOfMonth = $index"
+        ng-class="{ active: $index == currentDayOfMonth }"
+        ng-repeat="day in daysOfMonth"
+        ng-style="{ opacity: opacityForListItem($index, currentDayOfMonth, 30) }"
+        ng-bind="day < 10 ? '0' + day : day"></div>
+    </div>
   </div>
 
   <div class="day-marker">
@@ -47,12 +62,12 @@
     <span class="month" ng-bind="month"></span>
   </div>
 
-  <h3 ng-show="loading" class="text-center">
+  <h3 ng-show="loading" class="info-label">
     <span class="glyphicon glyphicon-refresh loading"></span>
     Loading ...
   </h3>
 
-  <h3 ng-show="!events.length && !loading" class="text-center">
+  <h3 ng-show="!events.length && !loading" class="info-label">
     No events for this day.
   </h3>
 

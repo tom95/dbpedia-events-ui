@@ -157,7 +157,8 @@ app
 
     return {
       categoryForTmpl: categoryForTmpl,
-      insertDataLinks: insertDataLinks
+      insertDataLinks: insertDataLinks,
+      categories: categories
     };
   })
   .directive('dbpLateCompile', ['$compile', function($compile) {

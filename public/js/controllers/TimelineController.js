@@ -4,6 +4,7 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 	var DAY = 1000 * 60 * 60 * 24; 
 
 	$scope.categoryForTmpl = dbpCategoryList.categoryForTmpl;
+	$scope.categories = dbpCategoryList.categories;
 
 	$scope.updateAvailableDays = function updateAvailableDays() {
 		$scope.availableDays = [];
@@ -19,6 +20,16 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 			}
 		}
 	};
+
+	$scope.months = ['JAN', 'FEB', 'MÄR', 'APR', 'MAI', 'JUN', 'JUL', 'AUG', 'SEP', 'OKT', 'NOV', 'DEZ'];
+	$scope.daysOfMonth = [];
+	$scope.currentMonth = 2;
+	$scope.currentDayOfMonth = 10;
+	$scope.opacityForListItem = function opacityForListItem(day, current, max) {
+		return (Math.pow((max - Math.abs(current - day)) / max, 4) * 0.7) + 0.3;
+	};
+	for (var i = 1; i <= 10; i++)
+		$scope.daysOfMonth.push(i);
 
 	$scope.day = '1st';
 	$scope.month = 'Jan';
