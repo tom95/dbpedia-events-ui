@@ -1,7 +1,7 @@
 var app = angular.module('dbpedia-events-ui', ['ngRoute']);
 
-app.config(['$routeProvider',
-    function ($routeProvider) {
+app
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
             controller: 'TimelineController',
             templateUrl: 'views/timeline.html'
@@ -15,6 +15,21 @@ app.config(['$routeProvider',
             redirectTo: '/'
         });
     }])
+    .filter('dbpNumberSuffix', function() {
+        return function(input) {
+            var string = input + '';
+            var lastNum = string[string.length - 1];
+
+            if (string == '11' || string == '12')
+                return string + 'th';
+
+            return input + (
+                lastNum == '1' ? 'st' :
+                lastNum == '2' ? 'nd' :
+                lastNum == '3' ? 'rd' :
+                'th');
+        }
+    })
     .factory('dbpCategoryList', function () {
         var categories = [
             {

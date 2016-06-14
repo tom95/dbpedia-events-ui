@@ -45,7 +45,7 @@
            ng-class="{ active: $index == currentMonth }"
            ng-repeat="month in months"
            ng-style="{ opacity: opacityForListItem($index, currentMonth, 12) }"
-           ng-bind="month"></div>
+           ng-bind="month | limitTo:3 | uppercase"></div>
     </div>
 
     <div class="date-picker clearfix">
@@ -58,8 +58,8 @@
   </div>
 
   <div class="day-marker">
-    <span class="day" ng-bind="day"></span>
-    <span class="month" ng-bind="month"></span>
+    <span class="day" ng-bind="(currentDayOfMonth + 1) | dbpNumberSuffix"></span>
+    <span class="month" ng-bind="months[currentMonth]"></span>
   </div>
 
   <h3 ng-show="loading" class="info-label">

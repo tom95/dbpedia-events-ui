@@ -2,8 +2,7 @@
     <div class="line" ng-hide="!events.length"></div>
 
     <div class="event-wrapper"
-         ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents"
-         ng-class="$index == 0 ? 'first' : ''">
+         ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents">
         <div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
 
             <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>

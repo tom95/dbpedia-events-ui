@@ -23,10 +23,12 @@ dbp-data-link {
 }
 
 .day-marker {
+	font-family: 'Open Sans';
 	margin: 15px;
 	font-size: 32px;
-	font-weight: bold;
 }
+.day-marker span:first-child { font-weight: bold; }
+.day-marker span:nth-child(2) { font-size: 0.8em; }
 
 .line {
 	position: absolute;
