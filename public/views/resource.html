@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container resource-container">
 	<div class="input-group">
 		<span class="input-group-addon">
 			<span class="glyphicon glyphicon-search"></span>
@@ -7,15 +7,35 @@
 		<input ng-change="updateSearchQuery()" type="text" class="form-control" placeholder="Search ..." ng-model="search">
 	</div>
 	<ul class="list-group" ng-show="!resource">
-		<button class="list-group-item" ng-click="$parent.resource = item.res" ng-repeat="item in items" ng-bind="item.label">
+		<button class="list-group-item" ng-click="$parent.resource = item; $parent.search = item.label" ng-repeat="item in items" ng-bind="item.label">
 		</button>
 	</ul>
 
-	  <h3 ng-show="loading" class="text-center">
+	<h3 ng-show="loading" class="text-center">
 		<span class="glyphicon glyphicon-refresh loading"></span>
 		Loading ...
-	  </h3>
+	</h3>
 
-	<dbp-timeline events="events" large="false"></dbp-timeline>
+	<div class="row">
+		<div class="col-md-8">
+			<h3 ng-show="!loading && resource && !events.length" class="text-center">
+				<span class="glyphicon glyphicon-zoom-out"></span>
+				No events for this resource.
+			</h3>
+
+			<dbp-timeline ng-show="resource" events="events" large="false"></dbp-timeline>
+		</div>
+		<div class="col-md-4">
+			<div ng-show="resource" style="margin-top: 12px;" class="panel panel-default">
+				<div class="panel-heading" ng-bind="resource.label"></div>
+				<div class="panel-body">
+					<img ng-show="resource.image" style="max-width: 100%; max-height: 200px; margin: auto; display: block;" ng-attr-src="{{ resource.image }}">
+					<br ng-show="resource.image">
+
+					<p ng-bind="resource.description"></p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 

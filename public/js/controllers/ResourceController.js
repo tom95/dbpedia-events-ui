@@ -16,30 +16,27 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
 		$scope.items = [];
 		$scope.resource = null;
 
-		if (!$scope.search)
+		if (!$scope.search || $scope.resource)
 			return;
 
 		searchTriggerTimeout = setTimeout(function() {
 			var search = $scope.search.toLowerCase();
 			$scope.loading = true;
 
-			$http.get('http://dbpedia-live.openlinksw.com/sparql?format=json&query=' +
-					escape('select distinct ?res ?label where {' +
-						'?res a owl:Thing.' +
-						'?res rdfs:label ?label.' +
-						'filter contains( lcase(?label), "' + search + '" ).' +
-						'} LIMIT 7'), { timeout: requestCanceler.promise }).then(function(data) {
+			$http.get('http://lookup.dbpedia.org/api/search/PrefixSearch?MaxHits=8&QueryString=' + search, {
+				headers: { 'Accept': 'application/json' }
+			}).then(function(data) {
 				// check if our query is still the most recent one
-				console.log(search, '=>', data);
 				$scope.loading = false;
 				requestCanceler = null;
 				if (search != $scope.search)
 					return;
 
-				$scope.items = data.data.results.bindings.map(function(item) {
+				$scope.items = data.data.results.map(function(item) {
 					return {
-						res: item.res.value,
-						label: item.label.value
+						res: item.uri,
+						description: item.description,
+						label: item.label
 					};
 				});
 			}, function(err) {
@@ -53,11 +50,25 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
 	};
 
 	$scope.$watch('resource', function() {
+		if ($scope.resource)
+			$scope.imageForResource($scope.resource);
+	});
+
+	$scope.imageForResource = function imageForResource(resource) {
+		$http.get('http://dbpedia-live.openlinksw.com/sparql?format=json&query=' +
+				  escape('select ?img { <' + resource.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }'))
+		.then((res) => {
+			console.log(res, resource.res);
+			if (res.data.results.bindings.length)
+				resource.image = res.data.results.bindings[0].img.value;
+		});
+	};
+
+	$scope.$watch('resource', function() {
 		if (!$scope.resource)
 			return;
 
-		$http.get('/events/resource?resource=' + escape($scope.resource)).success(function(data) {
-			console.log(data);
+		$http.get('/events/resource?resource=' + escape($scope.resource.res)).success(function(data) {
 			$scope.events = data;
 		});
 	})
