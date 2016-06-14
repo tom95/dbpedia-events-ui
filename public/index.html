@@ -28,12 +28,9 @@
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav" ng-controller="TabController as tab">
-						<li ng-class="{ active: tab.isSet(0) }"><a ng-click="tab.setTab(0)" href="/#/">Timeline</a></li>
-						<li ng-class="{ active: tab.isSet(1) }"><a ng-click="tab.setTab(1)" href="/#/resource">Resource Search</a></li>
-						<li ng-class="{ active: tab.isSet(2) }"><a ng-click="tab.setTab(2)" href="/#/editor">Template Editor</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/#/">Login</a></li>
+						<li ng-class="{ active: tab.isSet('/') }"><a href="/#/">Timeline</a></li>
+						<li ng-class="{ active: tab.isSet('/resource') }"><a href="/#/resource">Resource Search</a></li>
+						<li ng-class="{ active: tab.isSet('/editor') }"><a href="/#/editor">Template Editor</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->

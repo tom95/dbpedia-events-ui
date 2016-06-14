@@ -1,13 +1,7 @@
 var app = angular.module('dbpedia-events-ui');
 
-app.controller('TabController', function() {
-	this.tab = 0;
-  this.setTab = function(newTab) {
-    this.tab = newTab;
-    console.log(this.tab);
+app.controller('TabController', ['$location', function($location) {
+  this.isSet = function(location) {
+    return location == $location.path();
   };
-
-  this.isSet = function(tabIndex) {
-    return this.tab == tabIndex;
-  };
-});
+}]);
