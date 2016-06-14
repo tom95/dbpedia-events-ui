@@ -158,6 +158,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
         }).then(function(response) {
             console.log(response.data);
             console.log("Sent new template to backend");
+            $scope.events = response.data;
         });
     };
 
