@@ -29,19 +29,19 @@
     <div class="btn-group">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         <span class="glyphicon glyphicon-calendar"></span>
-        <span ng-bind="'Year ' + selectedYear"></span>
+        <span ng-bind="'Year ' + currentYear"></span>
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-          <li ng-class="{active: $parent.selectedYear == year}" ng-repeat="year in years">
-            <a href="" ng-click="$parent.selectedYear = year" ng-bind="year">
+          <li ng-class="{active: $parent.currentYear == year}" ng-repeat="year in years">
+            <a href="" ng-click="$parent.currentYear = year" ng-bind="year">
             </a>
           </li>
       </ul>
     </div>
 
     <div class="date-picker wider clearfix">
-      <div ng-mouseover="$parent.currentMonth = $index"
+      <div ng-click="$parent.currentMonth = $index"
         ng-class="{ active: $index == currentMonth }"
         ng-repeat="month in months"
         ng-style="{ opacity: opacityForListItem($index, currentMonth, 12) }"
@@ -49,9 +49,9 @@
     </div>
 
     <div class="date-picker clearfix">
-      <div ng-mouseover="$parent.currentDayOfMonth = $index"
+      <div ng-click="$parent.currentDayOfMonth = $index"
         ng-class="{ active: $index == currentDayOfMonth }"
-        ng-repeat="day in daysOfMonth"
+        ng-repeat="day in daysOfMonth | limitTo:daysOfCurrentMonth()"
         ng-style="{ opacity: opacityForListItem($index, currentDayOfMonth, 30) }"
         ng-bind="day < 10 ? '0' + day : day"></div>
     </div>
