@@ -58,7 +58,6 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
 		$http.get('http://dbpedia-live.openlinksw.com/sparql?format=json&query=' +
 				  escape('select ?img { <' + resource.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }'))
 		.then((res) => {
-			console.log(res, resource.res);
 			if (res.data.results.bindings.length)
 				resource.image = res.data.results.bindings[0].img.value;
 		});
@@ -69,7 +68,10 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
 			return;
 
 		$http.get('/events/resource?resource=' + escape($scope.resource.res)).success(function(data) {
-			$scope.events = data;
+			$scope.events = data.map(function(item) {
+				item.endTime = new Date(item.endTime);
+				return item;
+			});
 		});
 	})
 }]);
