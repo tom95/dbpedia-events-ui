@@ -1,5 +1,11 @@
 var app = angular.module('dbpedia-events-ui', ['ngRoute']);
 
+$(document).on('click', '.navbar-collapse.in', function(e) {
+    if ($(e.target).is('a')) {
+        $(this).collapse('hide');
+    }
+});
+
 app
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
