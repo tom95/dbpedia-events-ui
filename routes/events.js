@@ -1,8 +1,9 @@
-const httpRequest = require('request');
+const _httpRequest = require('request');
 const querystring = require('querystring');
 var sparqlMemoryCache = {};
 
-const ENABLE_PICTURES = false;
+// one of 'disabled', 'wiki', 'dbpedia'
+const PICTURE_MODE = 'wiki';
 
 /**
  * run the given query on the sparql endpoint at source. returns a promise
@@ -10,7 +11,7 @@ const ENABLE_PICTURES = false;
  */
 function sparqlQuery(query, source) {
     return new Promise((resolve, reject) => {
-        httpRequest(source + '?query=' +
+        _httpRequest(source + '?query=' +
             querystring.escape(query) + '&format=json', (err, res, body) => {
             if (err)
                 return reject(err);
@@ -26,22 +27,34 @@ function sparqlQuery(query, source) {
     });
 }
 
-function postRequest(url, params) {
+function httpRequest(method, url, params, parseJson) {
     return new Promise((resolve, reject) => {
-            httpRequest({
-                    method: 'POST',
-                    url: url,
-                    json: params
-                },
-                function (error, response, body) {
-                    if (error)
-                        return reject(error);
-                    else
-                        return resolve(body);
-                });
-        }
-    )
-        ;
+	var config = {
+	    method: method,
+	    url: url
+	};
+
+	if (method == 'GET')
+	    config.url += '?' + Object.keys(params).map((key) => {
+		return querystring.escape(key) + '=' + querystring.escape(params[key]);
+	    }).join('&');
+	else
+	    config.json = params;
+
+	_httpRequest(config,
+		     function (error, response, body) {
+			 if (error)
+			     return reject(error);
+			 else if (parseJson)
+			     try {
+				 return resolve(JSON.parse(body));
+			     } catch (e) {
+				 return reject(e);
+			     }
+			 else
+			     return resolve(body);
+		     });
+    }) ;
 }
 
 /**
@@ -104,8 +117,39 @@ function condenseEvents(data) {
  * given a reply from the dbpedia events endpoint fetch image links for each resource
  */
 function fetchImagesForResources(data) {
-    if (!ENABLE_PICTURES)
+    if (PICTURE_MODE == 'disabled')
         return Promise.resolve(data);
+
+    if (PICTURE_MODE == 'wiki')
+	return Promise.all(data.map((digest) => {
+	    return new Promise((resolve, reject) => {
+		var entity = digest.res.match(/\/([^/]+)$/)[1];
+		httpRequest('GET', 'https://en.wikipedia.org/w/api.php', {
+		    action: 'query',
+		    prop: 'extracts|pageimages|revisions|info',
+		    redirects: true,
+		    exintro: true,
+		    explaintext: true,
+		    piprop: 'thumbnail',
+		    pithumbsize: '300',
+		    rvprop: 'timestamp',
+		    inprop: 'url',
+		    indexpageids: true,
+		    titles: entity,
+		    format: 'json'
+		}, true)
+		.then((data) => {
+		    var pages = data.query.pages;
+		    var page = pages[Object.keys(pages)[0]];
+		    digest.image = page.thumbnail ? page.thumbnail.source : null;
+		    resolve(digest);
+		}, (err) => {
+		    console.log('Failed to fetch image', digest.res);
+		    digest.image = null;
+		    resolve(digest);
+		});
+	    });
+	}));
 
     return Promise.all(data.map((digest) => {
         return new Promise((resolve, reject) => {
@@ -130,7 +174,7 @@ function queryCustomEventsByDay(template) {
     // var cached = getEventsFromCache('custom-' + (+template.start));
     // if (cached) return Promise.resolve(cached);
 
-    return postRequest("http://141.89.225.50:9000/api/testconfig", template)
+    return httpRequest('POST', "http://141.89.225.50:9000/api/testconfig", template)
         .then((data) => {
             console.log("Test API respone: ", data);
             return data;

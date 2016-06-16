@@ -54,12 +54,42 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
     });
 
     $scope.imageForResource = function imageForResource(resource) {
-        $http.get('http://dbpedia-live.openlinksw.com/sparql?format=json&query=' +
-            escape('select ?img { <' + resource.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }'))
-            .then((res) => {
-                if (res.data.results.bindings.length)
-                    resource.image = res.data.results.bindings[0].img.value;
+        if (false)
+            $http.get('http://dbpedia-live.openlinksw.com/sparql?format=json&query=' +
+                escape('select ?img { <' + resource.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }'))
+                .then((res) => {
+                    if (res.data.results.bindings.length)
+                        resource.image = res.data.results.bindings[0].img.value;
             });
+        else {
+            var entity = resource.res.match(/\/([^/]+)$/)[1];
+            $.ajax({
+                url: 'https://en.wikipedia.org/w/api.php',
+                jsonp: 'callback',
+                dataType: 'jsonp',
+                data: {
+                    action: 'query',
+                    prop: 'extracts|pageimages|revisions|info',
+                    redirects: true,
+                    exintro: true,
+                    explaintext: true,
+                    piprop: 'thumbnail',
+                    pithumbsize: '300',
+                    rvprop: 'timestamp',
+                    inprop: 'url',
+                    indexpageids: true,
+                    titles: entity,
+                    format: 'json'
+                },
+                xhrFields: {withCredentials: true},
+                success: function (response) {
+                    var pages = response.query.pages;
+                    var page = pages[Object.keys(pages)[0]];
+                    resource.image = page.thumbnail ? page.thumbnail.source : null;
+                    $scope.$apply();
+                }
+            });
+        }
     };
 
     $scope.$watch('resource', function () {
