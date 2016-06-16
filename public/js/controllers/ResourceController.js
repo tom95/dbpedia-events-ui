@@ -72,10 +72,6 @@ angular.module('dbpedia-events-ui').controller('ResourceController', ['$scope', 
                 return item;
             });
         });
-
-        $http.get('/custom/resource?resource=' + escape($scope.resource.res)).success(function (data) {
-            $scope.events = data;
-        });
-    })
+    });
 }]);
 

@@ -2,6 +2,8 @@ const httpRequest = require('request');
 const querystring = require('querystring');
 var sparqlMemoryCache = {};
 
+const ENABLE_PICTURES = false;
+
 /**
  * run the given query on the sparql endpoint at source. returns a promise
  * with the returned json data.
@@ -102,6 +104,9 @@ function condenseEvents(data) {
  * given a reply from the dbpedia events endpoint fetch image links for each resource
  */
 function fetchImagesForResources(data) {
+    if (!ENABLE_PICTURES)
+        return Promise.resolve(data);
+
     return Promise.all(data.map((digest) => {
         return new Promise((resolve, reject) => {
             sparqlQuery('select ?img { <' + digest.res + '> <http://xmlns.com/foaf/0.1/depiction> ?img }',
@@ -234,7 +239,7 @@ module.exports = [{
         path: '/events/resource',
         method: 'GET',
         handler: (request, reply) => {
-            var resource = request.resource;
+            var resource = request.query.resource;
             if (!resource)
                 return reply('Missing param resource').code(403);
 
