@@ -1,9 +1,31 @@
 const _httpRequest = require('request');
 const querystring = require('querystring');
 var sparqlMemoryCache = {};
+var eventConfirmations = {};
 
 // one of 'disabled', 'wiki', 'dbpedia'
 const PICTURE_MODE = 'wiki';
+
+// http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
+function stringHash(str) {
+    var hash = 0, i, chr, len;
+    if (str.length === 0) return hash;
+    for (i = 0, len = str.length; i < len; i++) {
+	chr   = str.charCodeAt(i);
+	hash  = ((hash << 5) - hash) + chr;
+	hash |= 0;
+    }
+    return hash;
+}
+
+function eventFromCachesById(id, cb) {
+    Object.keys(sparqlMemoryCache).forEach((cache) => {
+	sparqlMemoryCache[cache].forEach((digest) => {
+	    if (digest.id == id)
+		cb(digest);
+	});
+    })
+}
 
 /**
  * run the given query on the sparql endpoint at source. returns a promise
@@ -80,7 +102,8 @@ function processEventQueryData(data) {
         var keys = Object.keys(digest);
         keys.forEach((key) => {
             item[key] = digest[key].value;
-        })
+        });
+	item.id = stringHash(item.digestid + item.tmpl + item.res);
         return item;
     });
 
@@ -111,6 +134,14 @@ function condenseEvents(data) {
     return data.filter((digest) => {
         return !digest.remove;
     });
+}
+
+function addConfirmCounts(data) {
+    data.forEach(function(digest) {
+	digest.confirm = eventConfirmations[digest.id] ||
+	    { confirm: 0, disconfirm: 0 };
+    });
+    return data;
 }
 
 /**
@@ -212,6 +243,7 @@ function queryEventsByDay(startDay) {
 		}', 'http://events.dbpedia.org/sparql')
         .then(processEventQueryData)
         .then(condenseEvents)
+         .then(addConfirmCounts)
         .then(fetchImagesForResources)
         .then((list) => {
             cacheEventQuery('event-' + (+startDay), list);
@@ -295,4 +327,27 @@ module.exports = [{
                     reply('Internal Error').code(500);
                 });
         }
-    }]
+    },
+    {
+	path: '/events/confirm/{id}',
+	method: 'PUT',
+	handler: (request, reply) => {
+	    if (!eventConfirmations[request.params.id])
+		eventConfirmations[request.params.id] = { confirm: 0, disconfirm: 0 };
+
+	    if (request.payload.confirm)
+		eventConfirmations[request.params.id].confirm++;
+	    else
+		eventConfirmations[request.params.id].disconfirm++;
+
+	    eventFromCachesById(request.params.id, (digest) => {
+		if (request.payload.confirm)
+		    digest.confirm.confirm++;
+		else
+		    digest.confirm.disconfirm++;
+	    });
+
+	    reply({ confirm: eventConfirmations[request.params.id] });
+	}
+    }
+];

@@ -66,5 +66,13 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
         $scope.$apply();
     });
 
+    $scope.confirmEvent = function confirmEvent(event, doConfirm) {
+        console.log('hi');
+        $http.put('/events/confirm/' + event.id, { confirm: doConfirm })
+            .then(function(body) {
+                event.confirm = body.confirm;
+                console.log(body);
+            });
+    };
 }]);
 

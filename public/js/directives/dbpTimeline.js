@@ -11,6 +11,13 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
         link: function ($scope, $element, $attrs) {
             $scope.categoryForTmpl = dbpCategoryList.categoryForTmpl;
             $scope.insertDataLinks = dbpCategoryList.insertDataLinks;
+
+            $scope.confirmEvent = function confirmEvent(event, doConfirm) {
+                $http.put('/events/confirm/' + event.id, { confirm: doConfirm })
+                    .then(function(res) {
+                        event.confirm = res.data.confirm;
+                    });
+            };
         }
     }
 }]);

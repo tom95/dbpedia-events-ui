@@ -1,4 +1,4 @@
-<div class="event-list" ng-class="{ large: large }">
+<div class="event-list" ng-class="{ large: large }" ng-style="{ opacity: event.confirm.confirm + event.confirm.disconfirm > 5 && event.confirm.disconfirm > event.confirm.confirm ? 0.7 : 1.0 }">
     <div class="line" ng-hide="!events.length"></div>
 
     <div class="event-wrapper"
@@ -12,6 +12,16 @@
             <h2 dbp-late-compile="insertDataLinks(event.desc, event.tmpl)"></h2>
 
             <div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
+
+            <span class="text-muted pull-right" ng-bind="event.confirm.confirm + ' Confirms vs ' + event.confirm.disconfirm + ' Disconfirms'"></span>
+
+            <button ng-click="confirmEvent(event, true)" class="btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-ok"></span> Confirm
+            </button>
+
+            <button ng-click="confirmEvent(event, false)" class="btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove"></span> Wrong
+            </button>
 
         </div>
     </div>
