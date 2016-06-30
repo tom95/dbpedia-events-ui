@@ -1,9 +1,9 @@
-<div class="event-list" ng-class="{ large: large }" ng-style="{ opacity: event.confirm.confirm + event.confirm.disconfirm > 5 && event.confirm.disconfirm > event.confirm.confirm ? 0.7 : 1.0 }">
+<div class="event-list" ng-class="{ large: large }">
     <div class="line" ng-hide="!events.length"></div>
 
     <div class="event-wrapper"
          ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents">
-        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'">
+        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: eventDisconfirmed(event)  ? 0.5 : 1.0 }">
 
             <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 

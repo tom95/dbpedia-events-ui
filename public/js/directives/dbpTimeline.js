@@ -18,6 +18,13 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                         event.confirm = res.data.confirm;
                     });
             };
+
+            $scope.eventDisconfirmed = function eventDisconfirmed(event) {
+                if (!event)
+                    return false;
+                return event.confirm.confirm + event.confirm.disconfirm > 5 &&
+                    event.confirm.disconfirm > event.confirm.confirm;
+            };
         }
     }
 }]);
