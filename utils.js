@@ -1,11 +1,12 @@
 const _httpRequest = require('request');
 const querystring = require('querystring');
 
-function httpRequest(method, url, params, parseJson) {
+function httpRequest(method, url, params, parseJson, headers) {
     return new Promise((resolve, reject) => {
 	var config = {
 	    method: method,
-	    url: url
+	    url: url,
+		headers: headers || {}
 	};
 
 	if (method == 'GET')
