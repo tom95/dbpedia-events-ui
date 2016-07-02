@@ -1,4 +1,4 @@
-const ArticleVerification = require('./Faroo.js');
+const ArticleVerification = require('./ArticleVerification.js');
 const escape = require('querystring').escape;
 const request = require('./utils').request;
 
@@ -19,4 +19,3 @@ class Faroo extends ArticleVerification {
 			})
 	}
 }
-
