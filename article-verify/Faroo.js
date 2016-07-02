@@ -12,6 +12,7 @@ class Faroo extends ArticleVerification {
 			.then((data) => {
 				// TODO post process, filter
 				console.log('Data: ', data);
+				// TODO return array of { title, url, pubDate, author }
 				return data;
 			}).catch((err) => {
 				console.log('Failed');
