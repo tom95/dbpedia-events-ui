@@ -6,6 +6,10 @@ var eventConfirmations = {};
 // one of 'disabled', 'wiki', 'dbpedia'
 const PICTURE_MODE = 'wiki';
 
+var verificationServices = {
+    'faroo': new (require('../article-verify/Faroo.js'))()
+};
+
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
 function stringHash(str) {
     var hash = 0, i, chr, len;
@@ -226,7 +230,7 @@ function queryEventsByDay(startDay) {
 
     var endDay = new Date(+startDay + 24 * 60 * 60 * 1000);
 
-    return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?res \
+    return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?res ?endTime \
 		{ \
 			?s a <http://events.dbpedia.org/ns/core#Event> . \
 			?s <http://purl.org/dc/terms/description> ?desc . \
@@ -327,6 +331,25 @@ module.exports = [{
                     reply('Internal Error').code(500);
                 });
         }
+    },
+    {
+	path: '/events/verify/{service}',
+	method: 'GET',
+	handler: (request, reply) => {
+	    var service = verificationServices[request.params.service];
+	    if (!service)
+		return reply('No such service').code(400);
+
+	    service.findArticles({
+		desc: request.query.desc,
+		tmpl: request.query.tmpl,
+		endTime: request.query.endTime
+	    }).then((data) => {
+		return reply(data);
+	    }, (err) => {
+		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
+	    });
+	}
     },
     {
 	path: '/events/confirm/{id}',
