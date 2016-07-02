@@ -6,6 +6,10 @@ var eventConfirmations = {};
 // one of 'disabled', 'wiki', 'dbpedia'
 const PICTURE_MODE = 'wiki';
 
+var verificationServices = {
+    'faroo': new (require('../article-verify/Faroo.js'))()
+};
+
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
 function stringHash(str) {
     var hash = 0, i, chr, len;
@@ -327,6 +331,24 @@ module.exports = [{
                     reply('Internal Error').code(500);
                 });
         }
+    },
+    {
+	path: '/events/verify/{service}',
+	method: 'GET',
+	handler: (request, reply) => {
+	    var service = verificationServices[request.params.service];
+	    if (!service)
+		return reply('No such service').code(400);
+
+	    service.findArticles({
+		desc: request.query.desc,
+		tmpl: request.query.tmpl
+	    }).then((data) => {
+		return reply(data);
+	    }, (err) => {
+		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
+	    });
+	}
     },
     {
 	path: '/events/confirm/{id}',

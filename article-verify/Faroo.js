@@ -1,6 +1,6 @@
-const ArticleVerification = require('./Faroo.js');
+const ArticleVerification = require('./ArticleVerification.js');
 const escape = require('querystring').escape;
-const request = require('./utils').request;
+const request = require('../utils').request;
 
 class Faroo extends ArticleVerification {
 	abstractBaseRelevance() {
@@ -8,15 +8,14 @@ class Faroo extends ArticleVerification {
 	}
 
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
-		return request('http://faroo.com?q=' + escape(subject))
+		return request('GET', 'http://faroo.com', { q: subject }, true)
 			.then((data) => {
 				// TODO post process, filter
 				console.log('Data: ', data);
-				// TODO return array of { title, url, pubDate, author }
+				// TODO return array of { title, url, pubDate, author, imageUrl }
 				return data;
-			}).catch((err) => {
-				console.log('Failed');
-			})
+			});
 	}
 }
 
+module.exports = Faroo;

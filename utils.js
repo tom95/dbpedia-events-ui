@@ -1,4 +1,5 @@
 const _httpRequest = require('request');
+const querystring = require('querystring');
 
 function httpRequest(method, url, params, parseJson) {
     return new Promise((resolve, reject) => {
@@ -18,16 +19,20 @@ function httpRequest(method, url, params, parseJson) {
 		     function (error, response, body) {
 			 if (error)
 			     return reject(error);
-			 else if (parseJson)
+
+			 if (response.statusCode < 200 || response.statusCode >= 300)
+				 return reject(body);
+
+			 if (parseJson)
 			     try {
-				 return resolve(JSON.parse(body));
+					 return resolve(JSON.parse(body));
 			     } catch (e) {
-				 return reject(e);
+					 return reject(e);
 			     }
 			 else
 			     return resolve(body);
 		     });
-    }) ;
+    });
 }
 
 module.exports.request = httpRequest;

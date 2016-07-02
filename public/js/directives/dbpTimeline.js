@@ -25,6 +25,16 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                 return event.confirm.confirm + event.confirm.disconfirm > 5 &&
                     event.confirm.disconfirm > event.confirm.confirm;
             };
+
+            $scope.testVerifyArticle = function testVerifyArticle(event) {
+                console.log($scope.categoryForTmpl(event.tmpl), event.tmpl, event);
+                $http.get('/events/verify/faroo?tmpl=' + escape($scope.categoryForTmpl(event.tmpl).desc[0]) + '&desc=' + escape(event.desc))
+                    .then(function(data) {
+                        console.log(data);
+                    }, function(err) {
+                        console.log(err);
+                    });
+            };
         }
     }
 }]);
