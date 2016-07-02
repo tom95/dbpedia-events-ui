@@ -11,8 +11,14 @@ class ArticleVerification {
 
 	findArticles(digest) {
 		var parts = this.extractSubjectObject(digest.desc, digest.tmpl);
-		return this.abstractExecuteFind(new Date(new Date(digest.endTime) - this.dateVariance()),
-								   new Date(new Date(digest.endTime) + this.dateVariance()), parts[0], parts[1], digest.desc);
+		var timeMatch = digest.endTime.match(/^(\d{4})-(\d{2})-(\d{2})/);
+		var centerDate = new Date();
+		centerDate.setFullYear(parseInt(timeMatch[1]));
+		centerDate.setMonth(parseInt(timeMatch[2]));
+		centerDate.setDate(parseInt(timeMatch[3]));
+
+		return this.abstractExecuteFind(new Date(centerDate - this.dateVariance()),
+								   new Date(centerDate + this.dateVariance()), parts[0], parts[1], digest.desc);
 	}
 
 	extractSubjectObject(desc, tmpl) {

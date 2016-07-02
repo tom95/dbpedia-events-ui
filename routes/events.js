@@ -230,7 +230,7 @@ function queryEventsByDay(startDay) {
 
     var endDay = new Date(+startDay + 24 * 60 * 60 * 1000);
 
-    return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?res \
+    return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?res ?endTime \
 		{ \
 			?s a <http://events.dbpedia.org/ns/core#Event> . \
 			?s <http://purl.org/dc/terms/description> ?desc . \
@@ -342,7 +342,8 @@ module.exports = [{
 
 	    service.findArticles({
 		desc: request.query.desc,
-		tmpl: request.query.tmpl
+		tmpl: request.query.tmpl,
+		endTime: request.query.endTime
 	    }).then((data) => {
 		return reply(data);
 	    }, (err) => {
