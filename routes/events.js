@@ -7,7 +7,8 @@ var eventConfirmations = {};
 const PICTURE_MODE = 'wiki';
 
 var verificationServices = {
-    'faroo': new (require('../article-verify/Faroo.js'))()
+    'faroo': new (require('../article-verify/Faroo.js'))(),
+    'bing': new (require('../article-verify/Bing.js'))()
 };
 
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
