@@ -8,7 +8,8 @@ const PICTURE_MODE = 'wiki';
 
 var verificationServices = {
     'faroo': new (require('../article-verify/Faroo.js'))(),
-    'bing': new (require('../article-verify/Bing.js'))()
+    'bing': new (require('../article-verify/Bing.js'))(),
+    'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))()
 };
 
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
@@ -346,7 +347,10 @@ module.exports = [{
 		tmpl: request.query.tmpl,
 		endTime: request.query.endTime
 	    }).then((data) => {
-		return reply(data);
+		return reply(data.map((item) => {
+		    item.source = request.params.service;
+		    return item;
+		}));
 	    }, (err) => {
 		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
 	    });

@@ -28,5 +28,20 @@
             </button>
 
         </div>
+
+        <div class="event-news" ng-show="event.news">
+            <div ng-show="!event.news.length">No articles related to this event found</div>
+            <div class="event-news-item" ng-repeat="news in event.news">
+                <a ng-attr-href="{{ news.url }}">
+                    <div class="pull-right">
+                        <small ng-bind="news.pubDate | date"></small>
+                        <img width="16" ng-attr-src="/archive-verify-icons/{{ news.source }}.png">
+                    </div>
+                    <h4 ng-bind="news.title"></h4>
+                    <p ng-bind="news.excerpt"></p>
+                </a>
+                <hr>
+            </div>
+        </div>
     </div>
 </div>
