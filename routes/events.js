@@ -7,7 +7,7 @@ var eventConfirmations = {};
 const PICTURE_MODE = 'wiki';
 
 var verificationServices = {
-    'faroo': new (require('../article-verify/Faroo.js'))(),
+    // 'faroo': new (require('../article-verify/Faroo.js'))(),
     'bing': new (require('../article-verify/Bing.js'))(),
     'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))()
 };
@@ -333,6 +333,29 @@ module.exports = [{
                     reply('Internal Error').code(500);
                 });
         }
+    },
+    {
+	path: '/events/verify',
+	method: 'GET',
+	handler: (request, reply) => {
+	    Promise.all(Object.keys(verificationServices).map(function(serviceId) {
+		return verificationServices[serviceId].findArticles({
+		    desc: request.query.desc,
+		    tmpl: request.query.tmpl,
+		    endTime: request.query.endTime
+		}).then((data) => {
+		    return data.map((item) => {
+			item.source = serviceId;
+			return item;
+		    });
+		});
+	    })).then((sources) => {
+		return reply([].concat.apply([], sources));
+	    }).catch((err) => {
+		console.log('Failed to grab data', err);
+		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
+	    });
+	}
     },
     {
 	path: '/events/verify/{service}',

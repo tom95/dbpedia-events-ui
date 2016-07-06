@@ -27,7 +27,7 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
             };
 
             $scope.testVerifyArticle = function testVerifyArticle(event) {
-                $http.get('/events/verify/newYorkTimes?tmpl=' + escape($scope.categoryForTmpl(event.tmpl).desc[0]) +
+                $http.get('/events/verify?tmpl=' + escape($scope.categoryForTmpl(event.tmpl).desc[0]) +
                           '&desc=' + escape(event.desc) +
                           '&endTime=' + escape(event.endTime))
                     .then(function(res) {
