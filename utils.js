@@ -24,13 +24,17 @@ function httpRequest(method, url, params, parseJson, headers) {
 			 if (response.statusCode < 200 || response.statusCode >= 300)
 				 return reject(body);
 
-			 if (parseJson)
+             if (typeof body !== 'string')
+                return resolve(body);
+
+			 if (parseJson) {
 			     try {
 					 return resolve(JSON.parse(body));
 			     } catch (e) {
+                     e.failedData = body;
 					 return reject(e);
 			     }
-			 else
+             } else
 			     return resolve(body);
 		     });
     });

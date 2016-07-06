@@ -27,7 +27,7 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
             };
 
             $scope.testVerifyArticle = function testVerifyArticle(event) {
-                $http.get('/events/verify/faroo?tmpl=' + escape($scope.categoryForTmpl(event.tmpl).desc[0]) + '&desc=' + escape(event.desc) + '&endTime=' + escape(event.endTime))
+                $http.get('/events/verify/FinancialTimes?tmpl=' + escape($scope.categoryForTmpl(event.tmpl).desc[0]) + '&desc=' + escape(event.desc) + '&endTime=' + escape(event.endTime))
                     .then(function(data) {
                         console.log(data);
                     }, function(err) {
@@ -37,4 +37,3 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
         }
     }
 }]);
-
