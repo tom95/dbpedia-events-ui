@@ -10,6 +10,8 @@ var verificationServices = {
     'faroo': new (require('../article-verify/Faroo.js'))(),
     'dieZeit': new (require('../article-verify/dieZeit.js'))(),
     'FinancialTimes': new (require('../article-verify/FinancialTimes.js'))
+    'bing': new (require('../article-verify/Bing.js'))(),
+    'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))()
 };
 
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
@@ -335,6 +337,29 @@ module.exports = [{
         }
     },
     {
+	path: '/events/verify',
+	method: 'GET',
+	handler: (request, reply) => {
+	    Promise.all(Object.keys(verificationServices).map(function(serviceId) {
+		return verificationServices[serviceId].findArticles({
+		    desc: request.query.desc,
+		    tmpl: request.query.tmpl,
+		    endTime: request.query.endTime
+		}).then((data) => {
+		    return data.map((item) => {
+			item.source = serviceId;
+			return item;
+		    });
+		});
+	    })).then((sources) => {
+		return reply([].concat.apply([], sources));
+	    }).catch((err) => {
+		console.log('Failed to grab data', err);
+		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
+	    });
+	}
+    },
+    {
 	path: '/events/verify/{service}',
 	method: 'GET',
 	handler: (request, reply) => {
@@ -347,7 +372,10 @@ module.exports = [{
 		tmpl: request.query.tmpl,
 		endTime: request.query.endTime
 	    }).then((data) => {
-		return reply(data);
+		return reply(data.map((item) => {
+		    item.source = request.params.service;
+		    return item;
+		}));
 	    }, (err) => {
 		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
 	    });

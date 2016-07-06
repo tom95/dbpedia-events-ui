@@ -41,6 +41,7 @@ dbp-data-link {
 .event-wrapper {
 	animation: left-slide-in 300ms;
 	position: relative;
+	margin-bottom: 15px;
 	transform-origin: top center;
 }
 .event {
@@ -51,6 +52,7 @@ dbp-data-link {
 	margin: 15px;
 	padding: 15px;
 	margin-left: 30px;
+	margin-bottom: 0;
 	position: relative;
 	width: calc(100% - 45px);
 }
@@ -145,4 +147,15 @@ dbp-data-link {
 	color: #ccc;
 	float: right;
 	font-size: inherit;
+}
+
+.event-news {
+	margin-right: 45px;
+	margin-left: 60px;
+	background-color: #f6f6f6;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #aaa;
+	border-top: 1px solid #f6f6f6;
+	padding: 15px;
+	padding-top: 0;
 }
