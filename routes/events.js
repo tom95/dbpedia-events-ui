@@ -7,9 +7,9 @@ var eventConfirmations = {};
 const PICTURE_MODE = 'wiki';
 
 var verificationServices = {
-    'faroo': new (require('../article-verify/Faroo.js'))(),
-    'dieZeit': new (require('../article-verify/dieZeit.js'))(),
-    'FinancialTimes': new (require('../article-verify/FinancialTimes.js'))
+    // 'faroo': new (require('../article-verify/Faroo.js'))(),
+    // 'dieZeit': new (require('../article-verify/dieZeit.js'))(),
+    // 'FinancialTimes': new (require('../article-verify/FinancialTimes.js')),
     'bing': new (require('../article-verify/Bing.js'))(),
     'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))()
 };
@@ -346,6 +346,7 @@ module.exports = [{
 		    tmpl: request.query.tmpl,
 		    endTime: request.query.endTime
 		}).then((data) => {
+		    console.log(serviceId, ' => ', data);
 		    return data.map((item) => {
 			item.source = serviceId;
 			return item;
