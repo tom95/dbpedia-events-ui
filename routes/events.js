@@ -8,10 +8,11 @@ const PICTURE_MODE = 'wiki';
 
 var verificationServices = {
     // 'faroo': new (require('../article-verify/Faroo.js'))(),
-    // 'dieZeit': new (require('../article-verify/dieZeit.js'))(),
+    'dieZeit': new (require('../article-verify/dieZeit.js'))(),
     // 'FinancialTimes': new (require('../article-verify/FinancialTimes.js')),
     'bing': new (require('../article-verify/Bing.js'))(),
-    'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))()
+    'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))(),
+    'guardian': new (require('../article-verify/Guardian.js'))()
 };
 
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
