@@ -14,11 +14,11 @@ class ArticleVerification {
 		var timeMatch = digest.endTime.match(/^(\d{4})-(\d{2})-(\d{2})/);
 		var centerDate = new Date();
 		centerDate.setFullYear(parseInt(timeMatch[1]));
-		centerDate.setMonth(parseInt(timeMatch[2]));
+		centerDate.setMonth(parseInt(timeMatch[2]) - 1);
 		centerDate.setDate(parseInt(timeMatch[3]));
 
-		return this.abstractExecuteFind(new Date(centerDate - this.dateVariance()),
-								   new Date(centerDate + this.dateVariance()), parts[0], parts[1], digest.desc);
+		return this.abstractExecuteFind(new Date(+centerDate - this.dateVariance()),
+								   new Date(+centerDate + this.dateVariance()), parts[0], parts[1], digest.desc);
 	}
 
 	extractSubjectObject(desc, tmpl) {
@@ -35,6 +35,16 @@ class ArticleVerification {
 
 	dateVariance() {
 		return 1000 * 60 * 60 * 24 * 7;
+	}
+
+	sanitise(string) {
+		return string
+			.replace(/[êéè]/gi, 'e')
+			.replace(/[âä]/gi, 'a')
+			.replace(/ü/gi, 'u')
+			.replace(/ö/gi, 'o')
+			.replace(/ß/gi, 'ss')
+			.replace(/[^a-z0-9\s]/gi, '')
 	}
 };
 

@@ -379,7 +379,8 @@ module.exports = [{
 		    return item;
 		}));
 	    }, (err) => {
-		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
+		console.log('Failed to grab data', err)
+		return reply('Failed to grab data' + JSON.stringify(err)).code(500);
 	    });
 	}
     },
