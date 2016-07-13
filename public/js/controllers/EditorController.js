@@ -154,7 +154,20 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
     $scope.testTemplate = function () {
         var templateText = prefixes + angular.element(document.getElementById("template")).text();
         $http.post('/events/custom', {
-            "templateText": templateText
+            "templateText": templateText,
+            "query": 'SELECT DISTINCT ?digestid ?tmpl ?desc ?res ?endTime \
+		{ \
+			?s a <http://events.dbpedia.org/ns/core#Event> . \
+			?s <http://purl.org/dc/terms/description> ?desc . \
+			?s <http://events.dbpedia.org/ns/core#update> ?u . \
+			?s <http://events.dbpedia.org/ns/core#digest> ?digest . \
+			?s <http://www.w3.org/ns/prov#wasDerivedFrom> ?tmpl . \
+			?tmpl a <http://events.dbpedia.org/ns/core#DigestTemplate> . \
+			?digest <http://www.w3.org/ns/prov#endedAtTime> ?endTime . \
+			?digest <http://purl.org/dc/terms/identifier> ?digestid . \
+			?u a <http://webr3.org/owl/guo#UpdateInstruction> . \
+			?u <http://webr3.org/owl/guo#target_subject> ?res . \
+		}'
         }).then(function (response) {
             console.log(response.data);
             console.log("Sent new template to backend");
