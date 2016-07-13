@@ -10,7 +10,7 @@ class NewYorkTimesArticleSearch extends ArticleVerification {
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
 		return request('GET', "https://api.nytimes.com/svc/search/v2/articlesearch.json", {
 			'api-key': "7f812bab4c23418e82b5af2ba7d989c2",
-			'q': subject,
+			'q': '"' + subject + '"' + '"' + object + '"',
 			'begin_date': this.convertDate(dateStart),
 			'end_date': this.convertDate(dateEnd),
 			'sort': "newest"
