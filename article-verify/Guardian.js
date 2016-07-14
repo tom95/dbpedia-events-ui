@@ -14,7 +14,6 @@ class Guardian extends ArticleVerification {
 		   	'from-date' : dateStart.toISOString(),
 		   	'to-date' : dateEnd.toISOString()
 		};
-		console.log(query);
 
 		return request('GET', 'https://content.guardianapis.com/search', query, true)
 			.then((data) => {

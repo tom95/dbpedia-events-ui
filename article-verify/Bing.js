@@ -24,19 +24,20 @@ class Bing extends ArticleVerification {
 
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
 		var params = {
-			q: subject,
-			count: 10,
-			mkt: 'en-US'
+			q: '"' + subject + '"' + '"' + object + '"',
+			count: 100,
+			mkt: 'en-US',
+			'News.SortBy': 'Date'
 		};
 		var headers = {
 			"Ocp-Apim-Subscription-Key": "95f06c2ab71b4f7fbcdbb8d5b6d33fcf"
 		};
 		return request('GET', BASE_URL, params, true, headers)
 			.then((data) => {
-				// TODO post process, filter
 				// console.log('Data: ', data);
-				// TODO return array of { title, url, pubDate, author, imageUrl }
-				return this._formatBingResult(data);
+				return this._formatBingResult(data).filter((item) => {
+					return item.pubDate >= dateStart && item.pubDate <= dateEnd;
+				}).sort((a, b) => { return  b.pubDate - a.pubDate });
 			});
 	}
 }

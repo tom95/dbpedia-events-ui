@@ -8,11 +8,12 @@ class dieZeit extends ArticleVerification {
 	}
 
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
-		return request('GET','http://api.zeit.de/content', { q: subject, api_key: '0d47a1ca0d95a5a7b68eda826ccb6889149b3f7ad47a9b5fb2bd'}, true)
+		return request('GET','http://api.zeit.de/content', { 
+			q: '"' + subject + '"' + '"' + object + '"',
+			api_key: '0d47a1ca0d95a5a7b68eda826ccb6889149b3f7ad47a9b5fb2bd'
+		}, true)
 			.then((data) => {
-				// TODO post process, filter
-				console.log('Data: ', data.matches);
-				// TODO return array of { title, url, pubDate, author }
+				//console.log('Data: ', data.matches);
 				return data.matches.map((article) => {
 					return {
 						pubDate: new Date(article.release_date),
