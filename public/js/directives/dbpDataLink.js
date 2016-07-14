@@ -1,4 +1,4 @@
-angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function ($http) {
+angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', '$filter', function ($http, $filter) {
     return {
         restrict: 'AE',
         link: function ($scope, $element, $attrs) {
@@ -10,8 +10,16 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function 
             var popover;
 
             var entity = $element.text();
-            var isOpen = false;
+            var isOpen = false
             var wasEntered = false;
+
+            var result;
+            if (result = entity.match(/([0-9]{4})-([0-9]{2})-([0-9]{2})/)) {
+                var date = new Date(parseInt(result[1]), parseInt(result[2]), parseInt(result[3]));
+                return $element
+                    .text($filter('date')(date, 'MMM d, y'))
+                    .css('color', 'inherit');
+            }
 
             function close() {
                 popover.detach();
@@ -21,7 +29,7 @@ angular.module('dbpedia-events-ui').directive('dbpDataLink', ['$http', function 
             function closeIfNotEntered() {
                 wasEntered = false;
 
-                if (isOpen) {
+                if (isOpen) { 
                     setTimeout(function () {
                         if (!wasEntered) {
                             close();
