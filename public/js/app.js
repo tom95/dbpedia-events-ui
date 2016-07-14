@@ -1,4 +1,4 @@
-var app = angular.module('dbpedia-events-ui', ['ngRoute']);
+var app = angular.module('dbpedia-events-ui', ['ngRoute', 'chart.js']);
 
 $(document).on('click', '.navbar-collapse.in', function(e) {
     if ($(e.target).is('a')) {

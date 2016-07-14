@@ -40,4 +40,19 @@ function httpRequest(method, url, params, parseJson, headers) {
     });
 }
 
+function extractSubjectObject(desc, tmpl) {
+	function escapeRegExp(str) {
+		// http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+		return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+	}
+
+	var regex = escapeRegExp(tmpl).replace(/%%.+?%%/g, "(.+)");
+
+	var current = 0;
+	return desc.match(regex).slice(1);
+}
+
+
 module.exports.request = httpRequest;
+module.exports.extractSubjectObject = extractSubjectObject;
+

@@ -1,3 +1,4 @@
+const extractSubjectObject = require('../utils.js').extractSubjectObject;
 
 class ArticleVerification {
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
@@ -10,7 +11,7 @@ class ArticleVerification {
 
 
 	findArticles(digest) {
-		var parts = this.extractSubjectObject(digest.desc, digest.tmpl);
+		var parts = extractSubjectObject(digest.desc, digest.tmpl);
 		var timeMatch = digest.endTime.match(/^(\d{4})-(\d{2})-(\d{2})/);
 		var centerDate = new Date();
 		centerDate.setFullYear(parseInt(timeMatch[1]));
@@ -19,18 +20,6 @@ class ArticleVerification {
 
 		return this.abstractExecuteFind(new Date(+centerDate - this.dateVariance()),
 								   new Date(+centerDate + this.dateVariance()), parts[0], parts[1], digest.desc);
-	}
-
-	extractSubjectObject(desc, tmpl) {
-		function escapeRegExp(str) {
-			// http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
-			return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-		}
-
-		var regex = escapeRegExp(tmpl).replace(/%%.+?%%/g, "(.+)");
-
-		var current = 0;
-		return desc.match(regex).slice(1);
 	}
 
 	dateVariance() {

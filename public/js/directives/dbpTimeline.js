@@ -32,7 +32,11 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                           '&endTime=' + escape(event.endTime))
                     .then(function(res) {
                         console.log(res.data);
-                        event.news = res.data;
+                        event.news = res.data.articles;
+                        event.trends = {
+                            counts: res.data.trends.map(function(i) { return i.count; }),
+                            labels: res.data.trends.map(function(i) { return i.date; })
+                        }
                     }, function(err) {
                         console.log(err);
                         alert('Failed to grab news (see console)');

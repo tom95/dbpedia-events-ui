@@ -6,6 +6,7 @@ var eventConfirmations = {};
 // one of 'disabled', 'wiki', 'dbpedia'
 const PICTURE_MODE = 'wiki';
 
+const fetchTrends = require('../trends-verify').fetchTrends;
 var verificationServices = {
     // 'faroo': new (require('../article-verify/Faroo.js'))(),
     'dieZeit': new (require('../article-verify/dieZeit.js'))(),
@@ -338,10 +339,23 @@ module.exports = [{
         }
     },
     {
+	path: '/events/trends',
+	method: 'GET',
+	handler: (request, reply) => {
+	    fetchTrends(request.query.desc, request.query.tmpl).then((trends) => {
+		return reply(trends);
+	    }).catch((err) => {
+		console.log('Failed to grab trends', err);
+		return reply('Failed to grab trends: ' + JSON.stringify(err)).code(500);
+	    });
+	}
+
+    },
+    {
 	path: '/events/verify',
 	method: 'GET',
 	handler: (request, reply) => {
-	    Promise.all(Object.keys(verificationServices).map(function(serviceId) {
+	    var articles = Promise.all(Object.keys(verificationServices).map(function(serviceId) {
 		return verificationServices[serviceId].findArticles({
 		    desc: request.query.desc,
 		    tmpl: request.query.tmpl,
@@ -354,7 +368,16 @@ module.exports = [{
 		    });
 		});
 	    })).then((sources) => {
-		return reply([].concat.apply([], sources));
+		return [].concat.apply([], sources);
+	    });
+
+	    var trends = fetchTrends(request.query.desc, request.query.tmpl);
+
+	    Promise.all([articles, trends]).then((data) => {
+		return reply({
+		    articles: data[0],
+		    trends: data[1]
+		});
 	    }).catch((err) => {
 		console.log('Failed to grab data', err);
 		return reply('Failed to grab data: ' + JSON.stringify(err)).code(500);
