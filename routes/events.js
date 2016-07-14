@@ -245,7 +245,7 @@ function queryEventsByDay(startDay) {
 			?tmpl a <http://events.dbpedia.org/ns/core#DigestTemplate> . \
 			?digest <http://www.w3.org/ns/prov#endedAtTime> ?endTime . \
 			?digest <http://purl.org/dc/terms/identifier> ?digestid . \
-			FILTER ( ?endTime > "' + startDay.toISOString() + '"^^xsd:date && \
+			FILTER ( ?endTime >= "' + startDay.toISOString() + '"^^xsd:date && \
 							 ?endTime < "' + endDay.toISOString() + '"^^xsd:date) \
 			?u a <http://webr3.org/owl/guo#UpdateInstruction> . \
 			?u <http://webr3.org/owl/guo#target_subject> ?res . \

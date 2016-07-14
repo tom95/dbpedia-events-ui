@@ -26,7 +26,7 @@ app
             var string = input + '';
             var lastNum = string[string.length - 1];
 
-            if (string == '11' || string == '12')
+            if (string == '11' || string == '12' || string == '13')
                 return string + 'th';
 
             return input + (

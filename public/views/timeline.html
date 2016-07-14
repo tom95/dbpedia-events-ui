@@ -39,6 +39,12 @@
         </li>
       </ul>
     </div>
+    &nbsp;
+    <div class="btn-group">
+      <button type="button" class="btn btn-info" ng-click="jumpToToday()">
+        Jump to Today
+      </button>
+    </div>
 
     <div class="date-picker wider clearfix">
       <div ng-click="$parent.currentMonth = $index"
@@ -49,16 +55,16 @@
     </div>
 
     <div class="date-picker clearfix">
-      <div ng-click="$parent.currentDayOfMonth = $index"
-           ng-class="{ active: $index == currentDayOfMonth }"
+      <div ng-click="$parent.currentDayOfMonth = $index + 1"
+           ng-class="{ active: $index + 1 == currentDayOfMonth }"
            ng-repeat="day in daysOfMonth | limitTo:daysOfCurrentMonth()"
            ng-style="{ opacity: opacityForListItem($index, currentDayOfMonth, 30) }"
            ng-bind="day < 10 ? '0' + day : day"></div>
     </div>
   </div>
-
+  
   <div class="day-marker">
-    <span class="day" ng-bind="(currentDayOfMonth + 1) | dbpNumberSuffix"></span>
+    <span class="day" ng-bind="currentDayOfMonth | dbpNumberSuffix"></span>
     <span class="month" ng-bind="months[currentMonth]"></span>
   </div>
 

@@ -7,13 +7,18 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
     $scope.arrayEqual = dbpCategoryList.arrayEqual;
     $scope.categories = dbpCategoryList.categories;
 
+    $scope.jumpToToday = function jumpToToday() {
+        var today = new Date();
+        $scope.currentDayOfMonth = today.getDate();
+        $scope.currentMonth = today.getMonth();
+        $scope.currentYear = today.getFullYear();
+    };
+
     $scope.selectedTmpl = [];
     $scope.loading = false;
 
-    $scope.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Octobe', 'November', 'December'];
-    $scope.currentDayOfMonth = 8;
-    $scope.currentMonth = 4;
-    $scope.currentYear = new Date().getFullYear() - 1;
+    $scope.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    $scope.jumpToToday();
 
     $scope.daysOfMonth = [];
     for (var i = 1; i <= 31; i++) $scope.daysOfMonth.push(i);
@@ -29,12 +34,12 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
     };
 
     $scope.$watch('currentMonth + currentDayOfMonth + currentYear', function () {
-        if ($scope.currentDayOfMonth + 1 > $scope.daysOfCurrentMonth())
-            $scope.currentDayOfMonth = $scope.daysOfCurrentMonth() - 1;
+        if ($scope.currentDayOfMonth > $scope.daysOfCurrentMonth())
+                $scope.currentDayOfMonth = $scope.daysOfCurrentMonth();
 
         $scope.activeDay = new Date();
         $scope.activeDay.setMonth($scope.currentMonth);
-        $scope.activeDay.setDate($scope.currentDayOfMonth + 1);
+        $scope.activeDay.setDate($scope.currentDayOfMonth);
         $scope.activeDay.setFullYear($scope.currentYear);
     });
 
