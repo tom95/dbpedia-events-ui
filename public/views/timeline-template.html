@@ -13,19 +13,21 @@
 
             <div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
 
-            <span class="text-muted pull-right" ng-bind="event.confirm.confirm + ' Confirms vs ' + event.confirm.disconfirm + ' Disconfirms'"></span>
+            <div style="margin-top: 12px">
+                <span class="text-muted pull-right" ng-bind="event.confirm.confirm + ' Confirms vs ' + event.confirm.disconfirm + ' Disconfirms'"></span>
 
-            <button ng-click="confirmEvent(event, true)" class="btn btn-success btn-xs">
-                <span class="glyphicon glyphicon-ok"></span> Confirm
-            </button>
+                <button ng-click="confirmEvent(event, true)" class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-ok"></span> Confirm
+                </button>
 
-            <button ng-click="confirmEvent(event, false)" class="btn btn-danger btn-xs">
-                <span class="glyphicon glyphicon-remove"></span> Wrong
-            </button>
+                <button ng-click="confirmEvent(event, false)" class="btn btn-danger btn-xs">
+                    <span class="glyphicon glyphicon-remove"></span> Wrong
+                </button>
 
-            <button ng-click="testVerifyArticle(event)" class="btn btn-warning btn-xs">
-                <span class="glyphicon glyphicon-search"></span> Verify
-            </button>
+                <button ng-click="testVerifyArticle(event)" class="btn btn-warning btn-xs">
+                    <span class="glyphicon glyphicon-search"></span> Verify
+                </button>
+            </div>
 
         </div>
 
