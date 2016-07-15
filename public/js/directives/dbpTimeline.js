@@ -1,4 +1,4 @@
-angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCategoryList', function ($http, dbpCategoryList) {
+angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCategoryList', '$filter', function ($http, dbpCategoryList, $filter) {
     return {
         restrict: 'E',
         scope: {
@@ -31,12 +31,27 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                           '&desc=' + escape(event.desc) +
                           '&endTime=' + escape(event.endTime))
                     .then(function(res) {
-                        console.log(res.data);
                         event.news = res.data.articles;
+
+                        var eventDate = new Date(event.endTime);
+                        var VARIANCE = 12 * 32 * 24 * 60 * 60 * 1000;
+                        var start = +eventDate - VARIANCE;
+                        var end = +eventDate + VARIANCE;
+
+                        var data = res.data.trends.map(function(i) {
+                            i.date = new Date(i.date);
+                            return i;
+                        }).filter(function(i) {
+                            return i.date >= start && i.date <= end;
+                        });
+
                         event.trends = {
-                            counts: res.data.trends.map(function(i) { return i.count; }),
-                            labels: res.data.trends.map(function(i) { return i.date; })
-                        }
+                            counts: data.map(function(i) { return i.count; }),
+                            labels: data.map(function(i) { return (i.date.getMonth() == eventDate.getMonth() &&
+                                             i.date.getFullYear() == eventDate.getFullYear()) ?
+                                             'Event Occurrence' :
+                                             $filter('date')(i.date, 'MMM yyyy'); })
+                        };
                     }, function(err) {
                         console.log(err);
                         alert('Failed to grab news (see console)');

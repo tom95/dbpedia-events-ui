@@ -30,9 +30,16 @@
         </div>
 
         <div class="event-news" ng-show="event.news">
-            <h3>Search Trends</h3>
-            <canvas class="chart chart-line" chart-data="event.trends.counts"
-                chart-labels="event.trends.labels"></canvas>
+            <div ng-show="event.trends.counts.length">
+                <h3>Search Trends</h3>
+                <canvas class="chart chart-line"
+                    chart-data="[event.trends.counts || []]"
+                    chart-series="['Counts']"
+                    chart-colors="['#45b7cd', '#ff6384', '#ff8e72']"
+                    chart-labels="event.trends.labels"></canvas>
+            </div>
+
+            <div ng-show="!event.trends.counts.length">Not enough data to display trends</div>
 
             <div ng-show="!event.news.length">No articles related to this event found</div>
             <div class="event-news-item" ng-repeat="news in event.news">
