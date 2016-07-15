@@ -49,7 +49,7 @@
     <div class="date-picker wider clearfix">
       <div ng-click="$parent.currentMonth = $index"
            ng-class="{ active: $index == currentMonth }"
-           ng-repeat="month in months"
+           ng-repeat="month in months | limitTo:monthsOfCurrentYear()"
            ng-style="{ opacity: opacityForListItem($index, currentMonth, 12) }"
            ng-bind="month | limitTo:3 | uppercase"></div>
     </div>
