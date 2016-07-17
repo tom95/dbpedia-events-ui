@@ -30,13 +30,27 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
     };
 
     $scope.daysOfCurrentMonth = function daysOfCurrentMonth() {
+        var today = new Date();
+        if ($scope.currentYear == today.getFullYear() && $scope.currentMonth == today.getMonth()) {
+            return today.getDate();
+        }
         return new Date($scope.currentYear, $scope.currentMonth + 1, 0).getDate();
     };
 
+    $scope.monthsOfCurrentYear = function monthsOfCurrentYear() {
+        var today = new Date();
+        if ($scope.currentYear == today.getFullYear()) {
+            return today.getMonth() + 1;
+        }
+        return new Date($scope.currentYear, -1, $scope.currentDay).getMonth();
+    }
+
     $scope.$watch('currentMonth + currentDayOfMonth + currentYear', function () {
+        if($scope.currentMonth + 1 > $scope.monthsOfCurrentYear())
+                $scope.currentMonth = new Date().getMonth();
         if ($scope.currentDayOfMonth > $scope.daysOfCurrentMonth())
                 $scope.currentDayOfMonth = $scope.daysOfCurrentMonth();
-
+       
         $scope.activeDay = new Date();
         $scope.activeDay.setMonth($scope.currentMonth);
         $scope.activeDay.setDate($scope.currentDayOfMonth);
