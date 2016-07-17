@@ -215,6 +215,7 @@ function queryCustomEventsByDay(template) {
     // var cached = getEventsFromCache('custom-' + (+template.start));
     // if (cached) return Promise.resolve(cached);
 
+    console.log(template);
     return httpRequest('POST', "http://141.89.225.50:9000/api/testconfig", template)
         .then((data) => {
             console.log("Test API respone: ", data);
@@ -253,7 +254,7 @@ function queryEventsByDay(startDay) {
 		}', 'http://events.dbpedia.org/sparql')
         .then(processEventQueryData)
         .then(condenseEvents)
-         .then(addConfirmCounts)
+	.then(addConfirmCounts)
         .then(fetchImagesForResources)
         .then((list) => {
             cacheEventQuery('event-' + (+startDay), list);
@@ -265,7 +266,7 @@ function queryEventsByResource(resource) {
     var cached = getEventsFromCache('resource-' + resource);
     if (cached) return Promise.resolve(cached);
 
-    return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?endTime {' +
+    return sparqlQuery('SELECT DISTINCT ?digestid ?tmpl ?desc ?res ?endTime {' +
         '?s a <http://events.dbpedia.org/ns/core#Event> .' +
         '?s <http://purl.org/dc/terms/description> ?desc .' +
         '?s <http://events.dbpedia.org/ns/core#update> ?u .' +
@@ -278,6 +279,7 @@ function queryEventsByResource(resource) {
         '?u <http://webr3.org/owl/guo#target_subject> <' + resource + '> .' +
         '} LIMIT 100', 'http://events.dbpedia.org/sparql')
         .then(processEventQueryData)
+	.then(addConfirmCounts)
         .then((list) => {
             cacheEventQuery('resource-' + resource, list);
             return list;

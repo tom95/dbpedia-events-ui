@@ -12,11 +12,15 @@ class ArticleVerification {
 
 	findArticles(digest) {
 		var parts = extractSubjectObject(digest.desc, digest.tmpl);
-		var timeMatch = digest.endTime.match(/^(\d{4})-(\d{2})-(\d{2})/);
-		var centerDate = new Date();
-		centerDate.setFullYear(parseInt(timeMatch[1]));
-		centerDate.setMonth(parseInt(timeMatch[2]) - 1);
-		centerDate.setDate(parseInt(timeMatch[3]));
+		var centerDate = new Date(digest.endTime);
+
+		if (isNaN(centerDate.getTime())) {
+			var timeMatch = digest.endTime.match(/^(\d{4})-(\d{2})-(\d{2})/);
+			centerDate = new Date();
+			centerDate.setFullYear(parseInt(timeMatch[1]));
+			centerDate.setMonth(parseInt(timeMatch[2]) - 1);
+			centerDate.setDate(parseInt(timeMatch[3]));
+		}
 
 		return this.abstractExecuteFind(new Date(+centerDate - this.dateVariance()),
 								   new Date(+centerDate + this.dateVariance()), parts[0], parts[1], digest.desc);

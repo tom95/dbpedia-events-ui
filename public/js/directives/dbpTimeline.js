@@ -22,8 +22,27 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
             $scope.eventDisconfirmed = function eventDisconfirmed(event) {
                 if (!event)
                     return false;
-                return event.confirm.confirm + event.confirm.disconfirm > 5 &&
-                    event.confirm.disconfirm > event.confirm.confirm;
+
+                if (event.confirm.confirm + event.confirm.disconfirm > 5 &&
+                    event.confirm.disconfirm > event.confirm.confirm)
+                    return 'Many people marked this event as wrong.';
+
+                if (event.articles && event.articles.length > 0)
+                    return false;
+
+                if (!event.trends || !event.trends.counts.length)
+                    return false;
+
+                for (var i = 0; i < event.trends.labels.length; i++) {
+                    if (event.trends.labels[i] ==  'Event Occurence')
+                        break;
+                }
+                console.log(event);
+
+                if (event.trends.counts[i] < event.trends.mean * 1.5)
+                    return 'Based on trends data, this event received no attention, so it may be wrong.'
+
+                return false;
             };
 
             $scope.testVerifyArticle = function testVerifyArticle(event) {
@@ -45,8 +64,14 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                             return i.date >= start && i.date <= end;
                         });
 
+                        var counts = data.map(function(i) { return i.count; });
+                        var sorted = Array.prototype.slice.call(counts).sort();
+                        var mean = sorted[parseInt(counts.length / 2)];
+                        console.log(sorted, mean, counts, Array.prototype.slice.call(counts));
+
                         event.trends = {
-                            counts: data.map(function(i) { return i.count; }),
+                            mean: mean,
+                            counts: counts,
                             labels: data.map(function(i) { return (i.date.getMonth() == eventDate.getMonth() &&
                                              i.date.getFullYear() == eventDate.getFullYear()) ?
                                              'Event Occurrence' :

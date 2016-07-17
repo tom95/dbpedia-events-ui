@@ -2,13 +2,13 @@ var app = angular.module('dbpedia-events-ui');
 
 app.controller('EditorController', ['$scope', '$http', function ($scope, $http) {
 
-    var prefixes = "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\
-@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \
-@prefix dcterms:    <http://purl.org/dc/terms/> .\
-@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\
-@prefix dc:         <http://purl.org/dc/elements/1.1/> .\
-@prefix spin:       <http://spinrdf.org/spin#> .\
-@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> ."
+    var prefixes = "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\n\
+@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \n\
+@prefix dcterms:    <http://purl.org/dc/terms/> .\n\
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\
+@prefix dc:         <http://purl.org/dc/elements/1.1/> .\n\
+@prefix spin:       <http://spinrdf.org/spin#> .\n\
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .\n";
 
     $scope.ontologies = [];
     $scope.filters = [];
@@ -153,8 +153,9 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
 
     $scope.testTemplate = function () {
         var templateText = prefixes + angular.element(document.getElementById("template")).text();
+        console.log(templateText);
         $http.post('/events/custom', {
-            "templateText": templateText,
+            "templateText": templateText/*,
             "query": 'SELECT DISTINCT ?digestid ?tmpl ?desc ?res ?endTime \
 		{ \
 			?s a <http://events.dbpedia.org/ns/core#Event> . \
@@ -167,7 +168,7 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
 			?digest <http://purl.org/dc/terms/identifier> ?digestid . \
 			?u a <http://webr3.org/owl/guo#UpdateInstruction> . \
 			?u <http://webr3.org/owl/guo#target_subject> ?res . \
-		}'
+		}'*/
         }).then(function (response) {
             console.log(response.data);
             console.log("Sent new template to backend");

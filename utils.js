@@ -6,15 +6,17 @@ function httpRequest(method, url, params, parseJson, headers) {
 	var config = {
 	    method: method,
 	    url: url,
-		headers: headers || {}
+	    headers: headers || {}
 	};
 
 	if (method == 'GET')
 	    config.url += '?' + Object.keys(params).map((key) => {
 		return querystring.escape(key) + '=' + querystring.escape(params[key]);
 	    }).join('&');
-	else
+	else {
 	    config.json = params;
+	    headers['Content-type'] = 'application/json';
+	}
 
 	_httpRequest(config,
 		     function (error, response, body) {
