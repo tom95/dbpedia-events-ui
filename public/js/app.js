@@ -53,12 +53,14 @@ app
                 label: 'Change of Leader',
                 tmpl: ['http://events.dbpedia.org/data/digests#LEADER'],
                 desc: ['%%newLeader%% succeeds %%oldLeader%% as the leader of %%labelres%%.'],
+                require: ['dbo:Person', 'dbo:Person'],
                 icon: 'users'
             },
             {
                 label: 'Deceased People',
                 tmpl: ['http://events.dbpedia.org/data/digests#DEADPEOPLE', 'http://events.dbpedia.org/data/digests#DEADPEOPLEWOF'],
                 desc: ['%%labelres%% died on %%deathdate%% in %%deathplace%%.', '%%labelres%% died on %%deathdate%% in %%deathplace%%.'],
+                require: ['dbo:Person', '', 'dbo:Place'],
                 icon: 'religious-christian'
             },
             {
@@ -83,12 +85,14 @@ app
                 label: 'Headhunted',
                 tmpl: ['http://events.dbpedia.org/data/digests#HEADHUNTED'],
                 desc: ['%%labelres%% switches from %%oldTeam%% to %%newTeam%%.'],
+                require: ['dbo:Person'],
                 icon: 'user-plus'
             },
             {
                 label: 'Change of President',
                 tmpl: ['http://events.dbpedia.org/data/digests#PRESIDENT'],
                 desc: ['%%newPres%% succeeds %%oldPres%% as the president of %%labelres%%.'],
+                require: ['dbo:Person', 'dbo:Person'],
                 icon: 'users'
             },
             {
@@ -107,12 +111,14 @@ app
                 label: 'Just Married',
                 tmpl: ['http://events.dbpedia.org/data/digests#JUSTMARRIED'],
                 desc: ['%%labelres%% married %%spouse%%.'],
+                require: ['dbo:Person', 'dbo:Person'],
                 icon: 'heart'
             },
             {
                 label: 'Just Divorced',
                 tmpl: ['http://events.dbpedia.org/data/digests#JUSTDIVORCED'],
                 desc: ['%%labelres%% divorced %%spouse%%.'],
+                require: ['dbo:Person', 'dbo:Person'],
                 icon: 'heart-broken'
             },
             {

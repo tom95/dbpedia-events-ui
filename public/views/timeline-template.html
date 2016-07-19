@@ -5,8 +5,6 @@
          ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents">
         <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: eventDisconfirmed(event)  ? 0.5 : 1.0 }">
 
-            <div ng-show="eventDisconfirmed(event)" ng-bind="eventDisconfirmed(event)"></div>
-
             <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 
             <div class="time" ng-show="showDate" ng-bind="event.endTime | date"></div>
@@ -34,6 +32,8 @@
         </div>
 
         <div class="event-news" ng-show="event.news">
+            <div class="text-danger" style="margin: 12px" ng-show="eventDisconfirmed(event)" ng-bind="eventDisconfirmed(event)"></div>
+
             <div ng-show="event.trends.counts.length">
                 <h3>Search Trends</h3>
                 <canvas class="chart chart-line"

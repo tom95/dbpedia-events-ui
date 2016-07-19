@@ -52,6 +52,7 @@ function sparqlQuery(query, source) {
                     var data = JSON.parse(body);
                     return resolve(data);
                 } catch (e) {
+		    console.log(body);
                     return reject(e);
                 }
             }
@@ -262,6 +263,17 @@ function queryEventsByDay(startDay) {
         });
 }
 
+function queryTypesOfResource(resourceType) {
+    var query = 'ASK {' + resourceType.map(function(tupel) {
+	return tupel.resource + ' <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ' + tupel.type;
+    }).join('.') + '}';
+
+    return sparqlQuery(query, 'http://dbpedia-live.openlinksw.com/sparql')
+        .then((res) => {
+            return res['boolean'];
+        });
+}
+
 function queryEventsByResource(resource) {
     var cached = getEventsFromCache('resource-' + resource);
     if (cached) return Promise.resolve(cached);
@@ -341,6 +353,19 @@ module.exports = [{
         }
     },
     {
+        path: '/events/type',
+        method: 'POST',
+        handler: (request, reply) => {
+            queryTypesOfResource(request.payload).then((isType) => {
+                    reply(isType);
+                },
+                (err) => {
+                    console.log(err);
+                    reply('Internal Error').code(500);
+                });
+        }
+    },
+    {
 	path: '/events/trends',
 	method: 'GET',
 	handler: (request, reply) => {
@@ -364,6 +389,7 @@ module.exports = [{
 		    endTime: request.query.endTime
 		}).then((data) => {
 		    console.log(serviceId, ' => ', data);
+		    if (!data) return [];
 		    return data.map((item) => {
 			item.source = serviceId;
 			return item;

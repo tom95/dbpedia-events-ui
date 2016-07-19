@@ -3,11 +3,17 @@ const extractSubjectObject = require('./utils').extractSubjectObject;
 const escape = require('querystring').escape;
 
 var cache = {};
+var lastFetch = 0;
+var MIN_TIME_BETWEEN_FETCH = 1000 * 15;
 
 function _fetchTrends(keyword) {
 	if (cache[keyword])
 		return cache[keyword];
 
+	if (+new Date() - lastFetch < MIN_TIME_BETWEEN_FETCH)
+		return [];
+
+	lastFetch = +new Date();
 	return request('GET', 'http://www.google.com/trends/fetchComponent', {
 		q: '"' + keyword + '"',
 		cid: 'TIMESERIES_GRAPH_0',
