@@ -3,7 +3,7 @@
 
     <div class="event-wrapper"
          ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents">
-        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: eventDisconfirmed(event)  ? 0.5 : 1.0 }">
+        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: event.state == 'disconfirmed' ? 0.5 : 1.0 }">
 
             <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 
@@ -32,7 +32,12 @@
         </div>
 
         <div class="event-news" ng-show="event.news">
-            <div class="text-danger" style="margin: 12px" ng-show="eventDisconfirmed(event)" ng-bind="eventDisconfirmed(event)"></div>
+            <div ng-class="{
+                'text-success': event.state == 'confirmed',
+                'text-danger': event.state == 'disconfirmed',
+                'text-warning': event.state == 'unknown' }"
+                style="margin: 12px"
+                ng-bind="event.stateDescription"></div>
 
             <div ng-show="event.trends.counts.length">
                 <h3>Search Trends</h3>

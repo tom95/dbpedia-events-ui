@@ -10,7 +10,7 @@ function extractSubjectObject(desc, tmpl) {
 	return desc.match(regex).slice(1);
 }
 
-angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCategoryList', '$filter', function ($http, dbpCategoryList, $filter) {
+angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCategoryList', '$filter', '$q', function ($http, dbpCategoryList, $filter, $q) {
     return {
         restrict: 'E',
         scope: {
@@ -131,29 +131,43 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                         alert('Failed to grab news (see console)');
                     }));
 
-		    /*Promise.all(waiting).then(function() {
-			if (event.confirm.confirm + event.confirm.disconfirm > 5 &&
-			    event.confirm.disconfirm > event.confirm.confirm) {
-			    event.stateDescription = 'Many people marked this event as wrong.';
-			    event.state = '';
-			}
+		$q.all(waiting).then(function() {
+		    // default state
+		    event.state = 'unknown';
+		    event.stateDescription = 'Insufficient data available to confirm or disconfirm event.';
 
-			if (event.articles && event.articles.length > 0)
-			    return false;
+		    // evaluate user feedback
+		    if (event.confirm.confirm + event.confirm.disconfirm > 5 &&
+			event.confirm.disconfirm > event.confirm.confirm) {
+			event.stateDescription = 'Many people marked this event as wrong.';
+			event.state = 'disconfirmed';
+			return;
+		    }
 
-			if (!event.trends || !event.trends.counts.length)
-			    return false;
+		    // evaluate returned articles
+		    if (event.articles && event.articles.length > 0) {
+			event.stateDescription = 'This event may have received news coverage by third party sources.'
+			event.state = 'confirmed';
+			return;
+		    }
 
-			for (var i = 0; i < event.trends.labels.length; i++) {
-			    if (event.trends.labels[i] ==  'Event Occurrence')
-				break;
-			}
+		    // evaluate trends data
+		    if (!event.trends || !event.trends.counts.length)
+			return;
 
-			if (event.trends.counts[i] < event.trends.mean * 3)
-			    return 'Based on trends data, this event received no attention, so it may be wrong.'
+		    for (var i = 0; i < event.trends.labels.length; i++) {
+			if (event.trends.labels[i] ==  'Event Occurrence')
+			    break;
+		    }
 
-			return false;
-		    });*/
+		    if (event.trends.counts[i] < event.trends.mean * 3) {
+			event.stateDescription = 'Based on trends data, this event received no attention, so it may be wrong.'
+			event.state = 'disconfirmed';
+		    } else {
+			event.stateDescription = 'Based on trends data, this event may have received attention on Google.';
+			event.state = 'confirmed';
+		    }
+		});
             };
         }
     }
