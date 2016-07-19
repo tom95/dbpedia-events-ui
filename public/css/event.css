@@ -159,3 +159,9 @@ dbp-data-link {
 	padding: 15px;
 	padding-top: 0;
 }
+@media screen and (max-width: 500px) {
+	.event-news {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
