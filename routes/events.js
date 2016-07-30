@@ -458,3 +458,5 @@ module.exports = [{
 	}
     }
 ];
+
+module.exports.queryEventsByDay = queryEventsByDay;

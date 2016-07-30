@@ -64,7 +64,8 @@
         "updatedAt": "2016-06-14T17:12:59.756Z",
         "id": 5
       }
-    ]
+    ],
+    "post": []
   },
   "schema": {
     "template": {
@@ -87,11 +88,50 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "post": {
+      "digestid": {
+        "type": "string"
+      },
+      "tmpl": {
+        "type": "string"
+      },
+      "day": {
+        "type": "date"
+      },
+      "desc": {
+        "type": "string"
+      },
+      "res": {
+        "type": "string"
+      },
+      "trends": {
+        "type": "string"
+      },
+      "numArticles": {
+        "type": "integer"
+      },
+      "articles": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
     }
   },
   "counters": {
     "template": {
       "id": 5
-    }
+    },
+    "post": {}
   }
 }

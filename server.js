@@ -19,7 +19,7 @@ var dogwaterOptions = {
   adapters:{
      templateDisk : 'sails-disk'
   },
-  models: [require('./models/template')]
+  models: [require('./models/template'), require('./models/post')]
 };
 
 server.register([{
@@ -158,5 +158,7 @@ server.register([{
 
 	server.start(() => {
 		console.log('Template API up and running at:', server.info.uri);
+
+		// require('./verify')(server.collections().post);
 	});
 });
