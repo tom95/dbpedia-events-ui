@@ -7,11 +7,12 @@ var lastFetch = 0;
 var MIN_TIME_BETWEEN_FETCH = 1000 * 15;
 
 function _fetchTrends(keyword) {
+	console.log(`\t\tFetching trends for ${keyword} ...`);
 	if (cache[keyword])
-		return cache[keyword];
+		return Promise.resolve(cache[keyword]);
 
 	if (+new Date() - lastFetch < MIN_TIME_BETWEEN_FETCH)
-		return [];
+		return Promise.resolve([]);
 
 	lastFetch = +new Date();
 	return request('GET', 'http://www.google.com/trends/fetchComponent', {

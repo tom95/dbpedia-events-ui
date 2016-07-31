@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.1",
     "dogwater": "^2.0.0",
     "hapi": "^13.3.0",
     "inert": "^3.2.0",

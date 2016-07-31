@@ -42,3 +42,13 @@ class ArticleVerification {
 };
 
 module.exports = ArticleVerification;
+
+module.exports.articleVerificationServices = {
+    // 'faroo': new (require('../article-verify/Faroo.js'))(),
+    'dieZeit': new (require('../article-verify/dieZeit.js'))(),
+    // 'FinancialTimes': new (require('../article-verify/FinancialTimes.js')),
+    'bing': new (require('../article-verify/Bing.js'))(),
+    'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))(),
+    'guardian': new (require('../article-verify/Guardian.js'))()
+};
+

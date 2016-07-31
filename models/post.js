@@ -8,9 +8,9 @@ module.exports = {
 		day: 'date',
 		desc: 'string',
 		res: 'string',
-		trends: 'string',
+		trends: 'json',
 		numArticles: 'integer',
-		articles: 'string'
+		articles: { collection: 'Article', via: 'post' }
     }
 };
 

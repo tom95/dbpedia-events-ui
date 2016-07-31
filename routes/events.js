@@ -7,14 +7,7 @@ var eventConfirmations = {};
 const PICTURE_MODE = 'wiki';
 
 const fetchTrends = require('../trends-verify').fetchTrends;
-var verificationServices = {
-    // 'faroo': new (require('../article-verify/Faroo.js'))(),
-    'dieZeit': new (require('../article-verify/dieZeit.js'))(),
-    // 'FinancialTimes': new (require('../article-verify/FinancialTimes.js')),
-    'bing': new (require('../article-verify/Bing.js'))(),
-    'newYorkTimes': new (require('../article-verify/NewYorkTimesArticleSearch.js'))(),
-    'guardian': new (require('../article-verify/Guardian.js'))()
-};
+const verificationServices = require('../article-verify/ArticleVerification').articleVerificationServices;
 
 // http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
 function stringHash(str) {
