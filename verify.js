@@ -64,48 +64,65 @@ function verifyPost(post) {
 	});
 }
 
-module.exports = function(_Post, _Article) {
+function initDataset() {
 	let year = 2015;
 	let month = 8;
 	let day = 1;
 	let numDays = 100;
-	let currentOffset = 0;
+	let promises = [];
+
+	console.log('Initializing dataset ...');
+	for (let i = 0; i < numDays; i++) {
+		let d = new Date(year, month, day + i);
+		console.log(`\tFetching events for ${d} ...`)
+
+		promises.push(queryEventsByDay(d).then(list => {
+			list = list.map(p => (p.day = day, p));
+			return Post.create(list).then(() => console.log(`\t... done ${d}`));
+		}));
+	}
+
+	return Promise.all(promises).then(() => console.log('... done'));
+};
+
+function removeAll() {
+	return Post.destroy({});
+}
+
+module.exports = function init(_Post, _Article) {
+	const CLEAN_START = true;
 
 	Post = _Post;
 	Article = _Article;
 
-	function next() {
-		let day = new Date(year, month, day + currentOffset);
+	(CLEAN_START ? removeAll() : Promise.resolve())
+		.then(Post.count())
+		.then(num => { return (num > 0 ? Promise.resolve() : initDataset()) })
+		.then(verifyAll);;
+};
 
-		console.log(`Querying events for ${day}`)
-		queryEventsByDay(day).then(list => {
-			return new Promise((reject, resolve) => {
-				let queue = list.map(p => (p.day = day, p));
+function verifyAll() {
+	Post.find().then(list => {
+		return new Promise((reject, resolve) => {
+			let queue = list.map(p => (p.day = day, p));
 
-				function step() {
-					var item = queue.pop();
-					if (!item) return resolve();
+			function step() {
+				var item = queue.pop();
+				if (!item) return resolve();
 
-					console.log(`\tVerify \`${item.desc}\` ...`);
-					verifyPost(item).then(() => {
-						console.log(`\t... done.`);
-					}).catch(err => {
-						console.log(`\t... []error!`, err);
-					});
+				console.log(`\tVerify \`${item.desc}\` ...`);
+				verifyPost(item).then(() => {
+					console.log(`\t... done.`);
+				}).catch(err => {
+					console.log(`\t... []error!`, err);
+				});
 
-					setTimeout(step, 30 * 1000)
-				}
+				setTimeout(step, 30 * 1000)
+			}
 
-				step();
-			});
-		}).then(() => {
-			currentOffset++;
-			if (currentOffset <= numDays)
-				next();
+			step();
 		});
-	}
-
-	next();
+	});
 };
 
 function categoryForTmpl(tmpl) {

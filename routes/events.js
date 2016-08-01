@@ -369,7 +369,6 @@ module.exports = [{
 		return reply('Failed to grab trends: ' + JSON.stringify(err)).code(500);
 	    });
 	}
-
     },
     {
 	path: '/events/verify',

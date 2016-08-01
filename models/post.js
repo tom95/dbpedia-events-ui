@@ -10,7 +10,10 @@ module.exports = {
 		res: 'string',
 		trends: 'json',
 		numArticles: 'integer',
-		articles: { collection: 'Article', via: 'post' }
+		articles: { collection: 'Article', via: 'post' },
+
+		userConfirm: 'boolean',
+		garbage: 'boolean'
     }
 };
 
