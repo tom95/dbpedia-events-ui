@@ -179,7 +179,7 @@ function fetchImagesForResources(data) {
 		    digest.image = page.thumbnail ? page.thumbnail.source : null;
 		    resolve(digest);
 		}, (err) => {
-		    console.log('Failed to fetch image', digest.res);
+		    console.log('Failed to fetch image', digest.res, err);
 		    digest.image = null;
 		    resolve(digest);
 		});
@@ -305,13 +305,29 @@ module.exports = [{
         startDay.setSeconds(0);
         startDay.setMilliseconds(0);
 
-        queryEventsByDay(startDay).then((list) => {
+	var endDay = new Date(+startDay + 24 * 60 * 60 * 1000);
+
+        /*queryEventsByDay(startDay).then((list) => {
                 reply(list);
             },
             (err) => {
                 console.log(err);
                 reply('Internal Error').code(500);
-            });
+            });*/
+
+	// function pz(num) { return num < 10 ? '0' + num : num; }
+
+	request.collections().post
+	    .find({ day: startDay })
+	    //.find({ day: { '>=': startDay, '<=': endDay } })
+	    //.find({ endTime: `${startDay.getFullYear()}-${pz(startDay.getMonth()+1)}-${pz(startDay.getDate())}T21:59:59+02:00` })
+	    .populate('articles')
+	    .exec((err, list) => {
+		if (err)
+		    return reply('Internal Error').code(500);
+		else
+		    return reply(list);
+	    });
     }
 },
     {
@@ -425,6 +441,18 @@ module.exports = [{
 		console.log('Failed to grab data', err)
 		return reply('Failed to grab data' + JSON.stringify(err)).code(500);
 	    });
+	}
+    },
+    {
+	path: '/event/{id}',
+	method: 'PUT',
+	handler: (request, reply) => {
+	    request.collections().post
+		.update({ id: request.params.id }, request.payload)
+		.exec((err, i) => {
+		    if (err) return reply('internal error').code(500);
+		    return reply(i);
+		});
 	}
     },
     {

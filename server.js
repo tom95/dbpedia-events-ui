@@ -162,7 +162,7 @@ server.register([{
 	server.start(() => {
 		console.log('Template API up and running at:', server.info.uri);
 
-		// server.collections().post.find().exec(console.log);
+		// server.collections().post.find({ verified: true }).exec(console.log);
 		// require('./verify')(server.collections().post, server.collections().article);
 	});
 });

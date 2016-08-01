@@ -25,7 +25,7 @@ function articleVerify(desc, tmpl, endTime) {
 			endTime: endTime
 		}).then(data => {
 			if (!data) return [];
-			console.log(`\t\t.... done (${serviceId})`)
+			console.log(`\t\t.... done (${serviceId} ${data.length})`)
 			return data.map(i => (i.source = serviceId, i));
 		});
 	})).then(serviceReplies => {
@@ -49,13 +49,18 @@ function verifyPost(post) {
 	return Promise.all(p).then(data => {
 		let trends = data[0];
 		let articles = data[1];
-		post.numArticles = articles.length;
-		post.trends = trends;
-		post.articles = data[1].map(article => article.id);
+		let update = {
+			numArticles: articles.length,
+			trends: trends,
+			verified: true,
+			articles: data[1].map(article => article.id)
+		};
 		console.log(`\t\tSaving \`${post.desc}\` ...`);
 
+		console.log(update);
 		return new Promise((resolve, reject) => {
-			Post.create(post).exec((err, created) => {
+			Post.update({ id: post.id }, update).exec((err, created) => {
+				console.log(err, created);
 				if (err)
 					return reject(err);
 				resolve(created);
@@ -68,7 +73,7 @@ function initDataset() {
 	let year = 2015;
 	let month = 8;
 	let day = 1;
-	let numDays = 100;
+	let numDays = 1;
 	let promises = [];
 
 	console.log('Initializing dataset ...');
@@ -77,7 +82,7 @@ function initDataset() {
 		console.log(`\tFetching events for ${d} ...`)
 
 		promises.push(queryEventsByDay(d).then(list => {
-			list = list.map(p => (p.day = day, p));
+			list = list.map(p => (p.day = d, p));
 			return Post.create(list).then(() => console.log(`\t... done ${d}`));
 		}));
 	}
@@ -86,26 +91,25 @@ function initDataset() {
 };
 
 function removeAll() {
-	return Post.destroy({});
+	return Promise.all([Post.destroy({}), Article.destroy({})]);
 }
 
 module.exports = function init(_Post, _Article) {
-	const CLEAN_START = true;
+	const CLEAN_START = false;
 
 	Post = _Post;
 	Article = _Article;
 
 	(CLEAN_START ? removeAll() : Promise.resolve())
-		.then(Post.count())
+		.then(() => Post.count())
 		.then(num => { return (num > 0 ? Promise.resolve() : initDataset()) })
-		.then(verifyAll);;
+		.then(verifyAll)
+		.catch(console.log);
 };
 
 function verifyAll() {
-	Post.find().then(list => {
-		return new Promise((reject, resolve) => {
-			let queue = list.map(p => (p.day = day, p));
-
+	Post.find({ verified: false }).then(queue => {
+		return new Promise((resolve, reject) => {
 			function step() {
 				var item = queue.pop();
 				if (!item) return resolve();

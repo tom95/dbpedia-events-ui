@@ -12,8 +12,10 @@ module.exports = {
 		numArticles: 'integer',
 		articles: { collection: 'Article', via: 'post' },
 
-		userConfirm: 'boolean',
-		garbage: 'boolean'
+		verified: { defaultsTo: false, type: 'boolean' },
+		userConfirm: { defaultsTo: false, type: 'boolean' },
+		userChecked: { defaultsTo: false, type: 'boolean' },
+		garbage: { defaultsTo: false, type: 'boolean' },
     }
 };
 

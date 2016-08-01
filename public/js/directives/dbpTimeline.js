@@ -68,7 +68,97 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
                     + '>';
             }
 
+	    $scope.updateConfirm = function updateConfirm(event) {
+		$http.put('/event/' + event.id, {
+		    userChecked: true,
+		    garbage: event.garbage,
+		    userConfirm: event.userConfirm
+		}).then(function() { event.userChecked = true; },
+			function(err) { alert(JSON.stringify(err)); })
+	    };
+
             $scope.testVerifyArticle = function testVerifyArticle(event) {
+                var category = $scope.categoryForTmpl(event.tmpl);
+                /*if (category.require) {
+                    var objs = extractSubjectObject(event.desc.split('<br>')[0], category.desc[0]);
+                    var types = objs.map(function(label, index) {
+                        if (!category.require[index])
+                            return null;
+
+                        return {
+                            resource: labelToResource(label),
+                            type: resolvePrefix(category.require[index])
+                        };
+                    }).filter(function(item) { return !!item; });
+
+                    waiting.push($http.post('/events/type', types)
+                        .then(function(res) {
+                            console.log(res.data);
+                            event.correctEntityTypes = res.data;
+                        }));
+                }*/
+
+	       if (event.trends && event.trends.length) {
+		    var eventDate = new Date(event.endTime);
+		    var VARIANCE = 12 * 32 * 24 * 60 * 60 * 1000;
+		    var start = +eventDate - VARIANCE;
+		    var end = +eventDate + VARIANCE;
+
+		    var data = event.trends.map(function(i) {
+			i.date = new Date(i.date);
+			return i;
+		    }).filter(function(i) {
+			return i.date >= start && i.date <= end;
+		    });
+
+		    var sum = 0;
+		    var counts = data.map(function(i) {
+			sum += i.count;
+			return i.count;
+		    });
+		    var mean = sum / counts.length;
+		    console.log(mean, counts);
+
+		    event.trends = {
+			mean: mean,
+			counts: counts,
+			labels: data.map(function(i) { return (i.date.getMonth() == eventDate.getMonth() &&
+					 i.date.getFullYear() == eventDate.getFullYear()) ?
+					 'Event Occurrence' :
+					 $filter('date')(i.date, 'MMM yyyy'); })
+		    };
+		}
+
+		// default state
+		event.state = 'unknown';
+		event.stateDescription = 'Insufficient data available to confirm or disconfirm event.';
+
+		// evaluate returned articles
+		if (event.articles && event.articles.length > 0) {
+		    event.stateDescription = 'This event may have received news coverage by third party sources.'
+		    event.state = 'confirmed';
+		    return;
+		}
+
+		// evaluate trends data
+		if (!event.trends || !event.trends.counts.length)
+		    return;
+
+		for (var i = 0; i < event.trends.labels.length; i++) {
+		    if (event.trends.labels[i] ==  'Event Occurrence')
+			break;
+		}
+
+		if (event.trends.counts[i] < event.trends.mean * 3) {
+		    event.stateDescription = 'Based on trends data, this event received no attention, so it may be wrong.'
+		    event.state = 'disconfirmed';
+		} else {
+		    event.stateDescription = 'Based on trends data, this event may have received attention on Google.';
+		    event.state = 'confirmed';
+		}
+            };
+
+            $scope.remoteTestVerifyArticle = function remoteTestVerifyArticle(event) {
                 var category = $scope.categoryForTmpl(event.tmpl);
 		var waiting = [];
                 if (category.require) {
