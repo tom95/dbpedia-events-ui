@@ -7,7 +7,7 @@ const server = new Hapi.Server();
 
 server.connection({
 	host: '0.0.0.0',
-	port: 8000
+	port: 8005
 });
 
 var dogwaterOptions = {
@@ -163,6 +163,6 @@ server.register([{
 		console.log('Template API up and running at:', server.info.uri);
 
 		// server.collections().post.find({ verified: true }).exec(console.log);
-		// require('./verify')(server.collections().post, server.collections().article);
+		require('./verify')(server.collections().post, server.collections().article);
 	});
 });

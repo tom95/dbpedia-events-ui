@@ -73,7 +73,7 @@ function initDataset() {
 	let year = 2015;
 	let month = 8;
 	let day = 1;
-	let numDays = 1;
+	let numDays = 30;
 	let promises = [];
 
 	console.log('Initializing dataset ...');
@@ -95,7 +95,7 @@ function removeAll() {
 }
 
 module.exports = function init(_Post, _Article) {
-	const CLEAN_START = false;
+	const CLEAN_START = true;
 
 	Post = _Post;
 	Article = _Article;
