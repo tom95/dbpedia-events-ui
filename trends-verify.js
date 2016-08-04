@@ -8,11 +8,11 @@ var MIN_TIME_BETWEEN_FETCH = 1000 * 15;
 
 function _fetchTrends(keyword) {
 	console.log(`\t\tFetching trends for ${keyword} ...`);
-	if (cache[keyword])
-		return Promise.resolve(cache[keyword]);
+	// if (cache[keyword])
+	//	return Promise.resolve(cache[keyword]);
 
-	if (+new Date() - lastFetch < MIN_TIME_BETWEEN_FETCH)
-		return Promise.resolve([]);
+	// if (+new Date() - lastFetch < MIN_TIME_BETWEEN_FETCH)
+	//	return Promise.resolve([]);
 
 	lastFetch = +new Date();
 	return request('GET', 'http://www.google.com/trends/fetchComponent', {
@@ -31,6 +31,8 @@ function _fetchTrends(keyword) {
 		}
 
 		cache[keyword] = points;
+		if (points.length < 1)
+			console.log(data);
 
 		return points;
 	});

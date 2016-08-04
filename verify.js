@@ -16,7 +16,7 @@ Promise.onPossiblyUnhandledRejection(function(e, promise) { throw e; });
 process.on("unhandledRejection", function(reason, promise) { throw reason; });
 process.on("rejectionHandled", function(promise) { console.log('rejection handled', promise); });
 
-function articleVerify(desc, tmpl, endTime) {
+function articleVerify(desc, tmpl, endTime, postId) {
 	return Promise.all(Object.keys(articleVerificationServices).map(serviceId => {
 		console.log(`\t\tFetching articles from ${serviceId} ...`);
 		return articleVerificationServices[serviceId].findArticles({
@@ -30,6 +30,7 @@ function articleVerify(desc, tmpl, endTime) {
 		});
 	})).then(serviceReplies => {
 		var articles = [].concat.apply([], serviceReplies);
+		articles = articles.map(a => (a.post = postId, a));
 
 		return new Promise((resolve, reject) => {
 			Article.create(articles).exec((err, list) => {
@@ -44,7 +45,7 @@ function verifyPost(post) {
 	var tmpl = categoryForTmpl(post.tmpl).desc[0];
 	var p = [
 		trendsVerify(post.desc, tmpl),
-		articleVerify(post.desc, tmpl, post.endTime)
+		articleVerify(post.desc, tmpl, post.endTime, post.id)
 	];
 	return Promise.all(p).then(data => {
 		let trends = data[0];
@@ -52,12 +53,11 @@ function verifyPost(post) {
 		let update = {
 			numArticles: articles.length,
 			trends: trends,
-			verified: true,
-			articles: data[1].map(article => article.id)
+			verified: true
 		};
 		console.log(`\t\tSaving \`${post.desc}\` ...`);
 
-		console.log(update);
+		console.log(update, ' to ', post.id);
 		return new Promise((resolve, reject) => {
 			Post.update({ id: post.id }, update).exec((err, created) => {
 				console.log(err, created);
@@ -95,20 +95,20 @@ function removeAll() {
 }
 
 module.exports = function init(_Post, _Article) {
-	const CLEAN_START = true;
+	const CLEAN_START = false;
 
 	Post = _Post;
 	Article = _Article;
 
 	(CLEAN_START ? removeAll() : Promise.resolve())
 		.then(() => Post.count())
-		.then(num => { return (num > 0 ? Promise.resolve() : initDataset()) })
+		.then(num => { console.log(`${num} posts in database`); return (num > 0 ? Promise.resolve() : initDataset()) })
 		.then(verifyAll)
 		.catch(console.log);
 };
 
 function verifyAll() {
-	Post.find({ verified: false }).then(queue => {
+	Post.find({ verified: false, or: [ { day: new Date(2015, 8, 1) }, { day: new Date(2015, 8, 2) }] }).sort('day ASC').then(queue => {
 		return new Promise((resolve, reject) => {
 			function step() {
 				var item = queue.pop();

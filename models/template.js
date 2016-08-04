@@ -1,6 +1,6 @@
 module.exports = {
     identity: 'template',
-    connection: 'templateDB',
+    connection: 'mongoDB',
     attributes: {
         name: {
             type: 'string',

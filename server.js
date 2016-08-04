@@ -14,10 +14,17 @@ var dogwaterOptions = {
   connections: {
     templateDB : {
       adapter: 'templateDisk'
+    },
+    mongoDB: {
+      adapter: 'mongo',
+      host: 'localhost',
+      port: 27017,
+      database: 'dbp-test'
     }
   },
   adapters:{
-     templateDisk : 'sails-disk'
+     templateDisk : 'sails-disk',
+     mongo : 'sails-mongo'
   },
   models: [
     require('./models/template'),
@@ -162,7 +169,16 @@ server.register([{
 	server.start(() => {
 		console.log('Template API up and running at:', server.info.uri);
 
-		// server.collections().post.find({ verified: true }).exec(console.log);
-		require('./verify')(server.collections().post, server.collections().article);
+
+		// server.collections().post.find({ or: [ { day: new Date(2015, 8, 1) }, { day: new Date(2015, 8, 2) }] }).then((list) => console.log(list.length));
+		// server.collections().post.update({ trends: [[], undefined, null] }, { verified: false }).exec(console.log);
+		// server.collections().post.findOne({ id: 1628701746 }).populate('articles').limit(4).exec(console.log);
+		for (var i = 0; i < 30; i++) {
+		  (function() {
+		    var day = new Date(2015, 8, 1 + i);
+		    server.collections().post.find({ day: day }).exec((err, list) => { console.log(day, '=>', list.length); });
+		  })();
+		}
+		// require('./verify')(server.collections().post, server.collections().article);
 	});
 });

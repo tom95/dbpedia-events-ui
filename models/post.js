@@ -1,8 +1,9 @@
 
 module.exports = {
     identity: 'post',
-    connection: 'templateDB',
+    connection: 'mongoDB',
     attributes: {
+		id: { type: 'integer', autoIncrement: true, primaryKey: true, unique: true },
 		digestid: 'string',
 		tmpl: 'string',
 		day: 'date',
@@ -10,7 +11,7 @@ module.exports = {
 		res: 'string',
 		trends: 'json',
 		numArticles: 'integer',
-		articles: { collection: 'Article', via: 'post' },
+		articles: { collection: 'article', via: 'post' },
 
 		verified: { defaultsTo: false, type: 'boolean' },
 		userConfirm: { defaultsTo: false, type: 'boolean' },

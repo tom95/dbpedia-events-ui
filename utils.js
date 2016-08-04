@@ -51,7 +51,14 @@ function extractSubjectObject(desc, tmpl) {
 	var regex = escapeRegExp(tmpl).replace(/%%.+?%%/g, "(.+)");
 
 	var current = 0;
-	return desc.match(regex).slice(1);
+	var matches = desc.match(regex).slice(1);
+
+	return matches.map((m) => {
+	    var res;
+	    if (res = m.match(/(.+?)\s*\(.+\)$/))
+		return res[1];
+	    return m;
+	})
 }
 
 

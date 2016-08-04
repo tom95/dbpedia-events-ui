@@ -1,14 +1,15 @@
 
 module.exports = {
     identity: 'article',
-    connection: 'templateDB',
+    connection: 'mongoDB',
     attributes: {
-		title: 'string',
-		url: 'string',
-		excerpt: 'string',
-		author: 'string',
-		imageUrl: 'string',
-		pubDate: 'date',
+		id: { type: 'integer', autoIncrement: true, primaryKey: true, unique: true },
+		title: { type: 'string', defaultsTo: '' },
+		url: { type: 'string', defaultsTo: '' },
+		excerpt: { type: 'string', defaultsTo: '' },
+		author: { type: 'string', defaultsTo: '' },
+		imageUrl: { type: 'string', defaultsTo: '' },
+		pubDate: { type: 'date', defaultsTo: '' },
 		post: { model: 'post' }
     }
 };
