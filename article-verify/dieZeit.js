@@ -10,7 +10,7 @@ class dieZeit extends ArticleVerification {
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
 		return request('GET','http://api.zeit.de/content', { 
 			q: '"' + subject + '" "' + object + '"',
-			api_key: '0d47a1ca0d95a5a7b68eda826ccb6889149b3f7ad47a9b5fb2bd'
+			api_key: '198ae7c88a349baaeecc3ae4f2620334cca56dd71a7d8d2a5bd4'
 		}, true)
 			.then((data) => {
 				//console.log('Data: ', data.matches);
