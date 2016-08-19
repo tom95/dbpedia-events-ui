@@ -64,6 +64,2573 @@
         "updatedAt": "2016-06-14T17:12:59.756Z",
         "id": 5
       }
+    ],
+    "post": [
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Alexander Francis Molamure awarded with the Knight Commander.",
+        "res": "http://dbpedia.org/resource/Alexander_Francis_Molamure",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 836857702,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.880Z",
+        "updatedAt": "2016-08-01T15:41:10.880Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Belle (Disney) married Beast.",
+        "res": "http://dbpedia.org/resource/Belle_(Disney)",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -1086632058,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Katharine_hepburn_little_women.jpg/235px-Katharine_hepburn_little_women.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.886Z",
+        "updatedAt": "2016-08-01T15:41:10.886Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Brian Freeman awarded with the Macavity Awards.<br>Brian Freeman awarded with the International Thriller Writers Awards.",
+        "res": "http://dbpedia.org/resource/Brian_Freeman",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -531780283,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.889Z",
+        "updatedAt": "2016-08-01T15:41:10.889Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Carlos Pena, Jr. divorced Vega, Alexa.",
+        "res": "http://dbpedia.org/resource/Carlos_Pena,_Jr.",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -850314740,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Carlos_Pena_Jr_BTR_Paparazzo.jpg/242px-Carlos_Pena_Jr_BTR_Paparazzo.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.892Z",
+        "updatedAt": "2016-08-01T15:41:10.892Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Carlos Pena, Jr. married Alexa PenaVega.",
+        "res": "http://dbpedia.org/resource/Carlos_Pena,_Jr.",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1063650244,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Carlos_Pena_Jr_BTR_Paparazzo.jpg/242px-Carlos_Pena_Jr_BTR_Paparazzo.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.895Z",
+        "updatedAt": "2016-08-01T15:41:10.895Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Clifford Cocks awarded with the Order of the Bath.",
+        "res": "http://dbpedia.org/resource/Clifford_Cocks",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -391661295,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Clifford-Cocks-FRS.jpg/200px-Clifford-Cocks-FRS.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.898Z",
+        "updatedAt": "2016-08-01T15:41:10.898Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Dean Barker (sailor) married Mandy Smith.",
+        "res": "http://dbpedia.org/resource/Dean_Barker_(sailor)",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -352603342,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Dean_Barker_America%27s_Cup_World_Series_%284%29.jpg/240px-Dean_Barker_America%27s_Cup_World_Series_%284%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.910Z",
+        "updatedAt": "2016-08-01T15:41:10.910Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Dean Barker (yachtsman) divorced Mandy Smith.",
+        "res": "http://dbpedia.org/resource/Dean_Barker_(yachtsman)",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 2057974326,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Dean_Barker_America%27s_Cup_World_Series_%284%29.jpg/240px-Dean_Barker_America%27s_Cup_World_Series_%284%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.913Z",
+        "updatedAt": "2016-08-01T15:41:10.913Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Disgaea 5: Alliance of Vengeance is released on 2016-10-15.",
+        "res": "http://dbpedia.org/resource/Disgaea_5:_Alliance_of_Vengeance",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1555496148,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.916Z",
+        "updatedAt": "2016-08-01T15:41:10.916Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Doodle God is released on 2015-09-24.",
+        "res": "http://dbpedia.org/resource/Doodle_God",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -1391682275,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Doodle_God_AppStore_Icon.png/300px-Doodle_God_AppStore_Icon.png",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.919Z",
+        "updatedAt": "2016-08-01T15:41:10.919Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Hate Story 3 is released on 2015-12-04.",
+        "res": "http://dbpedia.org/resource/Hate_Story_3",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 398324827,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Starcast_of_Hate_Story_3_at_Trailer_Launch.jpg/300px-Starcast_of_Hate_Story_3_at_Trailer_Launch.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.922Z",
+        "updatedAt": "2016-08-01T15:41:10.922Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Herman Tjeenk Willink divorced Single person.",
+        "res": "http://dbpedia.org/resource/Herman_Tjeenk_Willink",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1146179678,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Opdracht_Financieel_Dagblad_%2C_heer_Tjeenk_Willink_%2C_close_en_kop_-_NL-HaNA_Anefo_933-3139_WM556.jpg/204px-Opdracht_Financieel_Dagblad_%2C_heer_Tjeenk_Willink_%2C_close_en_kop_-_NL-HaNA_Anefo_933-3139_WM556.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.926Z",
+        "updatedAt": "2016-08-01T15:41:10.926Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Historikill: 1995–2007 is released on 2015-10-16.",
+        "res": "http://dbpedia.org/resource/Historikill:_1995%E2%80%932007",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 575204469,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.929Z",
+        "updatedAt": "2016-08-01T15:41:10.929Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Jack Black divorced Tanya Haden.",
+        "res": "http://dbpedia.org/resource/Jack_Black",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -677110173,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Jack_Black_March_2016.jpg/226px-Jack_Black_March_2016.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.932Z",
+        "updatedAt": "2016-08-01T15:41:10.932Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "James Wong Howe awarded with the Hud.",
+        "res": "http://dbpedia.org/resource/James_Wong_Howe",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 328963832,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/The_Alaskan_%281924%29_1.jpg/300px-The_Alaskan_%281924%29_1.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.939Z",
+        "updatedAt": "2016-08-01T15:41:10.939Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Jeanne Tripplehorn married Leland Orser.",
+        "res": "http://dbpedia.org/resource/Jeanne_Tripplehorn",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 2106616771,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.942Z",
+        "updatedAt": "2016-08-01T15:41:10.942Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Michael Angelis married Helen Worth.",
+        "res": "http://dbpedia.org/resource/Michael_Angelis",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 2061521303,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.946Z",
+        "updatedAt": "2016-08-01T15:41:10.946Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Morgana O'Reilly divorced Peter Salmon.",
+        "res": "http://dbpedia.org/resource/Morgana_O'Reilly",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1932966209,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.950Z",
+        "updatedAt": "2016-08-01T15:41:10.950Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Nataša Dorčić married Sven Medvesek.",
+        "res": "http://dbpedia.org/resource/Nata%C5%A1a_Dor%C4%8Di%C4%87",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 317317997,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.953Z",
+        "updatedAt": "2016-08-01T15:41:10.953Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Oliver Hudson married Erinn Bartlett.",
+        "res": "http://dbpedia.org/resource/Oliver_Hudson",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 234146951,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Oliver_Hudson.jpg/204px-Oliver_Hudson.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.956Z",
+        "updatedAt": "2016-08-01T15:41:10.956Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#LEADER",
+        "desc": "Aquino, Benigno succeeds Benigno S. Aquino III as the leader of Philippines.",
+        "res": "http://dbpedia.org/resource/Philippines",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1666545326,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/300px-Flag_of_the_Philippines.svg.png",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.960Z",
+        "updatedAt": "2016-08-01T15:41:10.960Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Rajini Murugan is released on 2015-10-21.",
+        "res": "http://dbpedia.org/resource/Rajini_Murugan",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -2142776838,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.963Z",
+        "updatedAt": "2016-08-01T15:41:10.963Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Richard Dickson Cudahy died on 2015-09-22 in Winnetka, Illinois.",
+        "res": "http://dbpedia.org/resource/Richard_Dickson_Cudahy",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -1991814433,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.969Z",
+        "updatedAt": "2016-08-01T15:41:10.969Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Rosewood (TV series) is released on 2015-09-23.",
+        "res": "http://dbpedia.org/resource/Rosewood_(TV_series)",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -350591263,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.973Z",
+        "updatedAt": "2016-08-01T15:41:10.973Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Shivam (Telugu film) is released on 2015-10-02.",
+        "res": "http://dbpedia.org/resource/Shivam_(Telugu_film)",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1691272748,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.976Z",
+        "updatedAt": "2016-08-01T15:41:10.976Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Sophie, Princess of Windisch-Graetz divorced Mariano Hugo of Windisch-Graetz.",
+        "res": "http://dbpedia.org/resource/Sophie,_Princess_of_Windisch-Graetz",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -392900302,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.980Z",
+        "updatedAt": "2016-08-01T15:41:10.980Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Sophie, Princess of Windisch-Graetz married Mariano Hugo Of Windisch-Graetz.",
+        "res": "http://dbpedia.org/resource/Sophie,_Princess_of_Windisch-Graetz",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -2086437766,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.983Z",
+        "updatedAt": "2016-08-01T15:41:10.983Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Spencer Pratt married Montag, Heidi.",
+        "res": "http://dbpedia.org/resource/Spencer_Pratt",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -1807510674,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Spencer_Pratt_2009.jpg/200px-Spencer_Pratt_2009.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.987Z",
+        "updatedAt": "2016-08-01T15:41:10.987Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Stephanie McMahon divorced Paul Michael Levesque.",
+        "res": "http://dbpedia.org/resource/Stephanie_McMahon",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": 1171443615,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Stephanie_McMahon_WrestleMania_31_in_2015.jpg/254px-Stephanie_McMahon_WrestleMania_31_in_2015.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.990Z",
+        "updatedAt": "2016-08-01T15:41:10.990Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "System Shock is released on 2015-09-22.",
+        "res": "http://dbpedia.org/resource/System_Shock",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -959583335,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:10.998Z",
+        "updatedAt": "2016-08-01T15:41:10.998Z"
+      },
+      {
+        "digestid": "2015/09/24",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Tum Bin is released on 2018-07-01.",
+        "res": "http://dbpedia.org/resource/Tum_Bin",
+        "endTime": "2015-09-24T21:59:59+02:00",
+        "id": -67284819,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.002Z",
+        "updatedAt": "2016-08-01T15:41:11.002Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Agent X (TV series) is released on 2015-11-08.",
+        "res": "http://dbpedia.org/resource/Agent_X_(TV_series)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -348252901,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.006Z",
+        "updatedAt": "2016-08-01T15:41:11.006Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Alex Gordon awarded with the Platinum Glove Award.",
+        "res": "http://dbpedia.org/resource/Alex_Gordon",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -3810556,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Alex_Gordon_2009.jpg/187px-Alex_Gordon_2009.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.011Z",
+        "updatedAt": "2016-08-01T15:41:11.011Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Angela Kinsey married Warren Lieberstein.",
+        "res": "http://dbpedia.org/resource/Angela_Kinsey",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 221012148,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Angela_Kinsey_%282009%29.jpg/225px-Angela_Kinsey_%282009%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.015Z",
+        "updatedAt": "2016-08-01T15:41:11.015Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Armikrog is released on 2015-09-30.",
+        "res": "http://dbpedia.org/resource/Armikrog",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -536343123,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.020Z",
+        "updatedAt": "2016-08-01T15:41:11.020Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Barbara Perry (actress) married Art Babbit.",
+        "res": "http://dbpedia.org/resource/Barbara_Perry_(actress)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -383023375,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.025Z",
+        "updatedAt": "2016-08-01T15:41:11.025Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Barbro Sachs-Osher married Bernard Osher.",
+        "res": "http://dbpedia.org/resource/Barbro_Sachs-Osher",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1888793133,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.035Z",
+        "updatedAt": "2016-08-01T15:41:11.035Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Benjamin F. Strickland II awarded with the Cutterman insignia.<br>Benjamin F. Strickland II awarded with the Commendation Medal.<br>Benjamin F. Strickland II awarded with the Achievement Medal.",
+        "res": "http://dbpedia.org/resource/Benjamin_F._Strickland_II",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -871567946,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.039Z",
+        "updatedAt": "2016-08-01T15:41:11.039Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Bharat Patankar married Omvedt, Gail.",
+        "res": "http://dbpedia.org/resource/Bharat_Patankar",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1951009791,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Bharatp.jpg/300px-Bharatp.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.044Z",
+        "updatedAt": "2016-08-01T15:41:11.044Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Brooklyn Decker married Andrew Stephen Roddick.",
+        "res": "http://dbpedia.org/resource/Brooklyn_Decker",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -377381875,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Brooklyn_Decker_2012_Shankbone.JPG/229px-Brooklyn_Decker_2012_Shankbone.JPG",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.049Z",
+        "updatedAt": "2016-08-01T15:41:11.049Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Candida Royalle died on 2015-09-07 in Mattituck, New York.",
+        "res": "http://dbpedia.org/resource/Candida_Royalle",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -85318788,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/CineKink_NYC_2013_Candida_Royalle.jpg/225px-CineKink_NYC_2013_Candida_Royalle.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.053Z",
+        "updatedAt": "2016-08-01T15:41:11.053Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Catherine Lowe married Sean Lowe (The Bachelor).",
+        "res": "http://dbpedia.org/resource/Catherine_Lowe",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -818004847,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.057Z",
+        "updatedAt": "2016-08-01T15:41:11.057Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Charles Ausburne awarded with the Navy Cross (United States).",
+        "res": "http://dbpedia.org/resource/Charles_Ausburne",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -883986136,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.065Z",
+        "updatedAt": "2016-08-01T15:41:11.065Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Cor Edskes died on 2015-09-07 in Haren.",
+        "res": "http://dbpedia.org/resource/Cor_Edskes",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1992724725,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.069Z",
+        "updatedAt": "2016-08-01T15:41:11.069Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Countess Donata of Castell-Rüdenhausen died on 2015-09-05 in Germany.",
+        "res": "http://dbpedia.org/resource/Countess_Donata_of_Castell-R%C3%BCdenhausen",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1993022167,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.073Z",
+        "updatedAt": "2016-08-01T15:41:11.073Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Courtney B. Vance married Angela Bassett.",
+        "res": "http://dbpedia.org/resource/Courtney_B._Vance",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 374283576,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Courtney_Vance_by_David_Shankbone.jpg/300px-Courtney_Vance_by_David_Shankbone.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.076Z",
+        "updatedAt": "2016-08-01T15:41:11.076Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Damian Lewis married Helen McCrory.",
+        "res": "http://dbpedia.org/resource/Damian_Lewis",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -45357359,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Damian_Lewis_Berlin_2015.jpg/187px-Damian_Lewis_Berlin_2015.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.080Z",
+        "updatedAt": "2016-08-01T15:41:11.080Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Dan Santat awarded with the Caldecott Medal.",
+        "res": "http://dbpedia.org/resource/Dan_Santat",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1799904789,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Dan_Santat_-_2015_National_Book_Festival_%282%29.jpg/200px-Dan_Santat_-_2015_National_Book_Festival_%282%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.084Z",
+        "updatedAt": "2016-08-01T15:41:11.084Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Detlef Weigel awarded with the Gottfried Wilhelm Leibniz Prize.",
+        "res": "http://dbpedia.org/resource/Detlef_Weigel",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1831751774,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Detlef_Weigel.jpg/268px-Detlef_Weigel.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.089Z",
+        "updatedAt": "2016-08-01T15:41:11.089Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Dmitri Alperovitch awarded with the FP Top 100 Global Thinkers.",
+        "res": "http://dbpedia.org/resource/Dmitri_Alperovitch",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -16902485,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.098Z",
+        "updatedAt": "2016-08-01T15:41:11.098Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Elliot Ackerman awarded with the Silver Star.<br>Elliot Ackerman awarded with the Purple Heart.",
+        "res": "http://dbpedia.org/resource/Elliot_Ackerman",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -100438748,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Elliot_Ackerman_2015.jpg/200px-Elliot_Ackerman_2015.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.103Z",
+        "updatedAt": "2016-08-01T15:41:11.103Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Fatima Effendi married Kanwar Arsalan.",
+        "res": "http://dbpedia.org/resource/Fatima_Effendi",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1307839578,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.107Z",
+        "updatedAt": "2016-08-01T15:41:11.107Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Glynn R. Donaho awarded with the Navy Cross (United States).",
+        "res": "http://dbpedia.org/resource/Glynn_R._Donaho",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -14426297,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Glynn_R._Donaho.jpg/212px-Glynn_R._Donaho.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.111Z",
+        "updatedAt": "2016-08-01T15:41:11.111Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Gotabhaya Rajapaksa awarded with the Doctor of Letters.<br>Gotabhaya Rajapaksa awarded with the Rana Wickrama Padakkama.<br>Gotabhaya Rajapaksa awarded with the Rana Sura Padakkama.<br>Gotabhaya Rajapaksa awarded with the University of Colombo.",
+        "res": "http://dbpedia.org/resource/Gotabhaya_Rajapaksa",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -419999365,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Nandasena_Gotabaya_Rajapaksa.jpg/215px-Nandasena_Gotabaya_Rajapaksa.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.116Z",
+        "updatedAt": "2016-08-01T15:41:11.116Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Heather Mills married Paul McCartney.",
+        "res": "http://dbpedia.org/resource/Heather_Mills",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 2089911931,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/HeatherMills1.jpg/300px-HeatherMills1.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.121Z",
+        "updatedAt": "2016-08-01T15:41:11.121Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Hit n Run (Prince album) is released on 2015-09-07.<br>Hit n Run (Prince album) is released on 2015-09-15.",
+        "res": "http://dbpedia.org/resource/Hit_n_Run_(Prince_album)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 833007642,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.130Z",
+        "updatedAt": "2016-08-01T15:41:11.130Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "James McIntosh (Food Writer) awarded with the Farmers Weekly.",
+        "res": "http://dbpedia.org/resource/James_McIntosh_(Food_Writer)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 538795418,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.134Z",
+        "updatedAt": "2016-08-01T15:41:11.134Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Jerry O'Connell married Rebecca Romijn.",
+        "res": "http://dbpedia.org/resource/Jerry_O'Connell",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1032239646,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/JerryO%27ConnellHWOFJune2013.jpg/254px-JerryO%27ConnellHWOFJune2013.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.138Z",
+        "updatedAt": "2016-08-01T15:41:11.138Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "John Astin married Patty Duke.",
+        "res": "http://dbpedia.org/resource/John_Astin",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 2057958197,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/John_Astin_Operation_Petticoat_1977.JPG/229px-John_Astin_Operation_Petticoat_1977.JPG",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.142Z",
+        "updatedAt": "2016-08-01T15:41:11.142Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Keith Arbuthnott, 15th Viscount of Arbuthnott awarded with the Commander of the Order of the British Empire.<br>Keith Arbuthnott, 15th Viscount of Arbuthnott awarded with the Mentioned in Despatches.<br>Keith Arbuthnott, 15th Viscount of Arbuthnott awarded with the Companion of the Order of the Bath.",
+        "res": "http://dbpedia.org/resource/Keith_Arbuthnott,_15th_Viscount_of_Arbuthnott",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1629394234,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Arms_Viscount_of_Arbuthnott_%28entire%29.svg/300px-Arms_Viscount_of_Arbuthnott_%28entire%29.svg.png",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.147Z",
+        "updatedAt": "2016-08-01T15:41:11.147Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Kristy Swanson married Lloyd Eisler.",
+        "res": "http://dbpedia.org/resource/Kristy_Swanson",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1609752198,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kristy_swanson.jpg/300px-Kristy_swanson.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.151Z",
+        "updatedAt": "2016-08-01T15:41:11.151Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Kwame Alexander awarded with the Newbery Medal.",
+        "res": "http://dbpedia.org/resource/Kwame_Alexander",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1617841278,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.160Z",
+        "updatedAt": "2016-08-01T15:41:11.160Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Leslie William Cannon awarded with the Commander of the Order of the British Empire.<br>Leslie William Cannon awarded with the Silver Star.<br>Leslie William Cannon awarded with the Companion of the Order of the Bath.<br>Leslie William Cannon awarded with the Mentioned in Despatches.",
+        "res": "http://dbpedia.org/resource/Leslie_William_Cannon",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1160820372,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.164Z",
+        "updatedAt": "2016-08-01T15:41:11.164Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Liberman (album) is released on 2015-10-23.",
+        "res": "http://dbpedia.org/resource/Liberman_(album)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1722666292,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.168Z",
+        "updatedAt": "2016-08-01T15:41:11.168Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Lionel Rees awarded with the Officer of the Order of the British Empire.<br>Lionel Rees awarded with the Military Cross.<br>Lionel Rees awarded with the Air Force Cross (United Kingdom).<br>Lionel Rees awarded with the Victoria Cross.",
+        "res": "http://dbpedia.org/resource/Lionel_Rees",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1070171033,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Lionel_Rees_VC_IWM_Q_68027.jpg/181px-Lionel_Rees_VC_IWM_Q_68027.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.174Z",
+        "updatedAt": "2016-08-01T15:41:11.174Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Love Is the Law (Charlene Soraia album) is released on 2015-09-11.",
+        "res": "http://dbpedia.org/resource/Love_Is_the_Law_(Charlene_Soraia_album)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1684829073,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.178Z",
+        "updatedAt": "2016-08-01T15:41:11.178Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Makarand Anaspure awarded with the Narayan Shripad Rajhans.<br>Makarand Anaspure awarded with the Star Screen Award.",
+        "res": "http://dbpedia.org/resource/Makarand_Anaspure",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1370078319,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.182Z",
+        "updatedAt": "2016-08-01T15:41:11.182Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Mark Wood (Medal of Honor) awarded with the Medal of Honor.",
+        "res": "http://dbpedia.org/resource/Mark_Wood_(Medal_of_Honor)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -987309875,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/M_Wood.jpg/219px-M_Wood.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.192Z",
+        "updatedAt": "2016-08-01T15:41:11.192Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Martin Milner died on 2015-09-06 in California.<br>Martin Milner died on 2015-09-06 in Carlsbad, California.<br>Martin Milner died on 2015-09-06 in United States.",
+        "res": "http://dbpedia.org/resource/Martin_Milner",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1874821512,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Martin_Milner_1960_publicity_photo.jpg/240px-Martin_Milner_1960_publicity_photo.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.196Z",
+        "updatedAt": "2016-08-01T15:41:11.196Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "MasterChef Asia is released on 2015-09-02.",
+        "res": "http://dbpedia.org/resource/MasterChef_Asia",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1286412608,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.201Z",
+        "updatedAt": "2016-08-01T15:41:11.201Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Melissa Fumero married David Fumero.",
+        "res": "http://dbpedia.org/resource/Melissa_Fumero",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 392962425,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.205Z",
+        "updatedAt": "2016-08-01T15:41:11.205Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Michael O'Moore Creagh awarded with the Mentioned in Despatches.",
+        "res": "http://dbpedia.org/resource/Michael_O'Moore_Creagh",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 596756017,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.210Z",
+        "updatedAt": "2016-08-01T15:41:11.210Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Momentary Lapse of Reason (TV series) is released on 2015-08-31.",
+        "res": "http://dbpedia.org/resource/Momentary_Lapse_of_Reason_(TV_series)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -889355904,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.219Z",
+        "updatedAt": "2016-08-01T15:41:11.219Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#LEADER",
+        "desc": "Sandra Torres succeeds Sandra Torres as the leader of National Unity of Hope.",
+        "res": "http://dbpedia.org/resource/National_Unity_of_Hope",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1752629894,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/UNE_Logo.svg/260px-UNE_Logo.svg.png",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.223Z",
+        "updatedAt": "2016-08-01T15:41:11.223Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Orson Welles awarded with the 43rd Academy Awards.<br>Orson Welles awarded with the 14th Academy Awards.",
+        "res": "http://dbpedia.org/resource/Orson_Welles",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -373010526,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Orson_Welles_1937.jpg/234px-Orson_Welles_1937.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.228Z",
+        "updatedAt": "2016-08-01T15:41:11.228Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Pickle and Peanut is released on 2015-09-02.",
+        "res": "http://dbpedia.org/resource/Pickle_and_Peanut",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -2116262259,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/PickleAndPeanut_Title.png/300px-PickleAndPeanut_Title.png",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.233Z",
+        "updatedAt": "2016-08-01T15:41:11.233Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Rajiv Chandrasekaran awarded with the The Samuel Johnson Prize for Non-Fiction.",
+        "res": "http://dbpedia.org/resource/Rajiv_Chandrasekaran",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1783877795,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rajiv_Chandrasekaran_-_2015_National_Book_Festival_%282%29.jpg/214px-Rajiv_Chandrasekaran_-_2015_National_Book_Festival_%282%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.238Z",
+        "updatedAt": "2016-08-01T15:41:11.238Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Rebecca Pidgeon married David Alan Mamet.",
+        "res": "http://dbpedia.org/resource/Rebecca_Pidgeon",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1868555694,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rebecca_Pidgeon_by_David_Shankbone.jpg/206px-Rebecca_Pidgeon_by_David_Shankbone.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.246Z",
+        "updatedAt": "2016-08-01T15:41:11.246Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Robin Givhan awarded with the Pulitzer Prize for Criticism.",
+        "res": "http://dbpedia.org/resource/Robin_Givhan",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1956600492,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Robin_givhan_8227.jpg/225px-Robin_givhan_8227.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.251Z",
+        "updatedAt": "2016-08-01T15:41:11.251Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Rochelle Humes married Marvin Humes.",
+        "res": "http://dbpedia.org/resource/Rochelle_Humes",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1780329779,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rochelle_Humes_2014.jpg/180px-Rochelle_Humes_2014.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.256Z",
+        "updatedAt": "2016-08-01T15:41:11.256Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Ruco Chan awarded with the Ruse of Engagement.<br>Ruco Chan awarded with the Brother's Keeper.",
+        "res": "http://dbpedia.org/resource/Ruco_Chan",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1862058860,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.261Z",
+        "updatedAt": "2016-08-01T15:41:11.261Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Samuel-François Lhéritier awarded with the Légion d'honneur.",
+        "res": "http://dbpedia.org/resource/Samuel-Fran%C3%A7ois_Lh%C3%A9ritier",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1400913508,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.266Z",
+        "updatedAt": "2016-08-01T15:41:11.266Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Sharon Gless married Barney Rosenzweig.",
+        "res": "http://dbpedia.org/resource/Sharon_Gless",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -201785560,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sharon_Gless_at_the_1991_Emmy_Awards_cropped.jpg/177px-Sharon_Gless_at_the_1991_Emmy_Awards_cropped.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.272Z",
+        "updatedAt": "2016-08-01T15:41:11.272Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Shelia P. Moses awarded with the Coretta Scott King Award.",
+        "res": "http://dbpedia.org/resource/Shelia_P._Moses",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1542847987,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Shelia_P._Moses_-_2015_National_Book_Festival_%285%29.jpg/200px-Shelia_P._Moses_-_2015_National_Book_Festival_%285%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.281Z",
+        "updatedAt": "2016-08-01T15:41:11.281Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Shubhadrangi divorced Bindusara.",
+        "res": "http://dbpedia.org/resource/Shubhadrangi",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 11473302,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.286Z",
+        "updatedAt": "2016-08-01T15:41:11.286Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Solomon H. Snyder awarded with the National Medal of Science.<br>Solomon H. Snyder awarded with the Albert Lasker Award for Basic Medical Research.",
+        "res": "http://dbpedia.org/resource/Solomon_H._Snyder",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1619034404,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Solomon_H._Snyder.jpg/263px-Solomon_H._Snyder.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.291Z",
+        "updatedAt": "2016-08-01T15:41:11.291Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Subhadrangi married Bindusara.",
+        "res": "http://dbpedia.org/resource/Subhadrangi",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1931139148,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.296Z",
+        "updatedAt": "2016-08-01T15:41:11.296Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Susan Allen (musician) died on 2015-09-07 in Seattle, Washington.",
+        "res": "http://dbpedia.org/resource/Susan_Allen_(musician)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -754743875,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.302Z",
+        "updatedAt": "2016-08-01T15:41:11.302Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Téa Leoni married David Duchovny.",
+        "res": "http://dbpedia.org/resource/T%C3%A9a_Leoni",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -213055591,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.311Z",
+        "updatedAt": "2016-08-01T15:41:11.311Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Thomas F. Darcy awarded with the Pulitzer Prize for Editorial Cartooning.",
+        "res": "http://dbpedia.org/resource/Thomas_F._Darcy",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -2058045607,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.316Z",
+        "updatedAt": "2016-08-01T15:41:11.316Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTDIVORCED",
+        "desc": "Vincent D'Onofrio divorced Greta Scacchi.",
+        "res": "http://dbpedia.org/resource/Vincent_D'Onofrio",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1697194267,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Vincent_D%27Onofrio_TIFF_2014.jpg/186px-Vincent_D%27Onofrio_TIFF_2014.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.321Z",
+        "updatedAt": "2016-08-01T15:41:11.321Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#DEADPEOPLE",
+        "desc": "Voula Zouboulaki died on 2015-09-07 in Athens, Greece.",
+        "res": "http://dbpedia.org/resource/Voula_Zouboulaki",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -1883778592,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.326Z",
+        "updatedAt": "2016-08-01T15:41:11.326Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#JUSTMARRIED",
+        "desc": "Wanda Ventham married Timothy Carlton.",
+        "res": "http://dbpedia.org/resource/Wanda_Ventham",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1748815391,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.332Z",
+        "updatedAt": "2016-08-01T15:41:11.332Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Warhammer 40,000: Regicide is released on 2015-09-08.",
+        "res": "http://dbpedia.org/resource/Warhammer_40,000:_Regicide",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": -335545325,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.341Z",
+        "updatedAt": "2016-08-01T15:41:11.341Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#RELEASED",
+        "desc": "Wildest Dreams (Taylor Swift song) is released on 2015-09-01.",
+        "res": "http://dbpedia.org/resource/Wildest_Dreams_(Taylor_Swift_song)",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 1578475849,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Western_Serengeti_2012_06_02_4139_%287557734884%29.jpg/300px-Western_Serengeti_2012_06_02_4139_%287557734884%29.jpg",
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.346Z",
+        "updatedAt": "2016-08-01T15:41:11.346Z"
+      },
+      {
+        "digestid": "2015/09/08",
+        "tmpl": "http://events.dbpedia.org/data/digests#AWARDED",
+        "desc": "Yevgenii Vasilevich Zolotov awarded with the Order of Friendship.",
+        "res": "http://dbpedia.org/resource/Yevgenii_Vasilevich_Zolotov",
+        "endTime": "2015-09-08T21:59:59+02:00",
+        "id": 283476665,
+        "confirm": {
+          "confirm": 0,
+          "disconfirm": 0
+        },
+        "image": null,
+        "day": "2000-12-31T23:00:00.000Z",
+        "createdAt": "2016-08-01T15:41:11.352Z",
+        "updatedAt": "2016-08-01T15:41:11.352Z"
+      }
+    ],
+    "article": [
+      {
+        "title": "Israel mourns death of its 5th president, Yitzhak Navon",
+        "url": "http://www.bing.com/cr?IG=0FA9951DD7284D77A8B2F8D6BFEB194E&CID=042AA75BE4D96B7C17EDAE38E5196AA0&rd=1&h=sZqmdWFkQprCC1r20A_hx7uegewbIoM5MtshYCwZXus&v=1&r=http%3a%2f%2fwww.israelhayom.com%2fsite%2fnewsletter_article.php%3fid%3d29529&p=DevEx,5019.1",
+        "excerpt": "Widely considered as one of Israel's most beloved statesmen, Navon, 94, dies at home • PM Benjamin Netanyahu: Navon was one of the finest of the nation • President Reuven Rivlin: Navon played a significant role in our nation's meaningful junctions ...",
+        "pubDate": "2015-11-08T12:04:00.000Z",
+        "author": "Israel Hayom",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:05:44.026Z",
+        "updatedAt": "2016-07-31T09:05:44.026Z",
+        "id": 1
+      },
+      {
+        "title": "Vikings expect Teddy Bridgewater to start Sunday vs. Raiders",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=NW8b7dbh0lO5cYrrUNtaC0brNH9pY7bEs7saW_va7Ck&v=1&r=http%3a%2f%2fwww.twincities.com%2f2015%2f11%2f08%2fvikings-expect-teddy-bridgewater-to-start-sunday-vs-raiders%2f&p=DevEx,5045.1",
+        "excerpt": "Vikings coach Mike Zimmer expects quarterback Teddy Bridgewater, recovering from a concussion, to be ready to play Sunday at Oakland. “He passed his first test,” Zimmer said Monday. “I think he’ll be good to go.” Bridgewater was knocked out of ...",
+        "pubDate": "2015-11-09T21:38:00.000Z",
+        "author": "TwinCities Pioneer Press",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.241Z",
+        "updatedAt": "2016-07-31T09:07:14.241Z",
+        "id": 2
+      },
+      {
+        "title": "Vikings' Mike Zimmer rips Rams for hit on Teddy Bridgewater",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=ry6cCbvIquNgIQCjAdjHt8C2rUNjMBIji3d-7rTlq-Y&v=1&r=http%3a%2f%2fwww.usatoday.com%2fstory%2fsports%2fnfl%2f2015%2f11%2f08%2fweek-9-injuries-teddy-bridgewater-dion-lewis%2f75420692%2f&p=DevEx,5035.1",
+        "excerpt": "At the end of a slide, Vikings quarterback Teddy Bridgewater took a forearm to the head from Rams defensive back Lamarcus Joyner in the fourth quarter of Minnesota's 21-18 overtime win. Bridgewater left the game with a concussion and did not return.",
+        "pubDate": "2015-11-09T11:52:00.000Z",
+        "author": "USA Today",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.247Z",
+        "updatedAt": "2016-07-31T09:07:14.247Z",
+        "id": 3
+      },
+      {
+        "title": "Bridgewater knocked unconscious vs. Rams",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=10lP_509zOnJKp_mZ6xy4sZzp5ZjadSPx1lNip5KLxk&v=1&r=http%3a%2f%2fwww.courier-journal.com%2fstory%2fsports%2fnfl%2f2015%2f11%2f08%2fbridgewater-knocked-unconscious-vs-rams%2f75437890%2f&p=DevEx,5053.1",
+        "excerpt": "MINNEAPOLIS — Minnesota Vikings quarterback Teddy Bridgewater was knocked out of the game by a hit to the head in the fourth quarter against the St. Louis Rams on Sunday that caused a concussion. After going to the locker room for examination ...",
+        "pubDate": "2015-11-09T09:44:00.000Z",
+        "author": "Courier-Journal",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.252Z",
+        "updatedAt": "2016-07-31T09:07:14.252Z",
+        "id": 4
+      },
+      {
+        "title": "Early Thoughts (Week 9): The Suddenly-Hot Minnesota Vikings",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=YlFyKJ5sTET4AEaZq8pmtTTsiYu_8ODY3j6_uy5s5E4&v=1&r=http%3a%2f%2fnflspinzone.com%2f2015%2f11%2f08%2fearly-thoughts-week-9-the-suddenly-hot-minnesota-vikings%2f&p=DevEx,5051.1",
+        "excerpt": "Under first-time head coach Mike Zimmer, the Purple Gang finished 7-9 in his debut season and did that with a rookie quarterback in Teddy Bridgewater (for the most part), without perennial Pro Bowl running back Adrian Peterson for 15 games and with a new ...",
+        "pubDate": "2015-11-09T00:23:00.000Z",
+        "author": "NFL Spin Zone",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.256Z",
+        "updatedAt": "2016-07-31T09:07:14.256Z",
+        "id": 5
+      },
+      {
+        "title": "St Louis Rams: Takeaways from loss vs Vikings",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=vY3RGCiGOz9hFjOMB1yfHsQcfTLzbCMEY7X4RCINTNw&v=1&r=http%3a%2f%2fisportsweb.com%2f2015%2f11%2f08%2fst-louis-rams-takeaways-loss-vs-vikings%2f&p=DevEx,5065.1",
+        "excerpt": "Their defense limited the passing offense of the Vikings to 148 yards and forced Teddy Bridgewater to through an interception. The defense of the Rams has proven to always be consistent and force other teams to grind in order to put points up on the board.",
+        "pubDate": "2015-11-09T00:12:00.000Z",
+        "author": "isportsweb",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.261Z",
+        "updatedAt": "2016-07-31T09:07:14.261Z",
+        "id": 6
+      },
+      {
+        "title": "Quarterbacks Ben Roethlisberger and Teddy Bridgewater injured in wins on Sunday",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=d0lQD8-KZcK9WQuYfqVQQT8DQfymEYb2YHlMxPmak5Q&v=1&r=http%3a%2f%2fwww.usnews.com%2fnews%2fsports%2farticles%2f2015%2f11%2f08%2fquarterbacks-roethlisberger-bridgewater-injured-in-wins&p=DevEx,5041.1",
+        "excerpt": "The Vikings also lost their quarterback in a win. Teddy Bridgewater sustained a concussion in Minnesota's 21-18 overtime victory over St. Louis. Bridgewater was injured when he was hit hard by Lamarcus Joyner as he slid at the end of a scramble.",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "US News and World Report",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.265Z",
+        "updatedAt": "2016-07-31T09:07:14.265Z",
+        "id": 7
+      },
+      {
+        "title": "In concussion protocol, Bridgewater nevertheless feels fine",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=fms678g82m28x38jYA1AJKC0Xl1Zzoe7gYFP1WS-MRo&v=1&r=http%3a%2f%2fprofootballtalk.nbcsports.com%2f2015%2f11%2f08%2fin-concussion-protocol-bridgewater-nevertheless-feels-fine%2f&p=DevEx,5055.1",
+        "excerpt": "Vikings quarterback Teddy Bridgewater exited Sunday’s overtime win over the Rams in the second half after taking an elbow to the head and a head off the ground. Officially, Bridgewater is in the concussion protocol. He won’t be able to play until he ...",
+        "pubDate": "2015-11-08T23:42:00.000Z",
+        "author": "NBC Sports PFT",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.270Z",
+        "updatedAt": "2016-07-31T09:07:14.270Z",
+        "id": 8
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=6dUvx2_RGKbiRTN4yRbB57wvjRjw_X_1T-eZMvlFmUo&v=1&r=http%3a%2f%2flubbockonline.com%2ffiled-online%2f2015-11-08%2fvikings-lose-bridgewater-beat-rams-21-18-ot&p=DevEx,5067.1",
+        "excerpt": "MINNEAPOLIS (AP) — Angered by a hit to Teddy Bridgewater's head, the Minnesota Vikings steered their feelings toward another steely victory. Adrian Peterson rushed for 125 yards on 29 carries, helping set up Blair Walsh's 40-yard field goal in overtime ...",
+        "pubDate": "2015-11-08T23:32:00.000Z",
+        "author": "Lubbock Avalanche-Journal",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.273Z",
+        "updatedAt": "2016-07-31T09:07:14.273Z",
+        "id": 9
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=kqEXlfrpw2yiHTqHHHgK-MZEx81swVJprXXZOJnVLzo&v=1&r=http%3a%2f%2fwww.wxow.com%2fstory%2f30466552%2f2015%2f11%2f08%2fvikings-lose-bridgewater-beat-rams-21-18-in-ot&p=DevEx,5061.1",
+        "excerpt": "Adrian Peterson rushed for 125 yards on 29 carries for Minnesota, helping set up Blair Walsh's 40-yard field goal in overtime that lifted the Vikings a 21-18 victory over the St. Louis Rams on Sunday after quarterback Teddy Bridgewater left with a concussion.",
+        "pubDate": "2015-11-08T22:55:00.000Z",
+        "author": "WXOW 19",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.276Z",
+        "updatedAt": "2016-07-31T09:07:14.276Z",
+        "id": 10
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=bhdPFBdK-xRAvcl8u6LdlVSUYpwQvC88RgosY-XoBHs&v=1&r=http%3a%2f%2fwww.argusleader.com%2fstory%2fsports%2fnfl%2f2015%2f11%2f08%2fvikings-lose-bridgewater-beat-rams-21-18-ot%2f75427094%2f&p=DevEx,5043.1",
+        "excerpt": "MINNEAPOLIS — Angered by a hit to Teddy Bridgewater's head, the Minnesota Vikings steered their feelings toward another steely victory. Adrian Peterson rushed for 125 yards on 29 carries, helping set up Blair Walsh's 40-yard field goal in overtime that ...",
+        "pubDate": "2015-11-08T22:55:00.000Z",
+        "author": "Argus Leader",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.280Z",
+        "updatedAt": "2016-07-31T09:07:14.280Z",
+        "id": 11
+      },
+      {
+        "title": "St. Louis Rams can’t get out of their own way in loss to Vikings",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=5M_KNGZKdw9FOX1kUeZrLYPbdvD7mhm9Fc_vTY1Vgn0&v=1&r=http%3a%2f%2framblinfan.com%2f2015%2f11%2f08%2fst-louis-rams-cant-get-out-of-their-own-way-in-loss-to-vikings%2f&p=DevEx,5039.1",
+        "excerpt": "However, after starting quarterback Teddy Bridgewater went down with a concussion, the passing game was nonexistent for the Vikings. Bridgewater, who prior to his concussion had thrown for 144-yards and rushed for a touchdown and two-point conversion ...",
+        "pubDate": "2015-11-08T22:50:00.000Z",
+        "author": "FanSided",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.283Z",
+        "updatedAt": "2016-07-31T09:07:14.283Z",
+        "id": 12
+      },
+      {
+        "title": "Minnesota Vikings' Formula For Success Won't Change If Teddy Bridgewater Is Out",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=HyWvMbYySCUwAqBK84I8M2fa-kxgVVeEIlPR3uk4Q3o&v=1&r=http%3a%2f%2fwww.rantsports.com%2fnfl%2f2015%2f11%2f08%2fminnesota-vikings-formula-for-success-wont-change-if-teddy-bridgewater-is-out%2f&p=DevEx,5031.1",
+        "excerpt": "Hill was just 2-for-6 for 15 yards after taking over for Bridgewater on Sunday, and the Vikings’ offense bogged down after he entered the game. But Minnesota’s core principles of a strong defense and a solid running game allow the quarterback to ...",
+        "pubDate": "2015-11-08T22:43:00.000Z",
+        "author": "Rant Sports",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.287Z",
+        "updatedAt": "2016-07-31T09:07:14.287Z",
+        "id": 13
+      },
+      {
+        "title": "NFL: Panthers beat Packers to stay undefeated",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=yK0mTTqqKydqqS2TTKu9XXDtYgPcf8O4rQ3x6ZO0yhE&v=1&r=http%3a%2f%2fwww.indystar.com%2fstory%2fsports%2fnfl%2fcolts%2f2015%2f11%2f08%2fnfl-panthers-beat-packers-stay-undefeated%2f75425338%2f&p=DevEx,5073.1",
+        "excerpt": "helping set up Blair Walsh’s 40-yard field goal in overtime that lifted the Vikings a 21-18 victory over the St. Louis Rams on Sunday after quarterback Teddy Bridgewater left with a concussion. In a predictably grind-it-out game between two similarly ...",
+        "pubDate": "2015-11-08T22:12:00.000Z",
+        "author": "Indianapolis Star",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.291Z",
+        "updatedAt": "2016-07-31T09:07:14.291Z",
+        "id": 14
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=64tF1Tum2eRQGrIf-aKMrml1DPDVQDMuBF8vCGlElzk&v=1&r=http%3a%2f%2fwww.sctimes.com%2fstory%2fsports%2f2015%2f11%2f08%2fvikings-lose-bridgewater-beat-rams-ot%2f75424428%2f&p=DevEx,5063.1",
+        "excerpt": "MINNEAPOLIS — Angered by a hit to Teddy Bridgewater’s head that knocked the quarterback out of the game, the Minnesota Vikings kept their composure and steered their feelings toward another steely victory. Then they let the St. Louis Rams have it.",
+        "pubDate": "2015-11-08T21:56:00.000Z",
+        "author": "SC Times",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.296Z",
+        "updatedAt": "2016-07-31T09:07:14.296Z",
+        "id": 15
+      },
+      {
+        "title": "Vikings top Rams in OT to tie Packers in NFC North; Bridgewater injured",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=eLWceQea_OaCI3DyhDl_ZnwvG6kPKSJlNx-2CkJEas4&v=1&r=http%3a%2f%2fbringmethenews.com%2f2015%2f11%2f08%2fvikings-beat-rams-in-ot-but-lose-bridgewater-to-concussion-on-cheap-shot%2f&p=DevEx,5037.1",
+        "excerpt": "But the win came at a big price, as starting quarterback Teddy Bridgewater suffered a concussion after taking a hit to the head early in the fourth quarter. He will need to pass a series of tests before he’s cleared to play again. The game went into OT ...",
+        "pubDate": "2015-11-08T21:50:00.000Z",
+        "author": "Rick Kupchella's-Bring MeTheNews",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.300Z",
+        "updatedAt": "2016-07-31T09:07:14.300Z",
+        "id": 16
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=sJmUhN9VgclxoEXK7ISuSd2WAgfvfxfnjfmdwHZ2pdo&v=1&r=http%3a%2f%2ffox2now.com%2f2015%2f11%2f08%2fvikings-lose-bridgewater-beat-rams-21-18-in-ot%2f&p=DevEx,5049.1",
+        "excerpt": "The Vikings won their fourth straight win after losing quarterback Teddy Bridgewater in the fourth quarter with a concussion, due to a late hit by the Rams Lamarcus Joyner. The Rams had rallied from a 10-0 deficit to take a 15-10 half time lead.",
+        "pubDate": "2015-11-08T21:49:00.000Z",
+        "author": "Fox2now",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.303Z",
+        "updatedAt": "2016-07-31T09:07:14.303Z",
+        "id": 17
+      },
+      {
+        "title": "Vikings QB Bridgewater leaves game with head injury",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=h5D0tPXXd_dgG6QNd83jyBZ_S6JG9ZAeiJ-F-kMc6cE&v=1&r=http%3a%2f%2fwww.10tv.com%2fcontent%2fstories%2fapexchange%2f2015%2f11%2f08%2ffbn--vikings-bridgewater-out.html&p=DevEx,5059.1",
+        "excerpt": "MINNEAPOLIS (AP) — Minnesota Vikings quarterback Teddy Bridgewater was knocked out of the game by a hit to the head in the fourth quarter against the St. Louis Rams on Sunday. After going to the locker room for examination, the Vikings ruled Bridgewater ...",
+        "pubDate": "2015-11-08T21:37:00.000Z",
+        "author": "10 TV",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.307Z",
+        "updatedAt": "2016-07-31T09:07:14.307Z",
+        "id": 18
+      },
+      {
+        "title": "Bridgewater Leaves Game Against Rams With Head Injury",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=CF24Am9tzS1XoGXqnfOtHtNHXFo8p13NIAlpJ3gdlqE&v=1&r=http%3a%2f%2fminnesota.cbslocal.com%2f2015%2f11%2f08%2fbridgewater-leaves-game-against-rams-with-head-injury%2f&p=DevEx,5057.1",
+        "excerpt": "MINNEAPOLIS (AP) — Minnesota Vikings quarterback Teddy Bridgewater was knocked out of the game by a hit to the head in the fourth quarter against the St. Louis Rams on Sunday that caused a concussion. After going to the locker room for examination ...",
+        "pubDate": "2015-11-08T21:24:00.000Z",
+        "author": "CBS Minnesota",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.311Z",
+        "updatedAt": "2016-07-31T09:07:14.311Z",
+        "id": 19
+      },
+      {
+        "title": "Teddy Bridgewater knocked out cold by Rams cheap shot (Video)",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=7cR_8YeSok56ZL93zTbUlciy_BhnSLOCLlMZyuP3zPE&v=1&r=http%3a%2f%2fthevikingage.com%2f2015%2f11%2f08%2fteddy-bridgewater-minnesota-vikings-knocked-out-cheap-shot-gregg-williams%2f&p=DevEx,5021.1",
+        "excerpt": "Teddy Bridgewater has now gotten a taste of the Gregg Williams approach to defense. Williams of course was the Saints defensive coordinator responsible for putting a bounty out on Brett Favre in the NFC Title Game in 2009. Williams was punished for his ...",
+        "pubDate": "2015-11-08T21:01:00.000Z",
+        "author": "The viking age",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.315Z",
+        "updatedAt": "2016-07-31T09:07:14.315Z",
+        "id": 20
+      },
+      {
+        "title": "Teddy Bridgewater Gets Knocked Out On This Hit By Lamarcus Joyner (Video)",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=GtfNpkq-rNcUqpBKHqVqLUamGrfC34LClnR5ug7ZeO4&v=1&r=http%3a%2f%2fwww.totalprosports.com%2f2015%2f11%2f08%2fteddy-bridgewater-gets-knocked-out-on-this-hit-by-lamarcus-joyner-video%2f&p=DevEx,5025.1",
+        "excerpt": "Teddy Bridgewater left Sunday’s game against the Rams after a vicious hit by Lamarcus Joyner. Bridgewater slid to avoid the hit, but instead Joyner clipped him with his forearm and appeared to knock the Vikings quarterback unconscious momentarily.",
+        "pubDate": "2015-11-08T21:01:00.000Z",
+        "author": "totalprosports.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.319Z",
+        "updatedAt": "2016-07-31T09:07:14.319Z",
+        "id": 21
+      },
+      {
+        "title": "Vikings quarterback Teddy Bridgewater knocked out of game against Rams with concussion",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=G286DnGSNHuFbMa2xbp-5KbZ9gJnD03ncNawGpMO3Og&v=1&r=http%3a%2f%2fblogs.twincities.com%2fvikings%2f2015%2f11%2f08%2fvikings-quarterback-teddy-bridgewater-leaves-game-against-rams-to-be-evaluated-for-concussion%2f&p=DevEx,5029.1",
+        "excerpt": "Vikings quarterback Teddy Bridgewater suffered a concussion early in the fourth quarter and was lost for the remainder of Sunday’s game against St. Louis at TCF Bank Stadium. On a running play, Bridgewater slid and was hit by Rams cornerback Lamarcus Joyner.",
+        "pubDate": "2015-11-08T20:51:00.000Z",
+        "author": "Twin Cities Blogs",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.323Z",
+        "updatedAt": "2016-07-31T09:07:14.323Z",
+        "id": 22
+      },
+      {
+        "title": "Teddy Bridgewater got knocked out by Lamarcus Joyner",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=e5A4YGyrc8YVZEURZqqsK6xBx2M-3IK56zDsbNOoeaE&v=1&r=http%3a%2f%2ffansided.com%2f2015%2f11%2f08%2fteddy-bridgewater-injury-rams-video%2f&p=DevEx,5019.1",
+        "excerpt": "Minnesota Vikings quarterback Teddy Bridgewater has been beat up bad against the Rams, and he got knocked out cold by Lamarcus Joyner. When the Minnesota Vikings entered this season, it was one where they need Teddy Bridgewater to take the next step ...",
+        "pubDate": "2015-11-08T20:47:00.000Z",
+        "author": "FanSided",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.326Z",
+        "updatedAt": "2016-07-31T09:07:14.326Z",
+        "id": 23
+      },
+      {
+        "title": "Teddy Bridgewater Got Knocked Out Cold After This Cheap Shot Elbow",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=5p5R-m10QVGJWUwyPRFskHFfQTSo0FFuWYPEj4OqNgk&v=1&r=http%3a%2f%2fthebiglead.com%2f2015%2f11%2f08%2fteddy-bridgewater-got-knocked-out-cold-after-this-cheap-shot-elbow%2f&p=DevEx,5023.1",
+        "excerpt": "Teddy Bridgewater took a violent elbow to the helmet from St. Louis defensive back LaMarcus Joyner, and then the QB’s head struck the turf. Replays showed that Bridgewater’s eyes were closed, and it appeared as if he were knocked out cold. He has left ...",
+        "pubDate": "2015-11-08T20:46:00.000Z",
+        "author": "The Big Lead",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.330Z",
+        "updatedAt": "2016-07-31T09:07:14.330Z",
+        "id": 24
+      },
+      {
+        "title": "Rams vs Vikings 2015 Score Ignites Sunday NFL Football Results",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=iRpAq1kewOLSq1HUSuYR_nsspHq1jf1m5e3cBsyugLY&v=1&r=http%3a%2f%2fnews.lalate.com%2f2015%2f11%2f08%2frams-vs-vikings-2015-score-ignites-sunday-nfl-football-results%2f&p=DevEx,5105.1",
+        "excerpt": "He has 78 yards, two catches, no touchdowns. The team has 108 yards receiving, 9 catches, no touchdowns. Teddy Bridgewater meantime only has 79 yards passing, no touchdowns. Adrian Peterson has one touchdown, 9 carries, 34 yards. The team has 40 yards ...",
+        "pubDate": "2015-11-08T19:23:00.000Z",
+        "author": "Lalate",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.335Z",
+        "updatedAt": "2016-07-31T09:07:14.335Z",
+        "id": 25
+      },
+      {
+        "title": "Vikings QB Teddy Bridgewater leaves with concussion",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=OcQbNlvmo1BLfiDr_EaFQNNqf3Rd2EuOUBAwIS8JN3Q&v=1&r=http%3a%2f%2fwww.upi.com%2fSports_News%2f2015%2f11%2f08%2fVikings-QB-Teddy-Bridgewater-leaves-with-concussion%2f9691447022407%2f&p=DevEx,5027.1",
+        "excerpt": "Minnesota Viking quarterback Teddy Bridgewater left Sunday's game against the St. Louis Rams in the fourth quarter after taking a shot to the head from Rams cornerback LaMarcus Joyner. The team later announced that Bridgewater suffered a concussion and ...",
+        "pubDate": "2015-11-08T17:41:00.000Z",
+        "author": "United Press International",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.339Z",
+        "updatedAt": "2016-07-31T09:07:14.339Z",
+        "id": 26
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=0wM_vPXkuNSFBO1b6dMvBZMPeCWzl3kviIwhByPo6Z4&v=1&r=http%3a%2f%2fwww.salon.com%2f2015%2f11%2f08%2fvikings_lose_bridgewater_beat_rams_21_18_in_ot%2f&p=DevEx,5075.1",
+        "excerpt": "MINNEAPOLIS (AP) — Angered by a hit to Teddy Bridgewater’s head, the Minnesota Vikings steered their feelings toward another steely victory. Adrian Peterson rushed for 125 yards on 29 carries, helping set up Blair Walsh’s 40-yard field goal in ...",
+        "pubDate": "2015-11-08T10:01:00.000Z",
+        "author": "Salon",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.343Z",
+        "updatedAt": "2016-07-31T09:07:14.343Z",
+        "id": 27
+      },
+      {
+        "title": "Vikings lose Bridgewater, beat Rams 21-18 in OT",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=GopSsQ3UK7ctSG-eS40nOueBOjlzI2lgHlzLRfGuKdY&v=1&r=http%3a%2f%2ftownhall.com%2fnews%2fgeneral%2f2015%2f11%2f08%2fvikings-lose-bridgewater-beat-rams-2118-in-ot-n2077700&p=DevEx,5069.1",
+        "excerpt": "MINNEAPOLIS (AP) — Angered by a hit to Teddy Bridgewater's head that knocked the quarterback out of the game, the Minnesota Vikings kept their composure and steered their feelings toward another steely victory. Then they let the St. Louis Rams have it.",
+        "pubDate": "2015-11-08T06:43:00.000Z",
+        "author": "Townhall.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.346Z",
+        "updatedAt": "2016-07-31T09:07:14.346Z",
+        "id": 28
+      },
+      {
+        "title": "Vikings The Most Overlooked Team in NFL As They Pull Even with Packers in NFC North",
+        "url": "https://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=WPhSJJK8kq1ANylGaaAVnWwEhtavkJnF2ChiZs5a2D4&v=1&r=https%3a%2f%2fwww.fanduel.com%2finsider%2f2015%2f11%2f08%2fvikings-the-most-overlooked-team-in-nfl-as-they-pull-even-with-packers-in-nfc-north%2f&p=DevEx,5047.1",
+        "excerpt": "They boast a healthy (and angry) Adrian Peterson at running back, a vicious Mike Zimmer-led defense, and a number of young offensive weapons surrounding QB Teddy Bridgewater that make them just dangerous enough to keep teams from playing too conservatively ...",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "fanduel.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.350Z",
+        "updatedAt": "2016-07-31T09:07:14.350Z",
+        "id": 29
+      },
+      {
+        "title": "Vikings’ Teddy Bridgewater knocked out by a dirty hit to the head",
+        "url": "https://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=8OYxaUQOmPwRgNKsAa1oD5LSCtNAXazehSiX1r-hzXk&v=1&r=https%3a%2f%2fwww.washingtonpost.com%2fnews%2fearly-lead%2fwp%2f2015%2f11%2f08%2fvikings-teddy-bridgewater-knocked-out-by-a-dirty-hit-to-the-head%2f&p=DevEx,5033.1",
+        "excerpt": "Teddy Bridgewater was knocked out of the Minnesota Vikings’ game when he was hit in the head by St. Louis Rams cornerback Lamarcus Joyner as he was sliding at the end of a fourth-quarter run. The Vikings quarterback was evaluated for a concussion after ...",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "Washington Post",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.354Z",
+        "updatedAt": "2016-07-31T09:07:14.354Z",
+        "id": 30
+      },
+      {
+        "title": "Roundup: Panthers (8-0) show Packers who’s boss in NFC - The Boston Globe",
+        "url": "https://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=jHbTM_RBeKWpiTCvdKzun0U3_e-6hYWpu-sy0HAG-04&v=1&r=https%3a%2f%2fwww.bostonglobe.com%2fsports%2f2015%2f11%2f08%2froundup-panthers-show-packers-who-boss-nfc%2fMxfz7NTqhULJELztJbQddP%2fstory.html&p=DevEx,5071.1",
+        "excerpt": "On the previous possession, Caleb Sturgis’s 53-yard field gave the Eagles the lead. Vikings 21, Rams 18 — Minnesota lost quarterback Teddy Bridgewater to a concussion but managed to win its seventh straight home game when Blair Walsh kicked a 40-yard ...",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "The Boston Globe",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.358Z",
+        "updatedAt": "2016-07-31T09:07:14.358Z",
+        "id": 31
+      },
+      {
+        "title": "Federal aid to repair roads won't improve highway system",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=EKoN5Vibu6xXyseWur7NhFyaJPWnwsiCgZs0yK9DnOY&v=1&r=http%3a%2f%2fchronicle.augusta.com%2fnews%2f2015-11-08%2ffederal-aid-repair-roads-wont-improve-highway-system&p=DevEx,5099.1",
+        "excerpt": "COLUMBIA — An influx of federal money to repair hundreds of roads and bridges damaged by last month’s historic flooding will do little to improve South Carolina’s dilapidated highway system. That’s because the federal government’s emergency money ...",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "The Augusta Chronicle",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.362Z",
+        "updatedAt": "2016-07-31T09:07:14.362Z",
+        "id": 32
+      },
+      {
+        "title": "Vikings' Bridgewater leaves game vs. Rams, to be evaluated for concussion",
+        "url": "http://www.bing.com/cr?IG=22695213A99A474AA9E9A84EB442063C&CID=298A2B0940AE65670E29226A416E64FE&rd=1&h=Xgd2lPsworkbqOT0dDJAHjuLjAFlq2VovnVsfp997Fc&v=1&r=http%3a%2f%2fwww.msn.com%2fen-ca%2fsports%2fother%2fvikings-bridgewater-leaves-game-vs-rams-to-be-evaluated-for-concussion%2far-CC6RUW&p=DevEx,5103.1",
+        "excerpt": "Minnesota Vikings quarterback Teddy Bridgewater has been forced from Sunday's game against the St. Louis Rams after taking a hit while sliding.",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "MSN",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:07:14.365Z",
+        "updatedAt": "2016-07-31T09:07:14.365Z",
+        "id": 33
+      },
+      {
+        "title": "Explore Actress Pauley, Perrette Abby Ncis, and more!",
+        "url": "https://www.bing.com/cr?IG=4A3AEC6976174444AAEB507EECF288B3&CID=116CD5611B986D811A5ADC021A586C42&rd=1&h=q60Nz6xZ4NlLCDeYXWN8eRwHoIYiXtNDcxuXTVprjLc&v=1&r=https%3a%2f%2fwww.pinterest.com%2fpin%2f353180795748000654%2f&p=DevEx,5087.1",
+        "excerpt": "NCIS (TV Series 2003– ) photos, including production stills, premiere photos and other event photos, publicity photos, behind-the-scenes, and more. Pauley Perrette is out of character in this form fitting dark green dress. She plays forensic scientist ...",
+        "pubDate": "2015-11-13T00:00:00.000Z",
+        "author": "pinterest.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:12:14.523Z",
+        "updatedAt": "2016-07-31T09:12:14.523Z",
+        "id": 34
+      },
+      {
+        "title": "Ayaz Sadiq re-elected as NA Speaker by landslide margin",
+        "url": "http://www.bing.com/cr?IG=1247460E411244D39F768EE7466F2C8B&CID=33A9E772BFEF6FA5359EEE11BE2F6EC7&rd=1&h=o-0KYeSb0id3GHM0cEBky1mmYOrnpkLSvcgcmv5GYhQ&v=1&r=http%3a%2f%2farynews.tv%2fen%2fpolling-underway-for-na-speakers-election%2f&p=DevEx,5035.1",
+        "excerpt": "Sardar Ayaz Sadiq of PML-N and Shafqat Mahmood of Pakistan Tehreek-i-Insaf (PTI) were contesting for the top slot of the two lower house of the parliament. Acting Speaker Murtaza Javed Abbasi, earlier informed the house that initially three nominations ...",
+        "pubDate": "2015-11-09T13:59:00.000Z",
+        "author": "arynews.tv",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:12:44.513Z",
+        "updatedAt": "2016-07-31T09:12:44.513Z",
+        "id": 35
+      },
+      {
+        "title": "Sardar Ayaz Sadiq, Shafqat Mahmood battle for post of NA speaker",
+        "url": "http://www.bing.com/cr?IG=1247460E411244D39F768EE7466F2C8B&CID=33A9E772BFEF6FA5359EEE11BE2F6EC7&rd=1&h=9O0qobeTDOP6sQL8VYTbXWIdWDO4f9Z2KS-yMIXDwLM&v=1&r=http%3a%2f%2fwww.pakistantoday.com.pk%2f2015%2f11%2f09%2fnational%2fsardar-ayaz-sadiq-shafqat-mahmood-battle-for-post-of-na-speaker%2f&p=DevEx,5023.1",
+        "excerpt": "Sardar Ayaz Sadiq and the Pakistan Tehreek-e-Insaf’s (PTI) Shafqat Mahmood. Ahead of voting, Acting Speaker Murtaza Javed Abbasi announced that the assembly had initially received three nominations, but Member National Assembly (MNA) Ghazi Ghulab Jamal ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "Pakistan Today",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:12:44.525Z",
+        "updatedAt": "2016-07-31T09:12:44.525Z",
+        "id": 36
+      },
+      {
+        "title": "Ayaz Sadiq becomes speaker again",
+        "url": "http://www.bing.com/cr?IG=1247460E411244D39F768EE7466F2C8B&CID=33A9E772BFEF6FA5359EEE11BE2F6EC7&rd=1&h=pFg_lyVCCfqSy9TzcT9NGQTkKNjxHPlfdjj0bV98AdM&v=1&r=http%3a%2f%2faaj.tv%2f2015%2f11%2fayaz-sadiq-becomes-speaker-again%2f&p=DevEx,5031.1",
+        "excerpt": "While announcing the result, acting speaker Murtaza Javed Abbasi said, “Shafqat Mahmood secured 31 votes, while Sardar Ayaz Sadiq got 268 votes.” A total of 300 votes were polled and one vote was found invalid. “Sardar Ayaz Sadiq has been re ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "aaj.tv",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:12:44.536Z",
+        "updatedAt": "2016-07-31T09:12:44.536Z",
+        "id": 37
+      },
+      {
+        "title": "2016 Breakthrough Prize Goes to Five Neutrino Experiments",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=_L2VgeIPeH8vi63pCWqJVuAqAOAFL3BExNA2lhji6bQ&v=1&r=http%3a%2f%2fwww.spaceref.com%2fnews%2fviewpr.html%3fpid%3d47322&p=DevEx,5031.1",
+        "excerpt": "Physicist Kam-Biu Luk identified the ideal site ... Berkeley Lab’s contributions to the Breakthrough Prize winners and many other neutrino experiments around the world have involved members from NSD, Physics, Accelerator Technology and Applied Physics ...",
+        "pubDate": "2015-11-13T16:50:00.000Z",
+        "author": "SpaceRef",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.824Z",
+        "updatedAt": "2016-07-31T09:17:44.824Z",
+        "id": 38
+      },
+      {
+        "title": "Breakthrough Awards glitz up science's deepest digging",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=8zTH5_QUGKCspKPWdhs6bMKywq10TKJmsvgiJKpix8U&v=1&r=http%3a%2f%2fwww.chinadaily.com.cn%2fworld%2f2015-11%2f11%2fcontent_22478557.htm&p=DevEx,5047.1",
+        "excerpt": "Among the recipients was Nanjing-born physicist Yifang Wang, who runs the Daya Bay Reactor Neutrino Experiment for the Institute of High Energy Physics of the Chinese Academy of Sciences and works in tandem with Kam-Biu Luk, Yifang's team will share the $3 ...",
+        "pubDate": "2015-11-11T06:16:00.000Z",
+        "author": "China Daily",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.843Z",
+        "updatedAt": "2016-07-31T09:17:44.843Z",
+        "id": 39
+      },
+      {
+        "title": "Breakthrough Awards glitz up science's deepest digging",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=KtwF82RWHRRK7qIlipC5-mAsbSjH-2hBvXsSJ1TDk9U&v=1&r=http%3a%2f%2fusa.chinadaily.com.cn%2fopinion%2f2015-11%2f11%2fcontent_22424180.htm&p=DevEx,5041.1",
+        "excerpt": "Among the recipients was Nanjing-born physicist Yifang Wang, who runs the Daya Bay Reactor Neutrino Experiment for the Institute of High Energy Physics of the Chinese Academy of Sciences and works in tandem with Kam-Biu Luk, Yifang's team will share the $3 ...",
+        "pubDate": "2015-11-10T22:30:00.000Z",
+        "author": "China Daily",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.860Z",
+        "updatedAt": "2016-07-31T09:17:44.860Z",
+        "id": 40
+      },
+      {
+        "title": "UC Berkeley professors who won Breakthrough Prize honored at daylong symposium",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=Jx1bMHcftYiyb2g3c2iV60D5n47w0noeyW7wSzwL0Ss&v=1&r=http%3a%2f%2fwww.dailycal.org%2f2015%2f11%2f09%2fuc-berkeley-professors-who-won-breakthrough-prize-honored-at-daylong-symposium%2f&p=DevEx,5019.1",
+        "excerpt": "which this year featured UC Berkeley professors Ian Agol and Kam-Biu Luk. The event, which was hosted by comedian Seth MacFarlane, included performances from Pharrell Williams and the attendance of celebrities. Agol, who accepted the Breakthrough Prize in ...",
+        "pubDate": "2015-11-10T07:31:00.000Z",
+        "author": "The Daily Californian",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.875Z",
+        "updatedAt": "2016-07-31T09:17:44.875Z",
+        "id": 41
+      },
+      {
+        "title": "13 researchers just won an award that blows the Nobel Prize away",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=fL_fA4Pii_FFaqUcEVxKFA4YFA3GSxthFInF_grunSk&v=1&r=http%3a%2f%2fwww.businessinsider.com.au%2f2016-breakthrough-prize-awards-2015-11&p=DevEx,5043.1",
+        "excerpt": "Five scientists, one mathematician, and a group of seven physicists walked off a stage with $US21 million at the Breakthrough Prize awards on Sunday night ... Yifang Wang and Kam-Biu Luk (Daya Bay); Atsuto Suzuki (KamLAND); Koichiro Nishikawa (K2K ...",
+        "pubDate": "2015-11-10T03:30:00.000Z",
+        "author": "businessinsider.com.au",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.889Z",
+        "updatedAt": "2016-07-31T09:17:44.889Z",
+        "id": 42
+      },
+      {
+        "title": "Silicon Valley investor awards millions for ‘breakthrough’ science",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=KuhhJ7_tXDXo51d4L-AjjQw-dYy7wYrkLsBKJ5k5gmU&v=1&r=http%3a%2f%2fwww.sfgate.com%2fscience%2farticle%2fSilicon-Valley-investor-awards-millions-for-6616229.php&p=DevEx,5051.1",
+        "excerpt": "It amounts to about $2,300 apiece. Three of Sunday’s Breakthrough awards went to Bay Area scientists, including Kam-Biu Luk, a physics professor at UC Berkeley and leader of the Daya Bay neutrino research center in China. In the life sciences ...",
+        "pubDate": "2015-11-10T00:00:00.000Z",
+        "author": "San Francisco Gate",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.901Z",
+        "updatedAt": "2016-07-31T09:17:44.901Z",
+        "id": 43
+      },
+      {
+        "title": "Science and math shine at 2016 Breakthrough Prize awards",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=eIKG3JCPuuimmiKiVVckKO52jrsRkTkQUppD9f9grVI&v=1&r=http%3a%2f%2fwww.paloaltoonline.com%2fnews%2f2015%2f11%2f09%2fscience-and-math-shine-at-2016-breakthrough-prize-awards&p=DevEx,5033.1",
+        "excerpt": "Researchers who received recognition for their discovery of neutrino oscillation include Yifang Wang, Kam-Biu Luk, Atsuto Suzuki ... Khan Academy founder Sal Khan told the Voice that the Breakthrough Prize isn't just about praising the scientists of ...",
+        "pubDate": "2015-11-09T22:48:00.000Z",
+        "author": "Palo Alto Online",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.914Z",
+        "updatedAt": "2016-07-31T09:17:44.914Z",
+        "id": 44
+      },
+      {
+        "title": "2016 Breakthrough Prize in fundamental physics goes to five neutrino experiments",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=4BDQhLsehj9b2q8Hyyer-UouAx6kiTOe7c01nex2LPM&v=1&r=http%3a%2f%2fphys.org%2fnews%2f2015-11-breakthrough-prize-fundamental-physics-neutrino.html&p=DevEx,5029.1",
+        "excerpt": "The Breakthrough Prizes, which honor advances in Fundamental Physics, Life Sciences ... Berkeley Lab's contributions to the Breakthrough Prize winners and many other neutrino experiments around the world have involved members from NSD, Physics, Accelerator ...",
+        "pubDate": "2015-11-09T22:00:00.000Z",
+        "author": "Phys",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.924Z",
+        "updatedAt": "2016-07-31T09:17:44.924Z",
+        "id": 45
+      },
+      {
+        "title": "Breakthrough prizes honor neutrino experiments Berkeley Lab helped make possible",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=dILCJpI-nDyCio8sB3swhjTV4krASra7f-Zm_LZZ-Q8&v=1&r=http%3a%2f%2fwww.eurekalert.org%2fpub_releases%2f2015-11%2fdbnl-bph110915.php&p=DevEx,5039.1",
+        "excerpt": "Physicist Kam-Biu Luk identified the ideal site ... Berkeley Lab's contributions to the Breakthrough Prize winners and many other neutrino experiments around the world have involved members from NSD, Physics, Accelerator Technology and Applied Physics ...",
+        "pubDate": "2015-11-09T18:05:00.000Z",
+        "author": "Eurek Alert",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.934Z",
+        "updatedAt": "2016-07-31T09:17:44.934Z",
+        "id": 46
+      },
+      {
+        "title": "Breakthrough Prize To Award $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=ZxnSqjGfQlUBkz5LZfjlDhbeVnqSJ7-jOyzTdUtXC34&v=1&r=http%3a%2f%2fwww.prnasia.com%2fstory%2f135624-0.shtml&p=DevEx,5061.1",
+        "excerpt": "\"The Breakthrough Prize honors achievements in science and math so we can encourage more pioneering research and celebrate scientists as the heroes they truly are.\" \"Breakthrough Prize laureates are making fundamental discoveries about the universe ...",
+        "pubDate": "2015-11-09T14:09:00.000Z",
+        "author": "en.prnasia.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.944Z",
+        "updatedAt": "2016-07-31T09:17:44.944Z",
+        "id": 47
+      },
+      {
+        "title": "Meet The 13 Scientists Honored For Making Big 'Breakthroughs'",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=nkSWBWuCB3fHK93Wgk9LQB1U3izN0UbLqAl7Hbb-Z84&v=1&r=http%3a%2f%2fwww.huffingtonpost.com%2fentry%2fscientists-honored-breakthrough-prize_us_562fd729e4b0c66bae59e39f&p=DevEx,5053.1",
+        "excerpt": "\"The Breakthrough Prize honors achievements in science and math so we can encourage more pioneering research and celebrate scientists as the heroes they truly are.\" The ceremony aired live on the National Geographic Channel. From sequencing ancient DNA to ...",
+        "pubDate": "2015-11-09T10:48:00.000Z",
+        "author": "The Huffington Post",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.954Z",
+        "updatedAt": "2016-07-31T09:17:44.954Z",
+        "id": 48
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=VMzbjVBZT8j49tPj-q60WI0sGxnCzW5gr2nQM5t0rCE&v=1&r=http%3a%2f%2fwww.prnewswire.com%2fnews-releases%2fbreakthrough-prize-awarded-22-million-in-science-prizes-300174577.html&p=DevEx,5049.1",
+        "excerpt": "\"The Breakthrough Prize honors achievements in science and math so we can encourage more pioneering research and celebrate scientists as the heroes they truly are.\" \"Breakthrough Prize laureates are making fundamental discoveries about the universe ...",
+        "pubDate": "2015-11-09T06:31:00.000Z",
+        "author": "prnewswire.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.966Z",
+        "updatedAt": "2016-07-31T09:17:44.966Z",
+        "id": 49
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "https://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=84N__oQ8A9qqhVEt0n-pbN7xDYRDr4321GJW1KdLNCk&v=1&r=https%3a%2f%2fca.finance.yahoo.com%2fnews%2fbreakthrough-prize-awarded-22-million-062100304.html&p=DevEx,5045.1",
+        "excerpt": "\"The Breakthrough Prize honors achievements in science and math so we can ... The award was accepted by team leaders Yifang Wang and Kam-Biu Luk (Daya Bay); Atsuto Suzuki (KamLAND); Koichiro Nishikawa (K2K / T2K); Arthur B. McDonald (Sudbury Neutrino ...",
+        "pubDate": "2015-11-09T06:21:00.000Z",
+        "author": "Finance Yahoo",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.976Z",
+        "updatedAt": "2016-07-31T09:17:44.976Z",
+        "id": 50
+      },
+      {
+        "title": "Science and math shine at 2016 Breakthrough Prize awards",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=tcXY4-xqIhaVDdtSnWsKvxBPwi9M8DytvzWLK9GeHxA&v=1&r=http%3a%2f%2fwww.mv-voice.com%2fnews%2f2015%2f11%2f08%2fscience-and-math-shine-at-2016-breakthrough-prize-awards&p=DevEx,5035.1",
+        "excerpt": "Researchers who received recognition for their discovery of neutrino oscillation include Yifang Wang, Kam-Biu Luk, Atsuto Suzuki ... Khan Academy founder Sal Khan told the Voice that the Breakthrough Prize isn't just about praising the scientists of ...",
+        "pubDate": "2015-11-09T05:39:00.000Z",
+        "author": "Mountain View Voice",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.986Z",
+        "updatedAt": "2016-07-31T09:17:44.986Z",
+        "id": 51
+      },
+      {
+        "title": "Breakthrough Prize To Award $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=101O28wNzmHk7BS_ziDDPfCb25QY5auMjAowbK53JLg&v=1&r=http%3a%2f%2fwww.prnewswire.co.uk%2fnews-releases%2fbreakthrough-prize-to-award-22-million-in-science-prizes-543333062.html&p=DevEx,5055.1",
+        "excerpt": "\"The Breakthrough Prize honors achievements in science and math so we can encourage more pioneering research and celebrate scientists as the heroes they truly are.\" \"Breakthrough Prize laureates are making fundamental discoveries about the universe ...",
+        "pubDate": "2015-11-09T05:06:00.000Z",
+        "author": "PR Newswire",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:44.995Z",
+        "updatedAt": "2016-07-31T09:17:44.995Z",
+        "id": 52
+      },
+      {
+        "title": "Breakthrough Prize Honors Scientists Working on Alzheimer's, Parkinson's, Neutrinos, And More",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=qrJQqBhGSDr382zbcRlZOH7SLnaxJoUo2mJu-zQAgeo&v=1&r=http%3a%2f%2fwww.popsci.com%2fbreakthrough-prize-honors-scientists-working-on-alzheimers-parkinsons-neutrinos-and-more&p=DevEx,5025.1",
+        "excerpt": "“The Breakthrough Prize honors achievements in science and math so we can ... They are: Takaaki Kajita and Yoichiro Suzuki, for the Super-Kamiokande team; Yifang Wang and Kam-Biu Luk on behalf of the Daya Bay team; Koichiro Nishikawa on behalf of the ...",
+        "pubDate": "2015-11-09T02:12:00.000Z",
+        "author": "Popular Science",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:45.024Z",
+        "updatedAt": "2016-07-31T09:17:45.024Z",
+        "id": 53
+      },
+      {
+        "title": "Breakthrough Prizes Give Top Scientists the Rock Star Treatment",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=MZJELsuAVbGp16Bjeye7SREDy7txhxwGFkNdeZAiZzs&v=1&r=http%3a%2f%2fwww.nytimes.com%2finteractive%2f2015%2f11%2f06%2fscience%2fbreakthrough-prize-winners-2016.html&p=DevEx,5023.1",
+        "excerpt": "“The Breakthrough Prize honors achievements in science and math so we can ... McDonald; the Daya Bay Reactor Neutrino Experiment in China, led by Yifang Wang and Kam-Biu Luk; the KamLAND neutrino detector in Toyama, Japan, led by Atsuto Suzuki; and ...",
+        "pubDate": "2015-11-09T02:04:00.000Z",
+        "author": "New York Times",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:45.040Z",
+        "updatedAt": "2016-07-31T09:17:45.040Z",
+        "id": 54
+      },
+      {
+        "title": "Breakthrough Prize To Award $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=HNzGs3eSN3H8yLXELypRdauoGnx1IbnZznY6McMc9GM&v=1&r=http%3a%2f%2ffinance.yahoo.com%2fnews%2fbreakthrough-prize-award-22-million-060900270.html&p=DevEx,5021.1",
+        "excerpt": "SAN FRANCISCO, Nov. 9, 2015 /PRNewswire/ -- The Breakthrough Prize and its founders Sergey Brin and Anne ... The award will be accepted by team leaders Yifang Wang and Kam-Biu Luk (Daya Bay); Atsuto Suzuki (KamLAND); Koichiro Nishikawa (K2K / T2K); Arthur ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "Yahoo Finance",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:45.053Z",
+        "updatedAt": "2016-07-31T09:17:45.053Z",
+        "id": 55
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=BzPcwz7fsSlGFR16o7wuiwoscoLhCi9r8aakC2p3ZHU&v=1&r=http%3a%2f%2fwww.newswire.ca%2fnews-releases%2fbreakthrough-prize-awarded-22-million-in-science-prizes-543365472.html&p=DevEx,5059.1",
+        "excerpt": "\"The Breakthrough Prize honors achievements in science and math so we can encourage more pioneering research and celebrate scientists as the heroes they truly are.\" \"Breakthrough Prize laureates are making fundamental discoveries about the universe ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "CNW Group",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:45.066Z",
+        "updatedAt": "2016-07-31T09:17:45.066Z",
+        "id": 56
+      },
+      {
+        "title": "2016 Breakthrough Prize in Fundamental Physics Goes to Five Neutrino Experiments, Three Made Possible by Berkeley Lab",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=mGWuOTx3fp5cFeR_8HMeloljkyphnG-OIhfRB19Lxf8&v=1&r=http%3a%2f%2fwww.einnews.com%2fpr_news%2f296006640%2f2016-breakthrough-prize-in-fundamental-physics-goes-to-five-neutrino-experiments-three-made-possible-by-berkeley-lab&p=DevEx,5037.1",
+        "excerpt": "Physicist Kam-Biu Luk identified the ideal site ... Berkeley Lab’s contributions to the Breakthrough Prize winners and many other neutrino experiments around the world have involved members from NSD, Physics, Accelerator Technology and Applied Physics ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "EIN Newsdesk",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:45.079Z",
+        "updatedAt": "2016-07-31T09:17:45.079Z",
+        "id": 57
+      },
+      {
+        "title": "Berkeley mathematician, neutrino physicists awarded Breakthrough prizes",
+        "url": "http://www.bing.com/cr?IG=A5F9AFE0231846F3BD1DB690C1F56ABC&CID=1778C4C768A368FE0EB1CDA469636965&rd=1&h=UcrT8EemWV6k0sp0QKgHslTZnUNC_M8QqUzU5TFg5Kg&v=1&r=http%3a%2f%2fnews.berkeley.edu%2f2015%2f11%2f08%2fberkeley-mathematician-neutrino-physicists-awarded-breakthrough-prizes%2f&p=DevEx,5027.1",
+        "excerpt": "UC Berkeley mathematician Ian Agol and a team of neutrino physicists led by UC Berkeley and Berkeley Lab physicist Kam-Biu Luk are among this year ... of our time,” Zuckerberg said. “The Breakthrough Prize honors achievements in science and math ...",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "Berkeley University of California",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:17:45.091Z",
+        "updatedAt": "2016-07-31T09:17:45.091Z",
+        "id": 58
+      },
+      {
+        "pubDate": "2015-11-09T02:00:08.000Z",
+        "title": "Academics land £2m prizes at Zuckerberg-backed 'science Oscars'",
+        "url": "https://www.theguardian.com/science/2015/nov/09/academics-land-2m-prizes-mark-zuckerberg-breakthrough-prize-science-oscars",
+        "source": "guardian",
+        "createdAt": "2016-07-31T09:20:14.671Z",
+        "updatedAt": "2016-07-31T09:20:14.671Z",
+        "id": 59
+      },
+      {
+        "title": "2016 New Horizons Prize Awarded",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=__KszEtFeRCAPFq4R5yOAXq_1BW9mYT3GbOpgu9hYqI&v=1&r=http%3a%2f%2fclapway.com%2f2015%2f11%2f10%2f2016-new-horizons-prize-awarded123%2f&p=DevEx,5057.1",
+        "excerpt": "One of the prizes, the 2016 Breakthrough Prize in Mathematics, is a $3 million grant, and it was presented to Ian Agol from the University of California at Berkeley and Institute for Advanced Study on November 8. The meaning of this award is to recognize ...",
+        "pubDate": "2015-11-10T17:54:00.000Z",
+        "author": "clapway.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:14.966Z",
+        "updatedAt": "2016-07-31T09:20:14.966Z",
+        "id": 60
+      },
+      {
+        "title": "UC Berkeley professors who won Breakthrough Prize honored at daylong symposium",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=Jx1bMHcftYiyb2g3c2iV60D5n47w0noeyW7wSzwL0Ss&v=1&r=http%3a%2f%2fwww.dailycal.org%2f2015%2f11%2f09%2fuc-berkeley-professors-who-won-breakthrough-prize-honored-at-daylong-symposium%2f&p=DevEx,5035.1",
+        "excerpt": "A total of $21 million in prizes were awarded to seven individuals and teams, which this year featured UC Berkeley professors Ian Agol and Kam-Biu Luk ... Agol, who accepted the Breakthrough Prize in mathematics for his work with fractals, described ...",
+        "pubDate": "2015-11-10T07:31:00.000Z",
+        "author": "The Daily Californian",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.010Z",
+        "updatedAt": "2016-07-31T09:20:15.010Z",
+        "id": 61
+      },
+      {
+        "title": "Russian-Jewish billionaire gives out $22 million in science prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=RjOoYbj1nLjuvyaqAeGfX0avGRf9ExPTRIcWL9-PcKk&v=1&r=http%3a%2f%2fwww.jewishjournal.com%2flifestyle%2farticle%2frussian_jewish_billionaire_gives_out_22_million_in_science_prizes&p=DevEx,5031.1",
+        "excerpt": "Russian-Jewish billionaire Yuri Milner gave out ... Singer Pharell Williams performed. The 2016 Breakthrough Prize in Mathematics, worth $3 million, was presented to Ian Agol of the University of California, Berkeley and the Institute for Advanced Study.",
+        "pubDate": "2015-11-09T19:33:00.000Z",
+        "author": "Jewish Journal",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.040Z",
+        "updatedAt": "2016-07-31T09:20:15.040Z",
+        "id": 62
+      },
+      {
+        "title": "Breakthrough Prize To Award $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=ZxnSqjGfQlUBkz5LZfjlDhbeVnqSJ7-jOyzTdUtXC34&v=1&r=http%3a%2f%2fwww.prnasia.com%2fstory%2f135624-0.shtml&p=DevEx,5047.1",
+        "excerpt": "The 2016 Breakthrough Prize in Mathematics to be Awarded to Ian Agol; The 2016 Breakthrough Prize in Life Sciences to be Awarded to Five Individual Recipients: Edward S. Boyden, Karl Deisseroth, John Hardy, Helen Hobbs, and Svante Paabo; The 2016 ...",
+        "pubDate": "2015-11-09T14:09:00.000Z",
+        "author": "en.prnasia.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.052Z",
+        "updatedAt": "2016-07-31T09:20:15.052Z",
+        "id": 63
+      },
+      {
+        "title": "Russian-Jewish billionaire gives out $22 million in science prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=AGew_mFGbROwATMq0Lua4L3mo_q8Q7abpkqqZ3E5uy0&v=1&r=http%3a%2f%2fwww.jta.org%2f2015%2f11%2f09%2fnews-opinion%2funited-states%2frussian-jewish-billionaire-gives-out-22-million-in-science-prizes&p=DevEx,5029.1",
+        "excerpt": "Singer Pharell Williams performed. The 2016 Breakthrough Prize in Mathematics, worth $3 million, was presented to Ian Agol of the University of California, Berkeley and the Institute for Advanced Study. Five Life Sciences prizes of $3 million each were ...",
+        "pubDate": "2015-11-09T08:11:00.000Z",
+        "author": "Jewish Telegraphic Agency",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.069Z",
+        "updatedAt": "2016-07-31T09:20:15.069Z",
+        "id": 64
+      },
+      {
+        "title": "$22 Million Breakthrough Prize Makes Science, Maths Glamorous",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=B79k-Z0J0biLmgHcmEx1qT51PxqUtcKUa_m022razpk&v=1&r=http%3a%2f%2fwww.valuewalk.com%2f2015%2f11%2fbreakthrough-prize-for-science-maths%2f&p=DevEx,5059.1",
+        "excerpt": "The mathematics prize went to Ian Agol of the University of California at Berkeley for his work on low dimensional topology and geometric group theory. Besides the three main categories, the Breakthrough Prize also acknowledged eight early-career ...",
+        "pubDate": "2015-11-09T06:43:00.000Z",
+        "author": "Value Walk",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.084Z",
+        "updatedAt": "2016-07-31T09:20:15.084Z",
+        "id": 65
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=VMzbjVBZT8j49tPj-q60WI0sGxnCzW5gr2nQM5t0rCE&v=1&r=http%3a%2f%2fwww.prnewswire.com%2fnews-releases%2fbreakthrough-prize-awarded-22-million-in-science-prizes-300174577.html&p=DevEx,5019.1",
+        "excerpt": "The 2016 Breakthrough Prize in Mathematics Awarded to Ian Agol; The 2016 Breakthrough Prize in Life Sciences Awarded to Five Individual Recipients: Edward S. Boyden, Karl Deisseroth, John Hardy, Helen Hobbs, and Svante Paabo; The 2016 ...",
+        "pubDate": "2015-11-09T06:31:00.000Z",
+        "author": "prnewswire.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.099Z",
+        "updatedAt": "2016-07-31T09:20:15.099Z",
+        "id": 66
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "https://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=84N__oQ8A9qqhVEt0n-pbN7xDYRDr4321GJW1KdLNCk&v=1&r=https%3a%2f%2fca.finance.yahoo.com%2fnews%2fbreakthrough-prize-awarded-22-million-062100304.html&p=DevEx,5043.1",
+        "excerpt": "The Prizes were Presented at Live Ceremony on Sunday, Nov. 8, at 10/9c on National Geographic Channel The 2016 Breakthrough Prize in Mathematics Awarded to Ian Agol; The 2016 Breakthrough Prize in Life Sciences Awarded to Five Individual Recipients ...",
+        "pubDate": "2015-11-09T06:21:00.000Z",
+        "author": "Finance Yahoo",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.114Z",
+        "updatedAt": "2016-07-31T09:20:15.114Z",
+        "id": 67
+      },
+      {
+        "title": "Breakthrough Prize To Award $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=101O28wNzmHk7BS_ziDDPfCb25QY5auMjAowbK53JLg&v=1&r=http%3a%2f%2fwww.prnewswire.co.uk%2fnews-releases%2fbreakthrough-prize-to-award-22-million-in-science-prizes-543333062.html&p=DevEx,5025.1",
+        "excerpt": "The 2016 Breakthrough Prize in Mathematics to be Awarded to Ian Agol; The 2016 Breakthrough Prize in Life Sciences to be Awarded to Five Individual Recipients: Edward S. Boyden, Karl Deisseroth, John Hardy, Helen Hobbs, and Svante Paabo; The 2016 ...",
+        "pubDate": "2015-11-09T05:06:00.000Z",
+        "author": "PR Newswire",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.129Z",
+        "updatedAt": "2016-07-31T09:20:15.129Z",
+        "id": 68
+      },
+      {
+        "title": "2016 Breakthrough Prize Winners",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=y8A_YF6kChVebBlcMIFCzUBRZndGFy6qiLk81jgNrKY&v=1&r=http%3a%2f%2fwww.scientificamerican.com%2freport%2f2016-breakthrough-prize-winners%2f&p=DevEx,5051.1",
+        "excerpt": "It brings dementia and slow death to more than 100,000 Americans a year. No one knows its cause or how to stay its inexorable course. Investigators are focusing on six conceptual models of the disease",
+        "pubDate": "2015-11-09T02:08:00.000Z",
+        "author": "Scientific American",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.149Z",
+        "updatedAt": "2016-07-31T09:20:15.149Z",
+        "id": 69
+      },
+      {
+        "title": "Academics land £2m prizes at Zuckerberg-backed 'science Oscars'",
+        "url": "https://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=5_oLxU3Gp8afHoU6pafrWUyunwqqDvJjg9cAwwj_iZM&v=1&r=https%3a%2f%2fwww.theguardian.com%2fscience%2f2015%2fnov%2f09%2facademics-land-2m-prizes-mark-zuckerberg-breakthrough-prize-science-oscars&p=DevEx,5023.1",
+        "excerpt": "We developed technology and culture which allowed us to colonise the whole planet,” he said. Ian Agol won the Breakthrough prize in mathematics for proving two famous conjectures in topology, a branch of maths that deals with how shapes transform into ...",
+        "pubDate": "2015-11-09T02:01:00.000Z",
+        "author": "The Guardian",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.174Z",
+        "updatedAt": "2016-07-31T09:20:15.174Z",
+        "id": 70
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=pwJIlXOpTCAbTjYWQDa78YHYPpfV1qfIbDOUzJwp83g&v=1&r=http%3a%2f%2ffinance.yahoo.com%2fnews%2fbreakthrough-prize-awarded-22-million-062100469.html&p=DevEx,5021.1",
+        "excerpt": "The 2016 Breakthrough Prize in Mathematics Awarded to Ian Agol; The 2016 Breakthrough Prize in Life Sciences Awarded to Five Individual Recipients: Edward S. Boyden, Karl Deisseroth, John Hardy, Helen Hobbs, and Svante Paabo; The 2016 Breakthrough Prize in ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "Yahoo Finance",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.201Z",
+        "updatedAt": "2016-07-31T09:20:15.201Z",
+        "id": 71
+      },
+      {
+        "title": "Breakthrough Prize Awarded $22 Million In Science Prizes",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=BzPcwz7fsSlGFR16o7wuiwoscoLhCi9r8aakC2p3ZHU&v=1&r=http%3a%2f%2fwww.newswire.ca%2fnews-releases%2fbreakthrough-prize-awarded-22-million-in-science-prizes-543365472.html&p=DevEx,5039.1",
+        "excerpt": "The 2016 Breakthrough Prize in Mathematics Awarded to Ian Agol; The 2016 Breakthrough Prize in Life Sciences Awarded to Five Individual Recipients: Edward S. Boyden, Karl Deisseroth, John Hardy, Helen Hobbs, and Svante Paabo; The 2016 ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "CNW Group",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.228Z",
+        "updatedAt": "2016-07-31T09:20:15.228Z",
+        "id": 72
+      },
+      {
+        "title": "Academics land £2m prizes at Zuckerberg-backed 'science Oscars'",
+        "url": "http://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=Baf1JhpfcWJZouh0VirpuyK5ZIFvDW2ZSwiFPsZrqic&v=1&r=http%3a%2f%2fwww.msn.com%2fen-au%2fnews%2fother%2facademics-land-%25c2%25a32m-prizes-at-zuckerberg-backed-science-oscars%2far-CC7uof&p=DevEx,5049.1",
+        "excerpt": "We developed technology and culture which allowed us to colonise the whole planet,” he said. Ian Agol won the Breakthrough prize in mathematics for proving two famous conjectures in topology, a branch of maths that deals with how shapes transform into ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "MSN",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.251Z",
+        "updatedAt": "2016-07-31T09:20:15.251Z",
+        "id": 73
+      },
+      {
+        "title": "Glitziest science prize hands out $21m to 1300 top researchers",
+        "url": "https://www.bing.com/cr?IG=5CFDD67141AD4E30A12F053F5CF10A3C&CID=06537396FC2565C521B17AF5FDE56421&rd=1&h=JqcFHvwtNS5zsIBIPnKVA5_XNlflRoDIqyZ07KVyn8o&v=1&r=https%3a%2f%2fwww.newscientist.com%2farticle%2fdn28461-glitziest-science-prize-hands-out-21m-to-1300-top-researchers%2f&p=DevEx,5037.1",
+        "excerpt": "The Breakthrough prize in mathematics went to Ian Agol at the Institute for Advanced Study in Princeton, New Jersey, for his work on topology, the branch of mathematics that deals with how shapes transform into each other. His work solved outstanding ...",
+        "pubDate": "2015-11-09T00:00:00.000Z",
+        "author": "New Scientist",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:20:15.270Z",
+        "updatedAt": "2016-07-31T09:20:15.270Z",
+        "id": 74
+      },
+      {
+        "title": "Breakthrough Prizes Give Top Scientists the Rock Star Treatment",
+        "url": "http://www.bing.com/cr?IG=E2FC78A9618E40B8895AF6C7EE07F442&CID=106F9263F14F63EB06EF9B00F08F622D&rd=1&h=MZJELsuAVbGp16Bjeye7SREDy7txhxwGFkNdeZAiZzs&v=1&r=http%3a%2f%2fwww.nytimes.com%2finteractive%2f2015%2f11%2f06%2fscience%2fbreakthrough-prize-winners-2016.html&p=DevEx,5019.1",
+        "excerpt": "The Fundamental Physics prize is being awarded to an entire community of some 1,300 physicists who have labored underground in tunnels and caverns over the last two decades to investigate these ghostly denizens of the cosmos. Five teams are being recognized.",
+        "pubDate": "2015-11-09T02:04:00.000Z",
+        "author": "New York Times",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T09:26:45.257Z",
+        "updatedAt": "2016-07-31T09:26:45.257Z",
+        "id": 75
+      },
+      {
+        "title": "Former Braves pitcher Tommy Hanson dies at 29",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=NHrC2GmnYZqKP8fAO8ciVwzBRZG45nQK-tPjaedHbKQ&v=1&r=http%3a%2f%2fwjbf.com%2f2015%2f11%2f10%2fformer-braves-pitcher-tommy-hanson-dies-at-29%2f&p=DevEx,5035.1",
+        "excerpt": "ATLANTA (AP) – Former Braves and Angels pitcher Tommy Hanson has died. He was 29. Coweta County coroner Richard Hawk says an autopsy began Tuesday, following Hanson’s death at Piedmont Hospital on Monday night. Hawk says Hanson was found “unconscious ...",
+        "pubDate": "2015-11-10T23:09:00.000Z",
+        "author": "WJBF",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.217Z",
+        "updatedAt": "2016-07-31T16:30:42.550Z",
+        "id": 76,
+        "post": 685689685
+      },
+      {
+        "title": "Tommy Hanson’s MLB Comeback Comes Up Tragically Short",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=70zpFDNsx0uo3vQ0ouaJxBdJZzhn6hsDoXIWLCF6-Mg&v=1&r=http%3a%2f%2fgoldengatesports.com%2f2015%2f11%2f09%2ftommy-hansons-mlb-comeback-comes-tragically-short%2f&p=DevEx,5023.1",
+        "excerpt": "Monday night, the San Francisco Giants farm system was handed some sad news to grasp, as Sacramento River Cats pitcher Tommy Hanson passed away in Atlanta. The Tulsa, Oklahoma native’s cause of death has not been determined at the time, but it came at ...",
+        "pubDate": "2015-11-10T07:59:00.000Z",
+        "author": "Golden Gate Sports",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.243Z",
+        "updatedAt": "2016-07-31T16:30:42.570Z",
+        "id": 77,
+        "post": 685689685
+      },
+      {
+        "title": "Tommy Hanson passes away after falling into coma",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=xIF1xnrCS2Eccp2PnQgr7fK6wXNeHOgnj8t1zpBDLdE&v=1&r=http%3a%2f%2fmlb.nbcsports.com%2f2015%2f11%2f09%2freport-tommy-hanson-in-a-coma-at-atlanta-area-hospital%2f&p=DevEx,5019.1",
+        "excerpt": "Multiple sources confirmed that Tommy Hanson passed away Monday evening after suffering catastrophic organ failure and falling into a coma. He was 29 years old. A 6-foot-6 right-hander, Hanson debuted with the Braves in 2009, finishing third in the NL ...",
+        "pubDate": "2015-11-10T07:23:00.000Z",
+        "author": "NBC Sports",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.263Z",
+        "updatedAt": "2016-07-31T16:30:42.582Z",
+        "id": 78,
+        "post": 685689685
+      },
+      {
+        "title": "Former Angel Tommy Hanson dead at 29",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=KXojt4BlO_x0im4ObJdKUXwGqFkFoZB9IRrFZDMsCRY&v=1&r=http%3a%2f%2fhalohangout.com%2f2015%2f11%2f09%2fformer-angel-tommy-hanson-dead-at-29%2f&p=DevEx,5021.1",
+        "excerpt": "Rumors have been swirling around the internet today that former Braves and Angels starting pitcher Tommy Hanson was in a coma today. Sports Director Zach Klein of ABC-TV Atlanta has reported that Hanson died late Monday night at the age of 29 at an Atlanta ...",
+        "pubDate": "2015-11-10T07:01:00.000Z",
+        "author": "halohangout.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.292Z",
+        "updatedAt": "2016-07-31T16:30:42.659Z",
+        "id": 79,
+        "post": 685689685
+      },
+      {
+        "title": "Former major league pitcher Tommy Hanson hospitalized in coma",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=N1ldOHsm_spcUIBenXJ4oaXAkSiPLNqsw_gnrMEsopA&v=1&r=http%3a%2f%2fwww.usatoday.com%2fstory%2fsports%2fmlb%2f2015%2f11%2f09%2fmajor-league-pitcher-tommy-hanson-coma-hospital%2f75486454%2f&p=DevEx,5025.1",
+        "excerpt": "Former major league pitcher Tommy Hanson is in a coma and fighting for his life in an Atlanta-area hospital, according to a person close to Hanson. The person spoke to USA TODAY Sports on condition of anonymity due to the sensitive nature of the subject.",
+        "pubDate": "2015-11-10T04:58:00.000Z",
+        "author": "USA Today",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.308Z",
+        "updatedAt": "2016-07-31T16:30:42.671Z",
+        "id": 80,
+        "post": 685689685
+      },
+      {
+        "title": "Colorado Rockies Shortstop Jose Reyes Arrested For Domestic Abuse",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=WRlYAc63KOyQVjYwWT5K_18fYAUplsdjY_AbYKyuF_8&v=1&r=http%3a%2f%2froxpile.com%2f2015%2f11%2f09%2fcolorado-rockies-shortstop-jose-reyes-arrested-for-domestic-abuse%2f&p=DevEx,5039.1",
+        "excerpt": "Rockies shortstop Jose Reyes arrested on Maui for domestic abuse. @ChelseaDavisHNN has the details coming up at five. #hawaiinewsnow — Chris Tanaka (@Chris_Tanaka) November 10, 2015 This does not bode well for Reyes’, being that domestic abuse is a ...",
+        "pubDate": "2015-11-10T03:46:00.000Z",
+        "author": "Rox Pile",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.321Z",
+        "updatedAt": "2016-07-31T16:30:42.687Z",
+        "id": 81,
+        "post": 685689685
+      },
+      {
+        "title": "Three potential trades for the Giants as GM meetings get underway",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=LZMbgRRfLOle79I1GtN2vtGOjmCVy9WI0_bgwKqcQmo&v=1&r=http%3a%2f%2fblogs.mercurynews.com%2fgiants%2f2015%2f11%2f09%2fthree-potential-trades-for-the-giants-as-gm-meetings-get-underway%2f&p=DevEx,5037.1",
+        "excerpt": "The GM meetings are underway and there are bound to be some wild discussions that never lead to the consummation of a deal. But those conversations remain valuable to club executives because they offer intelligence on which of their players are valued by ...",
+        "pubDate": "2015-11-10T03:38:00.000Z",
+        "author": "San Jose Mercury News Blogs",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.334Z",
+        "updatedAt": "2016-07-31T16:30:42.700Z",
+        "id": 82,
+        "post": 685689685
+      },
+      {
+        "title": "Former Atlanta Braves pitcher Tommy Hanson in coma, report says",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=YeKMifYMjA-1aa-xo-4S68-G95j5jV4p1Eu_r6TRQRA&v=1&r=http%3a%2f%2fchronicle.augusta.com%2fsports%2fbaseball%2f2015-11-09%2fformer-atlanta-braves-pitcher-tommy-hanson-coma-report-says&p=DevEx,5029.1",
+        "excerpt": "Former Atlanta Braves right-hander Tommy Hanson is in a coma at Piedmont Hospital in Atlanta, according to a report by WSB-TV. Details about the 29-year-old former pitcher’s condition were scarce Monday night. The reason for his hospitalization have not ...",
+        "pubDate": "2015-11-10T03:31:00.000Z",
+        "author": "The Augusta Chronicle",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.395Z",
+        "updatedAt": "2016-07-31T16:30:42.715Z",
+        "id": 83,
+        "post": 685689685
+      },
+      {
+        "title": "Modigliani's 'Reclining Nude' sells for $170 million at Christie's",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=4OYMtq8QjIB4oiWvPkhDim2n4rN9RRyqo5EM55leWtQ&v=1&r=http%3a%2f%2fmoney.cnn.com%2f2015%2f11%2f09%2fluxury%2freclining-nude-modigliani-christies%2findex.html&p=DevEx,5033.1",
+        "excerpt": "Auctioneers at Christie's expected Modigliani's \"Reclining Nude\" to go for $100 million. \"Reclining Nude,\" the century-old painting by Amedeo Modigliani, sold for $170,405,000 at a Christie's auction on Monday. There were five bidders for the work and the ...",
+        "pubDate": "2015-11-10T00:00:00.000Z",
+        "author": "CNN Money",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.417Z",
+        "updatedAt": "2016-07-31T16:30:42.726Z",
+        "id": 84,
+        "post": 685689685
+      },
+      {
+        "title": "Quinn makes a rookie mistake",
+        "url": "http://www.bing.com/cr?IG=0813A386016B43B9B4583C6EBA17608D&CID=322B0F67BA94603A3BD40604BB5461CB&rd=1&h=yosWxoxQYmlk-8TW4hlZCpx6drnJypxqceZtWjLMank&v=1&r=http%3a%2f%2fmarkbradley.blog.myajc.com%2f2015%2f11%2f09%2fthe-falcons-quinn-makes-a-rookie-mistake%2f&p=DevEx,5031.1",
+        "excerpt": "Dan Quinn made a mistake. Maybe it was a rookie mistake — this was Quinn’s ninth game as an NFL head coach — but it was a mistake all the same. Let’s be clear about that. Let’s also be clear about this: I understand why he made it. Don’t agree ...",
+        "pubDate": "2015-11-08T00:00:00.000Z",
+        "author": "myajc.com",
+        "imageUrl": "",
+        "source": "bing",
+        "createdAt": "2016-07-31T16:30:42.441Z",
+        "updatedAt": "2016-07-31T16:30:42.743Z",
+        "id": 85,
+        "post": 685689685
+      }
     ]
   },
   "schema": {
@@ -87,11 +2654,90 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "post": {
+      "digestid": {
+        "type": "string"
+      },
+      "tmpl": {
+        "type": "string"
+      },
+      "day": {
+        "type": "date"
+      },
+      "desc": {
+        "type": "string"
+      },
+      "res": {
+        "type": "string"
+      },
+      "trends": {
+        "type": "json"
+      },
+      "numArticles": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "article": {
+      "title": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "excerpt": {
+        "type": "string"
+      },
+      "pubDate": {
+        "type": "date"
+      },
+      "imageUrl": {
+        "type": "string"
+      },
+      "source": {
+        "type": "string"
+      },
+      "post": {
+        "type": "integer",
+        "model": "post",
+        "foreignKey": true,
+        "alias": "post"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
     }
   },
   "counters": {
     "template": {
       "id": 5
+    },
+    "post": {
+      "id": 2144473881
+    },
+    "article": {
+      "id": 85
     }
   }
 }

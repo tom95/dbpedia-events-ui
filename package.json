@@ -12,10 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.1",
+    "dogwater": "^2.0.0",
     "hapi": "^13.3.0",
     "inert": "^3.2.0",
     "request": "^2.72.0",
-    "dogwater": "^1.1.0",
     "sails-disk": "^0.10.9",
     "waterline": "^0.12.1"
   }
