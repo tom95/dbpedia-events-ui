@@ -30,7 +30,7 @@ class Bing extends ArticleVerification {
 			'News.SortBy': 'Date'
 		};
 		var headers = {
-			"Ocp-Apim-Subscription-Key": "95f06c2ab71b4f7fbcdbb8d5b6d33fcf"
+			"Ocp-Apim-Subscription-Key": "2a7aa62344b04e1da71eb76e5bd39b1a"
 		};
 		return request('GET', BASE_URL, params, true, headers)
 			.then((data) => {

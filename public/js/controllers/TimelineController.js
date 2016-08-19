@@ -19,8 +19,8 @@ angular.module('dbpedia-events-ui').controller('TimelineController', ['$scope', 
 
     $scope.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     $scope.jumpToToday();
-    $scope.currentDayOfMonth = 1;
-    $scope.currentMonth = 7;
+    $scope.currentDayOfMonth = 3;
+    $scope.currentMonth = 8;
     $scope.currentYear = 2015;
 
     $scope.daysOfMonth = [];

@@ -13,14 +13,15 @@ server.connection({
 var dogwaterOptions = {
   connections: {
     templateDB : {
-      adapter: 'templateDisk'
+			adapter: 'templateDisk',
+			database: 'knowmin',
+			user: 'root',
     }
   },
   adapters:{
-     templateDisk : 'sails-disk'
+     templateDisk : 'sails-mysql'
   },
   models: [
-    require('./models/template'),
     require('./models/post'),
 		require('./models/article')]
 };
@@ -159,10 +160,15 @@ server.register([{
 		}
 	});
 
-	server.start(() => {
+	server.start((err) => {
+		if (err)
+			return console.log(err);
+
 		console.log('Template API up and running at:', server.info.uri);
 
-		// server.collections().post.find({ verified: true }).exec(console.log);
+		server.collections().post.find({processed:false}).exec((err, list) => console.log(err, list.length, list));
+		// server.collections().post.find({processed:true}).exec((err, list) => console.log(err, list.length, list));
+		// server.collections().post.update({id:'2128576743'}, {processed:false}).exec((err, list) => console.log(err, list.length, list));
 		// require('./verify')(server.collections().post, server.collections().article);
 	});
 });

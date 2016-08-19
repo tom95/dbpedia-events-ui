@@ -14,6 +14,7 @@ class ArticleVerification {
 		var parts = extractSubjectObject(digest.desc, digest.tmpl);
 		var centerDate = new Date(digest.endTime);
 
+		console.log(digest);
 		if (isNaN(centerDate.getTime())) {
 			var timeMatch = digest.endTime.match(/^(\d{4})-(\d{2})-(\d{2})/);
 			centerDate = new Date();

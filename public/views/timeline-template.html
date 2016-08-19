@@ -3,7 +3,7 @@
 
     <div class="event-wrapper"
          ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents">
-        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: event.state == 'disconfirmed' ? 0.5 : 1.0, backgroundColor: event.userChecked ? '#fff' : '#ffb' }">
+        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: !event.verified ? 0.5 : 1.0, backgroundColor: event.userChecked ? '#fff' : '#ffb' }">
 
             <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 
@@ -14,10 +14,16 @@
             <div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
 
             <div style="margin-top: 12px">
-                <span class="text-muted pull-right" ng-bind="event.confirm.confirm + ' Confirms vs ' + event.confirm.disconfirm + ' Disconfirms'"></span>
+                <span class="text-muted pull-right" ng-bind="event.articles.length + ' Articles, Trends ' + (event.trends ? '' : 'not') + ' available'"></span>
 
-                <input ng-change="updateConfirm(event)" type="checkbox" ng-model="event.userConfirm"> Confirmed
-                <input ng-change="updateConfirm(event)" type="checkbox" ng-model="event.garbage"> Garbage
+                <select ng-model="event.status" ng-change="updateConfirm(event)">
+                    <option value="unset">Unset</option>
+                    <option value="correct">Correct</option>
+                    <option value="belated">Belated</option>
+                    <option value="illogical">Illogical</option>
+                    <option value="garbage">Garbage</option>
+                    <option value="false">False</option>
+                </select>
 
                 <!--<button ng-click="confirmEvent(event, true)" class="btn btn-success btn-xs">
                     <span class="glyphicon glyphicon-ok"></span> Confirm

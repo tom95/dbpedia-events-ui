@@ -174,10 +174,10 @@ app
             return desc.split('<br>').map(function (line) {
                 var current = 0;
                 var matches = line.match(regex);
-                return descTemplate.replace(/%%(.+?)%%/g, function () {
+                return matches ? descTemplate.replace(/%%(.+?)%%/g, function () {
                     current++;
                     return '<dbp-data-link href="' + matches[current] + '">' + matches[current] + '</dbp-data-link>';
-                });
+                }) : line;
             }).join('<br>');
         }
 

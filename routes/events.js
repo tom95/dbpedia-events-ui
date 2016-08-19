@@ -322,12 +322,7 @@ module.exports = [{
 	    //.find({ day: { '>=': startDay, '<=': endDay } })
 	    //.find({ endTime: `${startDay.getFullYear()}-${pz(startDay.getMonth()+1)}-${pz(startDay.getDate())}T21:59:59+02:00` })
 	    .populate('articles')
-	    .exec((err, list) => {
-		if (err)
-		    return reply('Internal Error').code(500);
-		else
-		    return reply(list);
-	    });
+	    .then((list) => reply(list), (err) => reply('Internal Error').code(500));
     }
 },
     {

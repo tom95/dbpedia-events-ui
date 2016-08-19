@@ -31,12 +31,7 @@ function articleVerify(desc, tmpl, endTime) {
 	})).then(serviceReplies => {
 		var articles = [].concat.apply([], serviceReplies);
 
-		return new Promise((resolve, reject) => {
-			Article.create(articles).exec((err, list) => {
-				if (err) return reject(err);
-				resolve(list);
-			});
-		});
+		return Article.create(articles)
 	});
 }
 
@@ -52,27 +47,21 @@ function verifyPost(post) {
 		let update = {
 			numArticles: articles.length,
 			trends: trends,
+			processed: true,
 			verified: true,
 			articles: data[1].map(article => article.id)
 		};
-		console.log(`\t\tSaving \`${post.desc}\` ...`);
+		console.log(`\t\tSaving \`${post.desc}\` \`${post.id}\` ...`);
 
 		console.log(update);
-		return new Promise((resolve, reject) => {
-			Post.update({ id: post.id }, update).exec((err, created) => {
-				console.log(err, created);
-				if (err)
-					return reject(err);
-				resolve(created);
-			});
-		});
+		return Post.update({ id: post.id }, update);
 	});
 }
 
 function initDataset() {
 	let year = 2015;
 	let month = 8;
-	let day = 1;
+	let day = 3;
 	let numDays = 1;
 	let promises = [];
 
@@ -108,7 +97,7 @@ module.exports = function init(_Post, _Article) {
 };
 
 function verifyAll() {
-	Post.find({ verified: false }).then(queue => {
+	Post.find({ processed: false }).then(queue => {
 		return new Promise((resolve, reject) => {
 			function step() {
 				var item = queue.pop();
@@ -119,9 +108,13 @@ function verifyAll() {
 					console.log(`\t... done.`);
 				}).catch(err => {
 					console.log(`\t... []error!`, err);
+					if (!err.quotaError)
+						Post.update({ id: item.id }, { processed: true }).exec(console.log);
+					else
+						process.exit(1);
 				});
 
-				setTimeout(step, 30 * 1000)
+				setTimeout(step, 15 * 1000)
 			}
 
 			step();

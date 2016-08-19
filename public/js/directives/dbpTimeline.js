@@ -141,7 +141,11 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
 		}
 
 		// evaluate trends data
-		if (!event.trends || !event.trends.counts.length)
+		if (!event.trends)
+		    return;
+		if (!event.trends.counts)
+		    return;
+		if (!event.trends.counts.length)
 		    return;
 
 		for (var i = 0; i < event.trends.labels.length; i++) {
