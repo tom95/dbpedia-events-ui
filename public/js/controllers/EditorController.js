@@ -78,6 +78,14 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
         $scope.loadTemplates();
     };
 
+    $scope.resetTemplate = function() {
+        $scope.name = "";
+        $scope.description = "";
+        $scope.ontologies = [];
+        $scope.descriptionTemplate = "";
+        $scope.filters = [];
+        $scope.rankWeight = "";
+    };
 
     $scope.saveTemplate = function () {
 
