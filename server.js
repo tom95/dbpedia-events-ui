@@ -19,10 +19,7 @@ var dogwaterOptions = {
   adapters:{
      templateDisk : 'sails-disk'
   },
-  models: [
-    require('./models/template'),
-    require('./models/post'),
-		require('./models/article')]
+  models: [require('./models/template')]
 };
 
 server.register([{
@@ -47,7 +44,7 @@ server.register([{
 			file: (request) => { return 'public/index.html'; }
 		}
 	});
-	
+
 	// Serve static assets
 	server.route({
 		method: 'GET',
@@ -161,8 +158,5 @@ server.register([{
 
 	server.start(() => {
 		console.log('Template API up and running at:', server.info.uri);
-
-		// server.collections().post.find().exec(console.log);
-		// require('./verify')(server.collections().post, server.collections().article);
 	});
 });
