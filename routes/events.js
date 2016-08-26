@@ -217,7 +217,7 @@ function queryCustomEventsByDay(template) {
         })
         .then(processEventQueryData)
         .then(condenseEvents)
-        .then(fetchImagesForResources)
+        .then(fetchImagesForResources);
     // .then((list) => {
     // 	cacheEventQuery('custom-' + (+startDay), list);
     // 	return list;

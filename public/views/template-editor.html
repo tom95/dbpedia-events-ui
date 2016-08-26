@@ -16,13 +16,13 @@
                                    class="form-control" id="description"/>
                         </div>
                         <div class="form-group">
-                            <div ng-repeat="(i, ontology) in ontologies track by $index">
+                            <div ng-repeat="(i, property) in properties track by $index">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder=""
-                                           ng-esc="removeOntology(ontologies[i])" ng-model="ontologies[i]"/>
+                                           ng-esc="removeProperty(properties[i])" ng-model="properties[i]"/>
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-danger"
-                                                ng-click="removeOntology(ontologies[i])">
+                                                ng-click="removeProperty(properties[i])">
                                             <span class="mdi mdi-minus"/>
                                         </button>
                                     </span>
@@ -30,10 +30,10 @@
                                 <br>
                             </div>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Ontology" ng-enter="addOntology()"
-                                       ng-model="newOntology"/>
+                                <input type="text" class="form-control" placeholder="Property" ng-enter="addProperty()"
+                                       ng-model="newProperty"/>
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-success pull-right" ng-click="addOntology()">
+                                    <button type="button" class="btn btn-success pull-right" ng-click="addProperty()">
                                         <span class="mdi mdi-plus"/>
                                     </button>
                                 </span>

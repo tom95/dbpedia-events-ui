@@ -4,23 +4,23 @@
     <b>dcterms:</b>identifier "<span class="label label-info">{{name}}</span>" ;
     <b>dcterms:</b>description """<span class="label label-info">{{description}}</span>"""@en ;
     <br>
-    <b>dbe:</b>queryString <span id="queryString">""" SELECT ?u ?res <span ng-repeat="ontology in ontologies"><span class="label label-info">?{{ontology | lowercase}} </span></span>
+    <b>dbe:</b>queryString <span id="queryString">""" SELECT ?u ?res <span ng-repeat="property in properties"><span class="label label-info">?{{property | lowercase}} </span></span>
                             { ?u guo:target_subject ?res ;
-                                guo:insert [<span ng-repeat="ontology in ontologies">
-                                    <span class="label label-info">dbo:{{ontology}} ?{{ontology | lowercase}};</span></span>
+                                guo:insert [<span ng-repeat="property in properties">
+                                    <span class="label label-info">dbo:{{property}} ?{{property | lowercase}};</span></span>
                                 ] . <span ng-repeat="filter in filters">
                                 <span class="label label-info">FILTER ({{filter}}) </span></span>
                             } """ </span>;
     <br>
-    <b>dbe:</b>contextQueryString <span id="contextQueryString">""" SELECT ?labelres <span ng-repeat="ontology in ontologies"><span class="label label-info">?label{{ontology | lowercase}} </span></span>
+    <b>dbe:</b>contextQueryString <span id="contextQueryString">""" SELECT ?labelres <span ng-repeat="property in properties"><span class="label label-info">?label{{property | lowercase}} </span></span>
                                     {
-                                        %%res%% rdfs:label ?labelres . <span ng-repeat="ontology in ontologies">
-                                        <span class="label label-info">%%{{ontology | lowercase}}%% rdfs:label ?label{{ontology | lowercase}} .</span></span>
+                                        %%res%% rdfs:label ?labelres . <span ng-repeat="property in properties">
+                                        <span class="label label-info">%%{{property | lowercase}}%% rdfs:label ?label{{property | lowercase}} .</span></span>
                                     } """ </span>;
 
     <br>
     <b>dbe:</b>descriptionTemplate """ <span class="label label-info">{{descriptionTemplate}}</span> """ ;
-    <b>dbe:</b>rankWeight "<span class="label label-info">{{rankWeight}}</span>"^^<b>xsd:</b>float ;
+    <b>dbe:</b>rankWeight "<span class="label label-info">{{rankWeight}}</span>"^^<b>xsd:</b>float
     .
     </code>
 </pre>

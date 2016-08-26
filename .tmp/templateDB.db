@@ -2574,7 +2574,7 @@
           "name": "DEADPEOPLE",
           "description": "Finds people who died within last three weeks.",
           "queryString": "\"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ",
-          "ontologies": [
+          "properties": [
             "deathdate",
             "deathplace"
           ],
@@ -2584,10 +2584,10 @@
             "(xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))"
           ],
           "rankWeight": "0.8",
-          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .@prefix dbe:        <http://events.dbpedia.org/ns/core#> . @prefix dcterms:    <http://purl.org/dc/terms/> .@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .@prefix dc:         <http://purl.org/dc/elements/1.1/> .@prefix spin:       <http://spinrdf.org/spin#> .@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .    \n    dig:DEADPEOPLE a dbe:DigestTemplate ;\n    dcterms:identifier \"DEADPEOPLE\" ;\n    dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\n    dbe:rankWeight \"0.8\"^^xsd:float ;\n    .\n    \n\n"
+          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\n@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \n@prefix dcterms:    <http://purl.org/dc/terms/> .\n@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix dc:         <http://purl.org/dc/elements/1.1/> .\n@prefix spin:       <http://spinrdf.org/spin#> .\n@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .\n    \n    dig:DEADPEOPLE a dbe:DigestTemplate ;\n    dcterms:identifier \"DEADPEOPLE\" ;\n    dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:deathdate ?deathdate;\n                                    dbo:deathplace ?deathplace;\n                                ] . \n                                FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%deathdate%% rdfs:label ?labeldeathdate .\n                                        %%deathplace%% rdfs:label ?labeldeathplace .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\n    dbe:rankWeight \"0.8\"^^xsd:float\n    .\n    \n\n"
         },
         "createdAt": "2016-06-06T15:52:25.423Z",
-        "updatedAt": "2016-06-14T15:28:04.540Z",
+        "updatedAt": "2016-08-21T15:19:19.271Z",
         "id": 1
       },
       {
@@ -2596,17 +2596,17 @@
           "name": "RELEASED",
           "description": "Finds works released within last three weeks.",
           "queryString": "\"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                            } \"\"\" ",
-          "ontologies": [
+          "properties": [
             "releasedate"
           ],
           "contextQueryString": "\"\"\" SELECT ?labelres ?labelreleasedate \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%releasedate%% rdfs:label ?labelreleasedate .\n                                    } \"\"\" ",
           "descriptionTemplate": "%%labelres%% is released on %%releasedate%%.",
           "filters": [],
           "rankWeight": "0.6",
-          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .@prefix dbe:        <http://events.dbpedia.org/ns/core#> . @prefix dcterms:    <http://purl.org/dc/terms/> .@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .@prefix dc:         <http://purl.org/dc/elements/1.1/> .@prefix spin:       <http://spinrdf.org/spin#> .@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .    \n    dig:RELEASED a dbe:DigestTemplate ;\n    dcterms:identifier \"RELEASED\" ;\n    dcterms:description \"\"\"Finds works released within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelreleasedate \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%releasedate%% rdfs:label ?labelreleasedate .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% is released on %%releasedate%%. \"\"\" ;\n    dbe:rankWeight \"0.6\"^^xsd:float ;\n    .\n    \n\n"
+          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\n@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \n@prefix dcterms:    <http://purl.org/dc/terms/> .\n@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix dc:         <http://purl.org/dc/elements/1.1/> .\n@prefix spin:       <http://spinrdf.org/spin#> .\n@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .\n    \n    dig:RELEASED a dbe:DigestTemplate ;\n    dcterms:identifier \"RELEASED\" ;\n    dcterms:description \"\"\"Finds works released within last three weeks.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?releasedate \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:releasedate ?releasedate;\n                                ] . \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelreleasedate \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%releasedate%% rdfs:label ?labelreleasedate .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% is released on %%releasedate%%. \"\"\" ;\n    dbe:rankWeight \"0.6\"^^xsd:float\n    .\n    \n\n"
         },
         "createdAt": "2016-06-06T15:54:16.051Z",
-        "updatedAt": "2016-06-14T15:28:06.997Z",
+        "updatedAt": "2016-08-21T15:19:22.458Z",
         "id": 2
       },
       {
@@ -2615,7 +2615,7 @@
           "name": "JUSTMARRIED",
           "description": "New spouse.",
           "queryString": "\"\"\" SELECT ?u ?res ?spouse \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:spouse ?spouse;\n                                ] . \n                                FILTER (NOT EXISTS {%%res%% dbo:deathDate ?deathDate}) \n                                FILTER (NOT EXISTS {%%spouse%% dbo:deathDate ?deathDate}) \n                            } \"\"\" ",
-          "ontologies": [
+          "properties": [
             "spouse"
           ],
           "contextQueryString": "\"\"\" SELECT ?labelres ?labelspouse \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%spouse%% rdfs:label ?labelspouse .\n                                    } \"\"\" ",
@@ -2625,11 +2625,37 @@
             "NOT EXISTS {%%spouse%% dbo:deathDate ?deathDate}"
           ],
           "rankWeight": "0.4",
-          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .@prefix dbe:        <http://events.dbpedia.org/ns/core#> . @prefix dcterms:    <http://purl.org/dc/terms/> .@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .@prefix dc:         <http://purl.org/dc/elements/1.1/> .@prefix spin:       <http://spinrdf.org/spin#> .@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .    \n    dig:JUSTMARRIED a dbe:DigestTemplate ;\n    dcterms:identifier \"JUSTMARRIED\" ;\n    dcterms:description \"\"\"New spouse.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?spouse \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:spouse ?spouse;\n                                ] . \n                                FILTER (NOT EXISTS {%%res%% dbo:deathDate ?deathDate}) \n                                FILTER (NOT EXISTS {%%spouse%% dbo:deathDate ?deathDate}) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelspouse \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%spouse%% rdfs:label ?labelspouse .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% married %%spouse%%. \"\"\" ;\n    dbe:rankWeight \"0.4\"^^xsd:float ;\n    .\n    \n\n"
+          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\n@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \n@prefix dcterms:    <http://purl.org/dc/terms/> .\n@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix dc:         <http://purl.org/dc/elements/1.1/> .\n@prefix spin:       <http://spinrdf.org/spin#> .\n@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .\n    \n    dig:JUSTMARRIED a dbe:DigestTemplate ;\n    dcterms:identifier \"JUSTMARRIED\" ;\n    dcterms:description \"\"\"New spouse.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?spouse \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:spouse ?spouse;\n                                ] . \n                                FILTER (NOT EXISTS {%%res%% dbo:deathDate ?deathDate}) \n                                FILTER (NOT EXISTS {%%spouse%% dbo:deathDate ?deathDate}) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelspouse \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%spouse%% rdfs:label ?labelspouse .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%% married %%spouse%%. \"\"\" ;\n    dbe:rankWeight \"0.4\"^^xsd:float\n    .\n    \n\n"
         },
         "createdAt": "2016-06-14T15:41:42.197Z",
-        "updatedAt": "2016-06-14T17:12:59.756Z",
+        "updatedAt": "2016-08-21T15:19:24.333Z",
         "id": 5
+      },
+      {
+        "name": "RISINGNUMBERS",
+        "query": {
+          "name": "RISINGNUMBERS",
+          "description": "Numbers are rising.",
+          "queryString": "\"\"\" SELECT ?u ?res ?old ?new \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:old ?old;\n                                    dbo:new ?new;\n                                ] . \n                                FILTER (isNumeric(?old) && isNumeric(?new) && ?new > ?old) \n                                FILTER (STRSTARTS(STR(?p), \\\"http://dbpedia.org/ontology/\\\")) \n                                FILTER (?p != dbo:wikiPageLength) \n                                FILTER (?p != dbo:wikiPageOutDegree) \n                                FILTER (?p != dbo:wikiPageRevisionID) \n                            } \"\"\" ",
+          "properties": [
+            "old",
+            "new"
+          ],
+          "contextQueryString": "\"\"\" SELECT ?labelres ?labelold ?labelnew \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%old%% rdfs:label ?labelold .\n                                        %%new%% rdfs:label ?labelnew .\n                                    } \"\"\" ",
+          "descriptionTemplate": "%%labelres%%s %%p%% raised from %%old%% to %%new%%",
+          "filters": [
+            "isNumeric(?old) && isNumeric(?new) && ?new > ?old",
+            "STRSTARTS(STR(?p), \\\"http://dbpedia.org/ontology/\\\")",
+            "?p != dbo:wikiPageLength",
+            "?p != dbo:wikiPageOutDegree",
+            "?p != dbo:wikiPageRevisionID"
+          ],
+          "rankWeight": "0.1",
+          "templateText": "@prefix dig:        <http://events.dbpedia.org/data/digests#> .\n@prefix dbe:        <http://events.dbpedia.org/ns/core#> . \n@prefix dcterms:    <http://purl.org/dc/terms/> .\n@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix dc:         <http://purl.org/dc/elements/1.1/> .\n@prefix spin:       <http://spinrdf.org/spin#> .\n@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .\n    \n    dig:RISINGNUMBERS a dbe:DigestTemplate ;\n    dcterms:identifier \"RISINGNUMBERS\" ;\n    dcterms:description \"\"\"Numbers are rising.\"\"\"@en ;\n    \n    dbe:queryString \"\"\" SELECT ?u ?res ?old ?new \n                            { ?u guo:target_subject ?res ;\n                                guo:insert [\n                                    dbo:old ?old;\n                                    dbo:new ?new;\n                                ] . \n                                FILTER (isNumeric(?old) && isNumeric(?new) && ?new > ?old) \n                                FILTER (STRSTARTS(STR(?p), \\\"http://dbpedia.org/ontology/\\\")) \n                                FILTER (?p != dbo:wikiPageLength) \n                                FILTER (?p != dbo:wikiPageOutDegree) \n                                FILTER (?p != dbo:wikiPageRevisionID) \n                            } \"\"\" ;\n    \n    dbe:contextQueryString \"\"\" SELECT ?labelres ?labelold ?labelnew \n                                    {\n                                        %%res%% rdfs:label ?labelres . \n                                        %%old%% rdfs:label ?labelold .\n                                        %%new%% rdfs:label ?labelnew .\n                                    } \"\"\" ;\n\n    \n    dbe:descriptionTemplate \"\"\" %%labelres%%s %%p%% raised from %%old%% to %%new%% \"\"\" ;\n    dbe:rankWeight \"0.1\"^^xsd:float\n    .\n    \n\n"
+        },
+        "createdAt": "2016-08-21T15:12:17.034Z",
+        "updatedAt": "2016-08-21T15:19:28.790Z",
+        "id": 6
       }
     ]
   },
@@ -2731,7 +2757,7 @@
   },
   "counters": {
     "template": {
-      "id": 5
+      "id": 6
     },
     "post": {
       "id": 2144473881
