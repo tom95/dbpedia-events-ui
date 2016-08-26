@@ -1,11 +1,13 @@
 Array.prototype.each = function(cb) { this.forEach(cb); return this; };
-
 const fs = require('fs');
-
 let data = JSON.parse(fs.readFileSync('posts.json'));
 
+// the area around the month of the event we use to calculate the
+// average of trends data
 const TRENDS_MAX_DAY_VARIANCE = 6 * 32 * 24 * 60 * 60 * 1000;
 
+// pre-process step in which filter out useless data and assign
+// the `trendsConfirm` value
 let processed = data
 	.filter(post => post.status != 'unset')
 	.each(post => {
@@ -15,11 +17,14 @@ let processed = data
 		let start = post.day.$date - TRENDS_MAX_DAY_VARIANCE;
 		let end = post.day.$date + TRENDS_MAX_DAY_VARIANCE;
 
+		// count values we want to look at based on TRENDS_MAX_VARIANCE
 		let counts = post.trends
 			.map(t => (t.date = new Date(t.date), t))
 			.filter(t => t.date >= start && t.date <= end);
+		// the average over the counts we wanted to look at
 		let avg = counts.reduce((sum, t) => sum + t.count, 0) / counts.length;
 
+		// find the count of the event's month
 		let eventDay = new Date(post.day.$date);
 		let countInEventMonth = undefined;
 		for (let i = 0; i < counts.length; i++) {
@@ -28,17 +33,14 @@ let processed = data
 				countInEventMonth = counts[i].count;
 		}
 
-		if (countInEventMonth === undefined) {
-			console.log('Failure in finding trends for day', eventDay, counts);
-			return process.exit(1);
-		}
-
-		post.trendAvg = avg;
+		// apply magic to determine whether the event was real
 		post.trendConfirm = countInEventMonth < 2 * avg;
 	});
 
+// take only those events for which we had either trends data or articles
 let dataAvailable = processed.filter(p => p.trends.length || p.numArticles > 0);
 
+// take only events of a certain category
 let correctEvents = dataAvailable.filter(p => p.status == 'correct');
 let belatedEvents = dataAvailable.filter(p => p.status == 'belated');
 let wrongEvents = dataAvailable.filter(p => p.status == 'wrong');
