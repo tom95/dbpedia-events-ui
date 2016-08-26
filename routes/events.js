@@ -317,7 +317,7 @@ module.exports = [{
 
 	// function pz(num) { return num < 10 ? '0' + num : num; }
 
-	request.collections().post
+	request.collections().mpost
 	    .find({ day: startDay })
 	    //.find({ day: { '>=': startDay, '<=': endDay } })
 	    //.find({ endTime: `${startDay.getFullYear()}-${pz(startDay.getMonth()+1)}-${pz(startDay.getDate())}T21:59:59+02:00` })
@@ -442,7 +442,7 @@ module.exports = [{
 	path: '/event/{id}',
 	method: 'PUT',
 	handler: (request, reply) => {
-	    request.collections().post
+	    request.collections().mpost
 		.update({ id: request.params.id }, request.payload)
 		.exec((err, i) => {
 		    if (err) return reply('internal error').code(500);

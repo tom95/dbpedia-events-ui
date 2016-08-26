@@ -16,14 +16,22 @@ var dogwaterOptions = {
 			adapter: 'templateDisk',
 			database: 'knowmin',
 			user: 'root',
+    },
+    mongo: {
+			adapter: 'mongo',
+			database: 'mknowmin',
+			user: 'root',
     }
   },
   adapters:{
-     templateDisk : 'sails-mysql'
+     templateDisk : 'sails-mysql',
+    mongo: 'sails-mongo'
   },
   models: [
     require('./models/post'),
-		require('./models/article')]
+    require('./models/article'),
+    require('./models/mpost'),
+    require('./models/marticle')]
 };
 
 server.register([{
@@ -166,7 +174,60 @@ server.register([{
 
 		console.log('Template API up and running at:', server.info.uri);
 
-		server.collections().post.find({processed:false}).exec((err, list) => console.log(err, list.length, list));
+		// server.collections().post.find().exec((err, list) => console.log(list.length));
+
+
+
+	  	var Post = server.collections().post;
+	  	var mPost = server.collections().mpost;
+
+	  	var Article = server.collections().article;
+	  	var mArticle = server.collections().marticle;
+		// mPost.find({ numArticles: {'>': 0} }).populate('articles').limit(4).exec(console.log);
+			// mArticle.find().exec((err, l) => console.log(l.length));
+		// createArticles();
+
+	  // complicated mysql->mongodb migrate stuff
+			/*Post.find().populate('articles').exec((err, list) => {
+				if (err)
+					return console.log('POST', err);
+				console.log('POST: Creating', list.length, 'items ...');
+
+				var pending = list.length;
+
+				list.forEach(post => {
+					var copy = {};
+					Object.keys(post).forEach(key => copy[key] = post[key]);
+					delete copy.articles;
+					delete copy.id;
+
+					mPost.create(copy).exec((err, newPost) => {
+						if (--pending < 1) {
+							mPost.find({ numArticles: {'>': 0} }).populate('articles').limit(4).exec(console.log);
+							return console.log('PRETTY MUCH DONE');
+						}
+
+						if (err)
+							return console.log('POST CREATE', err);
+
+						console.log('POST: Created', newPost.id);
+
+						if (post.articles.length < 1)
+							return console.log('NO ARTICELS FOR', newPost.id);
+
+						var listOfArticles = post.articles.map(article => (article.post = newPost.id, article));
+						// assert
+						listOfArticles.forEach(article => { if (article.post != newPost.id) process.exit(1); });
+
+						mArticle.create(listOfArticles).exec((err, newArticles) => {
+							if (err)
+								return console.log('ARTICLE CREATE', err, newPost.id);
+
+							console.log('ARTICLE CREATED', newArticles.length, newPost.id);
+						});
+					});
+				});
+			});*/
 		// server.collections().post.find({processed:true}).exec((err, list) => console.log(err, list.length, list));
 		// server.collections().post.update({id:'2128576743'}, {processed:false}).exec((err, list) => console.log(err, list.length, list));
 		// require('./verify')(server.collections().post, server.collections().article);

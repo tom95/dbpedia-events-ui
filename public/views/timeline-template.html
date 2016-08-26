@@ -14,7 +14,7 @@
             <div class="image" ng-style="{ 'background-image': 'url(' + event.image + ')' }"></div>
 
             <div style="margin-top: 12px">
-                <span class="text-muted pull-right" ng-bind="event.articles.length + ' Articles, Trends ' + (event.trends ? '' : 'not') + ' available'"></span>
+                <span class="text-muted pull-right" ng-bind="event.articles.length + ' Articles, Trends ' + (event.trends && event.trends.length ? '' : 'not') + ' available'"></span>
 
                 <select ng-model="event.status" ng-change="updateConfirm(event)">
                     <option value="unset">Unset</option>
