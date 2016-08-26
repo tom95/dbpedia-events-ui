@@ -70,9 +70,7 @@ angular.module('dbpedia-events-ui').directive('dbpTimeline', ['$http', 'dbpCateg
 
 	    $scope.updateConfirm = function updateConfirm(event) {
 		$http.put('/event/' + event.id, {
-		    userChecked: true,
-		    garbage: event.garbage,
-		    userConfirm: event.userConfirm
+		    status: event.status
 		}).then(function() { event.userChecked = true; },
 			function(err) { alert(JSON.stringify(err)); })
 	    };

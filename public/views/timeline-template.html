@@ -3,7 +3,7 @@
 
     <div class="event-wrapper"
          ng-repeat="event in events | orderBy:showDate ? '-endTime' : 'image'| filter:filterEvents">
-        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: !event.verified ? 0.5 : 1.0, backgroundColor: event.userChecked ? '#fff' : '#ffb' }">
+        <div class="event clearfix" ng-class="event.image ? '' : 'noimage'" ng-style="{ opacity: !event.verified ? 0.5 : 1.0, backgroundColor: event.status != 'unset' ? '#fff' : '#ffb' }">
 
             <span class="event-icon" ng-class="'icon-' + categoryForTmpl(event.tmpl).icon"></span>
 

@@ -24,7 +24,7 @@ var dogwaterOptions = {
     }
   },
   adapters:{
-     templateDisk : 'sails-mysql',
+     templateDisk : 'sails-disk',
     mongo: 'sails-mongo'
   },
   models: [
