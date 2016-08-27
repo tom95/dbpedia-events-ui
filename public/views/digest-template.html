@@ -11,16 +11,14 @@
                                 ] . <span ng-repeat="filter in filters">
                                 <span class="label label-info">FILTER ({{filter}}) </span></span>
                             } """ </span>;
-    <br>
-    <b>dbe:</b>contextQueryString <span id="contextQueryString">""" SELECT ?labelres <span ng-repeat="property in properties"><span class="label label-info">?label{{property | lowercase}} </span></span>
+    <br><!-- Workaround to NOT include dates into the contextQuery -->
+    <b>dbe:</b>contextQueryString <span id="contextQueryString">""" SELECT ?labelres <span ng-repeat="property in properties"><span ng-if="property.toLowerCase().indexOf('date') < 0" class="label label-info">?label{{property | lowercase}} </span></span>
                                     {
                                         %%res%% rdfs:label ?labelres . <span ng-repeat="property in properties">
-                                        <span class="label label-info">%%{{property | lowercase}}%% rdfs:label ?label{{property | lowercase}} .</span></span>
+                                        <span ng-if="property.toLowerCase().indexOf('date') < 0" class="label label-info">%%{{property | lowercase}}%% rdfs:label ?label{{property | lowercase}} .</span></span>
                                     } """ </span>;
-
     <br>
     <b>dbe:</b>descriptionTemplate """ <span class="label label-info">{{descriptionTemplate}}</span> """ ;
-    <b>dbe:</b>rankWeight "<span class="label label-info">{{rankWeight}}</span>"^^<b>xsd:</b>float
-    .
+    <b>dbe:</b>rankWeight "<span class="label label-info">{{rankWeight}}</span>"^^<b>xsd:</b>float .
     </code>
 </pre>

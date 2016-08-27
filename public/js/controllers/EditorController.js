@@ -166,49 +166,22 @@ app.controller('EditorController', ['$scope', '$http', function ($scope, $http) 
     $scope.testTemplate = function () {
         var templateText = prefixes + angular.element(document.getElementById("template")).text();
         console.log(escapeDoubleQuotes(templateText));
-        $http.post('/events/custom', { "templateText": '@prefix dig:        <http://events.dbpedia.org/data/digests#> .\
-                @prefix dbe:        <http://events.dbpedia.org/ns/core#> . \
-        @prefix dcterms:    <http://purl.org/dc/terms/> .\
-        @prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\
-        @prefix dc:         <http://purl.org/dc/elements/1.1/> .\
-        @prefix spin:       <http://spinrdf.org/spin#> .\
-        @prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .\
-\
-            dig:DEADPEOPLE a dbe:DigestTemplate ;\
-        dcterms:identifier \"DEADPEOPLE\" ;\
-        dcterms:description \"\"\"Finds people who died within last three weeks.\"\"\"@en ;\
-\
-        dbe:queryString \"\"\" SELECT ?u ?res ?deathdate ?deathplace \
-        { ?u guo:target_subject ?res ;\
-            guo:insert [\
-                dbo:deathdate ?deathdate;\
-            dbo:deathplace ?deathplace;\
-        ] .\
-            FILTER ((xsd:date(?deathdate) > xsd:date(NOW()-\"P21D\"^^xsd:duration))) \
-        } \"\"\" ;\
-\
-        dbe:contextQueryString \"\"\" SELECT ?labelres ?labeldeathdate ?labeldeathplace \
-        {\
-        %%res%% rdfs:label ?labelres .\
-        %%deathdate%% rdfs:label ?labeldeathdate .\
-        %%deathplace%% rdfs:label ?labeldeathplace .\
-        } \"\"\" ;\
-        dbe:descriptionTemplate \"\"\" %%labelres%% died on %%deathdate%% in %%labeldeathplace%%. \"\"\" ;\
-        dbe:rankWeight \"0.8\"^^xsd:float\
-            .',
+        $http.post('/events/custom', {
+            "templateText": templateText,
             "query": 'SELECT DISTINCT ?digestid ?tmpl ?desc ?res ?endTime\
-{\
-    ?s a <http://events.dbpedia.org/ns/core#Event> .\
-    ?s <http://purl.org/dc/terms/description> ?desc .\
-    ?s <http://events.dbpedia.org/ns/core#update> ?u .\
-    ?s <http://events.dbpedia.org/ns/core#digest> ?digest .\
-    ?s <http://www.w3.org/ns/prov#wasDerivedFrom> ?tmpl .\
-    ?tmpl a <http://events.dbpedia.org/ns/core#DigestTemplate> .\
-    ?digest <http://www.w3.org/ns/prov#endedAtTime> ?endTime .\
-    ?digest <http://purl.org/dc/terms/identifier> ?digestid .\
-    ?u a <http://webr3.org/owl/guo#UpdateInstruction> .\
-    ?u <http://webr3.org/owl/guo#target_subject> ?res .\
-}'}).then(function (response) {
+            {\
+                ?s a <http://events.dbpedia.org/ns/core#Event> .\
+                ?s <http://purl.org/dc/terms/description> ?desc .\
+                ?s <http://events.dbpedia.org/ns/core#update> ?u .\
+                ?s <http://events.dbpedia.org/ns/core#digest> ?digest .\
+                ?s <http://www.w3.org/ns/prov#wasDerivedFrom> ?tmpl .\
+                ?tmpl a <http://events.dbpedia.org/ns/core#DigestTemplate> .\
+                ?digest <http://www.w3.org/ns/prov#endedAtTime> ?endTime .\
+                ?digest <http://purl.org/dc/terms/identifier> ?digestid .\
+                ?u a <http://webr3.org/owl/guo#UpdateInstruction> .\
+                ?u <http://webr3.org/owl/guo#target_subject> ?res .\
+            }'
+}).then(function (response) {
             console.log(response.data);
             console.log("Sent new template to backend");
             $scope.events = response.data;
