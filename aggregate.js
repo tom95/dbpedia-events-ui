@@ -41,29 +41,49 @@ let processed = data
 let dataAvailable = processed.filter(p => p.trends.length || p.numArticles > 0);
 
 // take only events of a certain category
-let correctEvents = dataAvailable.filter(p => p.status == 'correct');
-let belatedEvents = dataAvailable.filter(p => p.status == 'belated');
-let wrongEvents = dataAvailable.filter(p => p.status == 'wrong');
-let garbageEvents = dataAvailable.filter(p => p.status == 'garbage');
-let illogicalEvents = dataAvailable.filter(p => p.status == 'illogical');
+let correctEventsWithData = dataAvailable.filter(p => p.status == 'correct');
+let belatedEventsWithData = dataAvailable.filter(p => p.status == 'belated');
+let falseEventsWithData = dataAvailable.filter(p => p.status == 'false');
+let garbageEventsWithData = dataAvailable.filter(p => p.status == 'garbage');
+let illogicalEventsWithData = dataAvailable.filter(p => p.status == 'illogical');
+
+let correctEvents = processed.filter(p => p.status == 'correct');
+let belatedEvents = processed.filter(p => p.status == 'belated');
+let falseEvents = processed.filter(p => p.status == 'false');
+let garbageEvents = processed.filter(p => p.status == 'garbage');
+let illogicalEvents = processed.filter(p => p.status == 'illogical');
 
 console.log('Correctly identified:',
-	correctEvents.filter(p => p.trendConfirm || p.numArticles > 0).length,
-	'of', correctEvents.length);
+	correctEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+	'of', correctEventsWithData.length);
 
 console.log('Assumed belated event was correct:',
-	belatedEvents.filter(p => p.trendConfirm || p.numArticles > 0).length,
-	'of', belatedEvents.length);
+	belatedEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+	'of', belatedEventsWithData.length);
 
-console.log('Assumed wrong event was correct:',
-	wrongEvents.filter(p => p.trendConfirm || p.numArticles > 0).length,
-	'of', wrongEvents.length);
+console.log('Assumed false event was correct:',
+	falseEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+	'of', falseEventsWithData.length);
 
 console.log('Assumed illogical event was correct:',
-	illogicalEvents.filter(p => p.trendConfirm || p.numArticles > 0).length,
-	'of', illogicalEvents.length);
+	illogicalEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+	'of', illogicalEventsWithData.length);
 
 console.log('Assumed garbage event was correct:',
-	garbageEvents.filter(p => p.trendConfirm || p.numArticles > 0).length,
-	'of', garbageEvents.length);
+	garbageEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+	'of', garbageEventsWithData.length);
 
+console.log('Correct Events:',
+	correctEvents.length, 'of',  processed.length);
+
+console.log('Belated Events:',
+	belatedEvents.length, 'of',  processed.length);
+
+console.log('False Events:',
+	falseEvents.length, 'of',  processed.length);
+
+console.log('Garbage Events:',
+	garbageEvents.length, 'of',  processed.length);
+
+console.log('Illogical Events:',
+	illogicalEvents.length, 'of',  processed.length);
