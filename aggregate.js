@@ -6,6 +6,8 @@ let data = JSON.parse(fs.readFileSync('posts.json'));
 // average of trends data
 const TRENDS_MAX_DAY_VARIANCE = 6 * 32 * 24 * 60 * 60 * 1000;
 
+let trendsThreshold = 2.5;
+
 // pre-process step in which filter out useless data and assign
 // the `trendsConfirm` value
 let processed = data
@@ -34,8 +36,12 @@ let processed = data
 		}
 
 		// apply magic to determine whether the event was real
-		post.trendConfirm = countInEventMonth < 2 * avg;
+		post.trendConfirm = countInEventMonth > trendsThreshold * avg;
 	});
+
+let articleThreshold = 5;
+
+console.log('articleThreshold: ', articleThreshold, ', trendsThreshold: ', trendsThreshold);
 
 // take only those events for which we had either trends data or articles
 let dataAvailable = processed.filter(p => p.trends.length || p.numArticles > 0);
@@ -60,32 +66,32 @@ console.log('Number of events, with trends data available:',
 		   processed.filter(p => p.trends.length).length, 'of', processed.length);
 
 console.log('Number of events, with articles available:',
-		   processed.filter(p => p.numArticles > 5).length, 'of', processed.length);
+		   processed.filter(p => p.numArticles > articleThreshold).length, 'of', processed.length);
 
 console.log('\n');
 
 console.log('Number of all events, thought to be correct:',
-		   dataAvailable.filter(p => p.trendConfirm || p.numArticles > 5).length,
+		   dataAvailable.filter(p => p.trendConfirm || p.numArticles > articleThreshold).length,
 		   'of', dataAvailable.length);
 
 console.log('Number of correct events thought to be correct',
-	correctEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
+	correctEventsWithData.filter(p => p.trendConfirm || p.numArticles > articleThreshold).length,
 	'of', correctEventsWithData.length);
 
 console.log('Number of belated events thought to be correct',
-	belatedEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
+	belatedEventsWithData.filter(p => p.trendConfirm || p.numArticles > articleThreshold).length,
 	'of', belatedEventsWithData.length);
 
 console.log('Number of false events thought to be correct',
-	falseEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
+	falseEventsWithData.filter(p => p.trendConfirm || p.numArticles > articleThreshold).length,
 	'of', falseEventsWithData.length);
 
 console.log('Number of illogical events thought to be correct',
-	illogicalEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
+	illogicalEventsWithData.filter(p => p.trendConfirm || p.numArticles > articleThreshold).length,
 	'of', illogicalEventsWithData.length);
 
 console.log('Number of garbage events thought to be correct',
-	garbageEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
+	garbageEventsWithData.filter(p => p.trendConfirm || p.numArticles > articleThreshold).length,
 	'of', garbageEventsWithData.length);
 
 /*
