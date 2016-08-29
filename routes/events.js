@@ -206,8 +206,8 @@ function fetchImagesForResources(data) {
 }
 
 function queryCustomEventsByDay(template) {
-    // var cached = getEventsFromCache('custom-' + (+template.start));
-    // if (cached) return Promise.resolve(cached);
+    var cached = getEventsFromCache('custom-' + (+template.start));
+    if (cached) return Promise.resolve(cached);
 
     console.log(template);
     return httpRequest('POST', "http://141.89.225.50:9000/api/testconfig", template)
@@ -217,11 +217,11 @@ function queryCustomEventsByDay(template) {
         })
         .then(processEventQueryData)
         .then(condenseEvents)
-        .then(fetchImagesForResources);
-    // .then((list) => {
-    // 	cacheEventQuery('custom-' + (+startDay), list);
-    // 	return list;
-    // });
+        .then(fetchImagesForResources)
+	.then((list) => {
+	    cacheEventQuery('custom-' + (+startDay), list);
+	    return list;
+	});
 }
 
 function queryEventsByDay(startDay) {
@@ -319,13 +319,8 @@ module.exports = [{
         method: 'POST',
         handler: (request, reply) => {
             queryCustomEventsByDay(request.payload)
-                .then((list) => {
-                        reply(list);
-                    },
-                    (err) => {
-                        console.log(err);
-                        reply('Internal Error').code(500);
-                    });
+                .then(list => reply(list),
+		      err => { console.log(err); reply('Internal Error').code(500); });
         }
     },
     {
