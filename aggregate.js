@@ -53,37 +53,45 @@ let falseEvents = processed.filter(p => p.status == 'false');
 let garbageEvents = processed.filter(p => p.status == 'garbage');
 let illogicalEvents = processed.filter(p => p.status == 'illogical');
 
-console.log('Correctly identified:',
-	correctEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+console.log('Number of events, with data available:',
+		   dataAvailable.length, 'of', processed.length);
+
+console.log('Number of events, with trends data available:',
+		   processed.filter(p => p.trends.length).length, 'of', processed.length);
+
+console.log('Number of events, with articles available:',
+		   processed.filter(p => p.numArticles > 5).length, 'of', processed.length);
+
+console.log('\n');
+
+console.log('Number of all events, thought to be correct:',
+		   dataAvailable.filter(p => p.trendConfirm || p.numArticles > 5).length,
+		   'of', dataAvailable.length);
+
+console.log('Number of correct events thought to be correct',
+	correctEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
 	'of', correctEventsWithData.length);
 
-console.log('Assumed belated event was correct:',
-	belatedEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+console.log('Number of belated events thought to be correct',
+	belatedEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
 	'of', belatedEventsWithData.length);
 
-console.log('Assumed false event was correct:',
-	falseEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+console.log('Number of false events thought to be correct',
+	falseEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
 	'of', falseEventsWithData.length);
 
-console.log('Assumed illogical event was correct:',
-	illogicalEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+console.log('Number of illogical events thought to be correct',
+	illogicalEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
 	'of', illogicalEventsWithData.length);
 
-console.log('Assumed garbage event was correct:',
-	garbageEventsWithData.filter(p => p.trendConfirm || p.numArticles > 0).length,
+console.log('Number of garbage events thought to be correct',
+	garbageEventsWithData.filter(p => p.trendConfirm || p.numArticles > 5).length,
 	'of', garbageEventsWithData.length);
 
-console.log('Correct Events:',
-	correctEvents.length, 'of',  processed.length);
-
-console.log('Belated Events:',
-	belatedEvents.length, 'of',  processed.length);
-
-console.log('False Events:',
-	falseEvents.length, 'of',  processed.length);
-
-console.log('Garbage Events:',
-	garbageEvents.length, 'of',  processed.length);
-
-console.log('Illogical Events:',
-	illogicalEvents.length, 'of',  processed.length);
+/*
+console.log('Correct Events:', correctEvents.length, 'of',  processed.length);
+console.log('Belated Events:', belatedEvents.length, 'of',  processed.length);
+console.log('False Events:', falseEvents.length, 'of',  processed.length);
+console.log('Garbage Events:', garbageEvents.length, 'of',  processed.length);
+console.log('Illogical Events:', illogicalEvents.length, 'of',  processed.length);
+*/
