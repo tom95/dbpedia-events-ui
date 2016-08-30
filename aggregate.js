@@ -4,9 +4,12 @@ let data = JSON.parse(fs.readFileSync('posts.json'));
 
 // the area around the month of the event we use to calculate the
 // average of trends data
-const TRENDS_MAX_DAY_VARIANCE = 6 * 32 * 24 * 60 * 60 * 1000;
 
-let trendsThreshold = 2.5;
+let numMonthsForTrends = 6;
+
+const TRENDS_MAX_DAY_VARIANCE = numMonthsForTrends * 31 * 24 * 60 * 60 * 1000;
+
+let trendsThreshold = 5.5;
 
 // pre-process step in which filter out useless data and assign
 // the `trendsConfirm` value
@@ -26,6 +29,9 @@ let processed = data
 		// the average over the counts we wanted to look at
 		let avg = counts.reduce((sum, t) => sum + t.count, 0) / counts.length;
 
+		let sortedCounts = counts.sort();
+		let mean = sortedCounts[sortedCounts.length / 2];
+
 		// find the count of the event's month
 		let eventDay = new Date(post.day.$date);
 		let countInEventMonth = undefined;
@@ -36,12 +42,12 @@ let processed = data
 		}
 
 		// apply magic to determine whether the event was real
-		post.trendConfirm = countInEventMonth > trendsThreshold * avg;
+		post.trendConfirm = countInEventMonth > trendsThreshold * mean;
 	});
 
 let articleThreshold = 5;
 
-console.log('articleThreshold: ', articleThreshold, ', trendsThreshold: ', trendsThreshold);
+console.log('articleThreshold: ', articleThreshold, ', trendsThreshold: ', trendsThreshold, ', numMonthsForTrends: ', numMonthsForTrends);
 
 // take only those events for which we had either trends data or articles
 let dataAvailable = processed.filter(p => p.trends.length || p.numArticles > 0);
