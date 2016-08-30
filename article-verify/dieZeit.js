@@ -1,6 +1,7 @@
 const ArticleVerification = require('./ArticleVerification.js');
 const escape = require('querystring').escape;
 const request = require('../utils').request;
+const apiKey = require('./apiKeys').dieZeit;
 
 class dieZeit extends ArticleVerification {
 	abstractBaseRelevance() {
@@ -10,7 +11,7 @@ class dieZeit extends ArticleVerification {
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
 		return request('GET','http://api.zeit.de/content', { 
 			q: '"' + subject + '" "' + object + '"',
-			api_key: '0d47a1ca0d95a5a7b68eda826ccb6889149b3f7ad47a9b5fb2bd'
+			api_key: apiKey
 		}, true)
 			.then((data) => {
 				//console.log('Data: ', data.matches);

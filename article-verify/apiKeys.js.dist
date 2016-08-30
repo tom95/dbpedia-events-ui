@@ -1,0 +1,9 @@
+
+module.exports = {
+	bing: 'asdasdasdasdasd',
+	dieZeit: 'asdasdasdasdasd',
+	financialTimes: 'asdasdasdasdasd',
+	guardian: 'asdasdasdasd',
+	newYorkTimes: 'asdasdasd'
+};
+

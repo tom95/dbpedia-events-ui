@@ -1,6 +1,7 @@
 const ArticleVerification = require('./ArticleVerification.js');
 const escape = require('querystring').escape;
 const request = require('../utils').request;
+const apiKey = require('./apiKeys').guardian;
 
 class Guardian extends ArticleVerification {
 	abstractBaseRelevance() {
@@ -9,7 +10,7 @@ class Guardian extends ArticleVerification {
 
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
 		var query = {
-			'api-key': 'a6d3cc9e-e062-4c06-8b9a-bf57d27eafe7',
+			'api-key': apiKey,
 			'q' : '"' + this.sanitise(subject) + '"' + ' AND ' + '"' + this.sanitise(object) + '"',
 		   	'from-date' : dateStart.toISOString(),
 		   	'to-date' : dateEnd.toISOString()

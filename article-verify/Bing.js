@@ -1,5 +1,6 @@
 const ArticleVerification = require('./ArticleVerification.js');
 const request = require('../utils').request;
+const apiKey = require('./apiKeys').bing;
 
 const BASE_URL = "https://api.cognitive.microsoft.com/bing/v5.0/news/search";
 
@@ -30,7 +31,7 @@ class Bing extends ArticleVerification {
 			'News.SortBy': 'Date'
 		};
 		var headers = {
-			"Ocp-Apim-Subscription-Key": "95f06c2ab71b4f7fbcdbb8d5b6d33fcf"
+			"Ocp-Apim-Subscription-Key": apiKey
 		};
 		return request('GET', BASE_URL, params, true, headers)
 			.then((data) => {

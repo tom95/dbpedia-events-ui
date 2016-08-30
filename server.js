@@ -156,7 +156,9 @@ server.register([{
 		}
 	});
 
-	server.start(() => {
+	server.start((err) => {
+		if (err)
+			throw err;
 		console.log('Template API up and running at:', server.info.uri);
 	});
 });

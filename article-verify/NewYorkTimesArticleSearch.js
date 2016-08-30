@@ -1,6 +1,7 @@
 const ArticleVerification = require('./ArticleVerification.js');
 const escape = require('querystring').escape;
 const request = require('../utils').request;
+const apiKey = require('./apiKeys').newYorkTimes;
 
 class NewYorkTimesArticleSearch extends ArticleVerification {
 	abstractBaseRelevance() {
@@ -9,7 +10,7 @@ class NewYorkTimesArticleSearch extends ArticleVerification {
 
 	abstractExecuteFind(dateStart, dateEnd, subject, object, sentence) {
 		return request('GET', "https://api.nytimes.com/svc/search/v2/articlesearch.json", {
-			'api-key': "7f812bab4c23418e82b5af2ba7d989c2",
+			'api-key': apiKey,
 			'q': '"' + subject + '"' + '"' + object + '"',
 			'begin_date': this.convertDate(dateStart),
 			'end_date': this.convertDate(dateEnd),
